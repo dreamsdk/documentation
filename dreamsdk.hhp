@@ -9,7 +9,7 @@ Compatibility=1.1 or later
 Compiled File=dreamsdk.chm
 Contents File=dreamsdk.hhc
 Index File=dreamsdk.hhk
-Error log file=dreamsdk.log.txt
+Error log file=dreamsdk.log
 Full-text search=Yes
 Language=0x409 English (United States)
 Title=DreamSDK Help
@@ -23,4 +23,23 @@ Display compile progress=Yes
 
 [FILES]
 pages\index.html
+pages\general\index.html
+pages\general\features.html
+pages\general\requirements.html
 pages\general\faq.html
+pages\general\licenses.html
+pages\general\credits.html
+pages\manager\index.html
+pages\manager\kos.html
+pages\manager\kos-ports.html
+pages\manager\dc-tool.html
+pages\manager\environ.html
+pages\manager\options.html
+pages\manager\about.html
+pages\shell\index.html
+pages\shell\overview.html
+pages\shell\outside.html
+pages\shell\terminal\index.html
+pages\shell\terminal\cmd.html
+pages\shell\terminal\mintty.html
+img\Classic-45-degree-seamless-pattern-for-website-background.jpg

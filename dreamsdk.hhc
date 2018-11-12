@@ -19,12 +19,87 @@
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="General Information">
+		<param name="Local" value="pages\general\index.html">
 		</OBJECT>
 	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Features">
+			<param name="Local" value="pages\general\features.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="System Requirements">
+			<param name="Local" value="pages\general\requirements.html">
+			</OBJECT>
 		<LI> <OBJECT type="text/sitemap">
 			<param name="Name" value="Frequently Asked Questions (FAQ)">
 			<param name="Local" value="pages\general\faq.html">
 			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Licenses Information">
+			<param name="Local" value="pages\general\licenses.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Credits">
+			<param name="Local" value="pages\general\credits.html">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DreamSDK Manager">
+		<param name="Local" value="pages\manager\index.html">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="KallistiOS">
+			<param name="Local" value="pages\manager\kos.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="KallistiOS Ports">
+			<param name="Local" value="pages\manager\kos-ports.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Dreamcast Tool">
+			<param name="Local" value="pages\manager\dc-tool.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Environment">
+			<param name="Local" value="pages\manager\environ.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Options">
+			<param name="Local" value="pages\manager\options.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="About">
+			<param name="Local" value="pages\manager\about.html">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DreamSDK Shell">
+		<param name="Local" value="pages\shell\index.html">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Overview">
+			<param name="Local" value="pages\shell\overview.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Run DreamSDK Shell commands without opening prompt">
+			<param name="Local" value="pages\shell\outside.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Terminal">
+			<param name="Local" value="pages\shell\terminal\index.html">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Command Prompt">
+				<param name="Local" value="pages\shell\terminal\cmd.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="MinTTY">
+				<param name="Local" value="pages\shell\terminal\mintty.html">
+				</OBJECT>
+		</UL>
 	</UL>
 </UL>
 </BODY>
