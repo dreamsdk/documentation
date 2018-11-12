@@ -22,3 +22,13 @@ body {
 	text-align: center;
 	color: #999;
 }
+
+a:hover {
+	color: #ccc;
+	text-decoration: underline;
+}
+
+a {
+	color: blue;
+	text-decoration: underline;
+}

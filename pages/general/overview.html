@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+  <META http-equiv="Content-Type" content="text/html; charset=Windows-1252">
+  <TITLE>Overview</TITLE>
+  <LINK href="../../css/style.css" rel="stylesheet" type="text/css">
+</HEAD>
+
+<BODY>
+
+<H1>DreamSDK Overview</H1>
+
+<p><b>DreamSDK</b> is a ready-to-use environment for <b>Sega Dreamcast</b> development running on the <b>Microsoft Windows</b> platform.</p>
+
+<p>It's a self-contained package embedding all needed software to freely develop for the <b>Sega Dreamcast</b> system on Windows. This package is built on open-source software only thus it doesn't contains any copyrighted software. See <a href="licenses.html">licenses</a> for more information.</p>
+
+<p><b>DreamSDK</b> is composed by several components, mainly:</p>
+<ul>
+	<li>MinGW/MSYS for the core system and foundation;</li>
+	<li>Binutils, GNU Compiler Collection (GCC), Newlib and GNU Debugger (GDB) for all the toolchains;</li>
+	<li>Additional components made specially for this package:
+		<ul>
+			<li>DreamSDK Manager, which handles the <b>KallistiOS</b> library;</li>
+			<li>DreamSDK Shell, a component which is built on the top of MSYS.</li>	
+		</ul>
+	</li>
+</ul>
+
+<p><b>DreamSDK</b> uses <b>KallistiOS</b> (KOS), which is the best option today to develop for the Dreamcast. It's a pro-grade development system for the Dreamcast. KOS has been used to produce multiple commercial quality games for sale like Feet of Fury.</p>
+
+<p>Instead of the majority of the previous released packages of this kind (e.g. <b>dcfreedev</b> &mdash; with GCC 3.4.6 &mdash;, <b>DC Dev Environment (DDE)</b>, <b>Code::Blocks DC Development</b>...), this package only includes the pre-compiled toolchains (both for the <b>SuperH</b> CPU and <b>Yamaha AICA</b>) but not the <b>KallistiOS</b> library itself: <b>KallistiOS</b> is handled by the <b>DreamSDK Manager</b> application.</p>
+
+<p>The whole package is built and optimized for Windows. It respects the KallistiOS requirements and prerequisites, which means that you'll need to compile your Dreamcast programs from the DreamSDK Shell.</p>
+
+<p>This environment should work with <a target="_blank" href="https://bitbucket.org/ihi/libronin">Libronin</a> too, the only other viable alternative for the Dreamcast development but this scenario was not tested.</p>
+
+<p>Please read the rest of this help file to learn more!</p>
+
+<!--FOOTER:START-->
+<div id="footer">&copy; Copyleft 2018 &mdash; <a href="http://dreamsdk.sizious.com/" target="_blank">The DreamSDK Team</a> and contributors.</div>
+<!--FOOTER:END-->
+
+</body>
+</html>

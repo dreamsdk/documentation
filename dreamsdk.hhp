@@ -24,9 +24,11 @@ Display compile progress=Yes
 [FILES]
 pages\index.html
 pages\general\index.html
+pages\general\overview.html
 pages\general\features.html
 pages\general\requirements.html
 pages\general\faq.html
+pages\general\changes.html
 pages\general\licenses.html
 pages\general\credits.html
 pages\manager\index.html

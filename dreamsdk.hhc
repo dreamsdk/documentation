@@ -23,6 +23,10 @@
 		</OBJECT>
 	<UL>
 		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Overview">
+			<param name="Local" value="pages\general\overview.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
 			<param name="Name" value="Features">
 			<param name="Local" value="pages\general\features.html">
 			</OBJECT>
@@ -33,6 +37,10 @@
 		<LI> <OBJECT type="text/sitemap">
 			<param name="Name" value="Frequently Asked Questions (FAQ)">
 			<param name="Local" value="pages\general\faq.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Changes Log">
+			<param name="Local" value="pages\general\changes.html">
 			</OBJECT>
 		<LI> <OBJECT type="text/sitemap">
 			<param name="Name" value="Licenses Information">
