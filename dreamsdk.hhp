@@ -1,0 +1,26 @@
+
+[INFOTYPES]
+
+[OPTIONS]
+Auto Index=No
+Binary Index=Yes
+Binary TOC=No
+Compatibility=1.1 or later
+Compiled File=dreamsdk.chm
+Contents File=dreamsdk.hhc
+Index File=dreamsdk.hhk
+Error log file=dreamsdk.log.txt
+Full-text search=Yes
+Language=0x409 English (United States)
+Title=DreamSDK Help
+Default Topic=pages\index.html
+Default Window=
+Default Font=Arial, 9, 000
+Create CHI file=No
+Full text search stop list file=
+Display compile notes=Yes
+Display compile progress=Yes
+
+[FILES]
+pages\index.html
+pages\general\faq.html

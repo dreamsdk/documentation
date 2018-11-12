@@ -1,0 +1,24 @@
+body { 
+	background-image: url(../img/bkgnd.png);
+	background-repeat: fixed;
+	background-attachment: fixed;
+	font-family: Tahoma, Arial, Verdana, Geneva, Helvetica, sans-serif;
+	font-size: 1em;
+	color: black;
+
+	scrollbar-face-color:#0000A0;
+	scrollbar-arrow-color:#FFFFFF;
+	scrollbar-track-color:#0000A0;
+	scrollbar-highlight-color:#CCCCCC;
+	scrollbar-3dlight-color:#FFFFFF;
+	scrollbar-shadow-color:#000000;
+	scrollbar-darkshadow-color:#999999;
+}
+
+#footer {
+	font-size: 0.75em;
+	border-top: 2px solid #999;
+	padding-top: 2px;
+	text-align: center;
+	color: #999;
+}
