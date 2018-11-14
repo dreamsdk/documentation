@@ -1,28 +1,65 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
-<HTML>
-<HEAD>
-  <META http-equiv="Content-Type" content="text/html; charset=Windows-1252">
-  <TITLE>System Requirements</TITLE>
-  <LINK href="../../css/style.css" rel="stylesheet" type="text/css">
-</HEAD>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<META http-equiv="Content-Type" content="text/html; charset=Windows-1252">
+	<meta name="Keywords" content="system requirements,windows,git,python,subversion,svn" />  
+	<TITLE>System Requirements</TITLE>
+	<link href="../../css/style.css" rel="stylesheet" type="text/css">
+</head>
 
-<BODY>
+<body>
 
 <H1>System Requirements</H1>
 
-<p><b>DreamSDK</b> needs the following requirements:</p>
+<p>This section explains the requirements needed to use <b>DreamSDK</b> properly.</p>
+
+<h2>Required external components</h2>
+
+<p><b>DreamSDK</b> needs the following external components to work properly:</p>
 
 <ul>
-	<li>Git</li>	
-	<li>Python</li>	
-	<li>Subversion Client (SVN)</li>	
+	<li><a target="_blank" href="http://git-scm.org">Git</a></li>	
+	<li><a target="_blank" href="http://python.org/">Python</a> 2.7.x</li>	
+	<li><a target="_blank" href="http://subversion.apache.org/">Subversion Client</a> (SVN)</li>	
 </ul>
 
-<p>For the Windows Operating system, <b>Windows XP Service Pack 3</b> or later is required.</p>
+<p>Theses components aren't provided by the <b>DreamSDK</b> package thus they need to be installed separately.</p>
+
+<p>All of these components should be available in the <span class="code">PATH</span> environment variable. To check if it's the case:</p>
+<ol>
+<li>Open a <b>Command Prompt</b> (Hit the <span class="shortcut">Win + R</span> keyboard shortcut, enter <span class="code">cmd</span> and hit <span class="shortcut">Enter</span>);</li>
+<li>Enter the following commands:
+<ul>
+<li><span class="code">git --version</span></li>
+<li><span class="code">python --version</span></li>
+<li><span class="code">svn --version</span></li>
+</ul>
+</li>
+<li>All of these commands should prints components version.</li>
+</ol>
+
+<p>If at least one of them prints an incorrect message like <span class="code">Bad command or filename</span>, then you should (re)install the problematic component, and please don't forget to check the <span class="code">PATH</span> option when asked!</p>
+
+<h2>Required operating system</h2>
+
+<p>For the <b>Windows</b> Operating System (OS), <b>Windows XP Service Pack 3</b> or later is required.</p>
+
+<p>If you want to install <b>DreamSDK</b> on <b>Windows XP</b>, please pay attention to the external components version to use. The <b>Windows XP</b> support was dropped almost everywhere, the reason why <b>DreamSDK</b> supports it today is the fact that the <b>Sega Dreamcast</b> is a legacy system released back in 1998; some of useful utilities were made for this operating system (or more exactly, for <b>Windows NT</b> which is older!).</p>
+
+<p>So if you want to install <b>DreamSDK</b> on <b>Windows XP Service Pack 3</b>, please use these components versions:</p>
+<ul>
+	<li><a target="_blank" href="http://git-scm.org">Git</a>: <a target="_blank" href="https://github.com/git-for-windows/git/releases/download/v2.10.0.windows.1/Git-2.10.0-32-bit.exe">2.10.0</a> and optionally <a target="_blank" href="https://download.tortoisegit.org/tgit/1.8.16.0/TortoiseGit-1.8.16.0-32bit.msi">TortoiseGit 1.8.16.0</a></li>	
+	<li><a target="_blank" href="http://python.org/">Python</a>: any of 2.7.x release, e.g. <a target="_blank" href="https://www.python.org/ftp/python/2.7.15/python-2.7.15.msi">2.7.15</a> is compatible</li>	
+	<li><a target="_blank" href="http://subversion.apache.org/">Subversion Client (SVN)</a>: <a target="_blank" href="https://www.collab.net/downloads/subversion-1.7.19-windows-32">1.7.19 from CollabNet</a></li>	
+</ul>
+
+<p>In my case, I have a workstation dedicated to the <b>Sega Dreamcast</b> environment running <b>Windows XP</b>. This explains also the choice of using the legacy <a target="_blank" href="http://mingw.org/">MinGW/MSYS</a> environment instead of the modern (and better) <a target="_blank" href="http://mingw-w64.org/">MinGW-w64/MSYS2</a> environment, as they officially dropped <b>Windows XP</b> support.</p>
+
+<p>Of course, you can use <b>DreamSDK</b> on modern Windows, if you plan to develop for your Dreamcast and execute your programs on emulators or even use <b>Dreamcast Tool</b>. This software package is compatible with <b>Windows 10</b>.</p>
 
 <!--FOOTER:START-->
 <div id="footer">&copy; Copyleft 2018 &mdash; <a href="http://dreamsdk.sizious.com/" target="_blank">The DreamSDK Team</a> and contributors.</div>
 <!--FOOTER:END-->
 
-</BODY>
-</HTML>
+</body>
+</html>

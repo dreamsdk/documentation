@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <HTML>
 <HEAD>
   <META http-equiv="Content-Type" content="text/html; charset=Windows-1252">
@@ -8,15 +8,65 @@
 
 <BODY>
 
-<H1>Frequently Asked Questions (FAQ)</H1>
+<H1>Licenses Information</H1>
 
+<p>The DreamSDK package is a full, self-contained and easy to use environment for Sega Dreamcast development on the Microsoft Windows platform. This package is built upon many various components which are governed by their own individual copyright and licensing terms.</p>
 
+<p>For more information about the licensing terms of all these components, please visit the websites specified below.</p>
 
-<HR>
+<h2>Environment</h2>
 
-<P>Copyright (c) 1999-2014 Igor Pavlov</P>
-<P><B>Web site:</B> <A href="http://www.7-zip.org" target="_blank">www.7-zip.org</A></P>
-<P><B>Support:</B> <A href="http://www.7-zip.org/support.html" target="_blank">www.7-zip.org/support.html</A></P>
+<p>DreamSDK uses the MinGW/MSYS environment provided by http://mingw.org/.</p>
+
+<h2>Toolchains</h2>
+
+<p>The DreamSDK package provides two toolchains, one for the Hitachi SuperH (SH-4) CPU and the other for the Yamaha AICA Super Intelligent Sound Processor (ARM). Toolchains are built upon the following components:</p>
+
+<ul>
+<li>Binutils: http://www.gnu.org/software/binutils/</li>
+<li>GNU Compiler Collection (GCC): https://gcc.gnu.org/</li>
+<li>Newlib: http://sourceware.org/newlib/</li>
+<li>GNU Debugger (GDB): https://www.gnu.org/software/gdb/</li>
+</ul>
+
+<h2>Libraries</h2>
+<p>The libraries provided by the DreamSDK package used for the Sega Dreamcast development are KallistiOS and its addons which are KallistiOS Ports and Dreamcast Tool. The official website of KallistiOS is http://cadcdev.sourceforge.net/softprj/kos/.</p>
+
+<p>KallistiOS license is the specific KOS License, when all of the additional components are licensed separately.</p>
+
+<p>Note: These libraries aren't directly embedded in this package but they are downloaded/compiled in real-time by the DreamSDK Manager tool, which is on the GNU GPL 3 license (see Miscellaneous section below for more information).</p>
+
+<h2>Dependencies</h2>
+
+<p>In order to use the DreamSDK package, the following dependencies are used:</p>
+
+<ul>
+<li>Git: https://git-scm.com/</li>
+<li>Subversion (SVN): http://subversion.apache.org/</li>
+<li>Python: https://www.python.org/</li>
+</ul>
+
+<h2>Miscellaneous</h2>
+
+<p>The DreamSDK package embed two additional applications made by The DreamSDK Team:</p>
+
+<ul>
+<li>Shell: The Shell Launcher component, which launch the MSYS Shell.</li>
+<li>Manager: The Manager component, which administrate the DreamSDK installation.</li>
+</ul>
+
+<p>All of these components were built with Free Pascal (https://www.freepascal.org/) and Lazarus (https://www.lazarus-ide.org/) and are licensed under the GNU GPL 3 license.</p>
+
+<p>The Setup was made with Inno Setup (http://www.jrsoftware.org/).</p>
+
+<h2>Resources</h2>
+
+<p>The DreamSDK Manager icon was made by Martz90 (https://www.deviantart.com/martz90), licensed under the CC Attribution-Noncommercial-No Derivate 4.0 license.</p>
+<p>The Setup package was made by Roundicons (https://www.flaticon.com/authors/roundicons), licensed under the Creative Commons BY 3.0.</p>
+
+<!--FOOTER:START-->
+<div id="footer">&copy; Copyleft 2018 &mdash; <a href="http://dreamsdk.sizious.com/" target="_blank">The DreamSDK Team</a> and contributors.</div>
+<!--FOOTER:END-->
 
 </BODY>
 </HTML>

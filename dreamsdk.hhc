@@ -57,6 +57,10 @@
 		</OBJECT>
 	<UL>
 		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Home">
+			<param name="Local" value="pages\manager\home.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
 			<param name="Name" value="KallistiOS">
 			<param name="Local" value="pages\manager\kos.html">
 			</OBJECT>

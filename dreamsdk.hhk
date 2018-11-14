@@ -10,9 +10,34 @@
 </OBJECT>
 <UL>
 	<LI> <OBJECT type="text/sitemap">
-		<param name="Name" value="DreamSDK Start Page">
-		<param name="Name" value="DreamSDK Start Page">
-		<param name="Local" value="pages\index.html">
+		<param name="Name" value="system requirements">
+		<param name="Name" value="system requirements">
+		<param name="Local" value="pages\general\requirements.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="windows">
+		<param name="Name" value="windows">
+		<param name="Local" value="pages\general\requirements.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="git">
+		<param name="Name" value="git">
+		<param name="Local" value="pages\general\requirements.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="python">
+		<param name="Name" value="python">
+		<param name="Local" value="pages\general\requirements.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="subversion">
+		<param name="Name" value="subversion">
+		<param name="Local" value="pages\general\requirements.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="svn">
+		<param name="Name" value="svn">
+		<param name="Local" value="pages\general\requirements.html">
 		</OBJECT>
 </UL>
 </BODY>

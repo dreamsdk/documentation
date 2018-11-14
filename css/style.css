@@ -32,3 +32,16 @@ a {
 	color: blue;
 	text-decoration: underline;
 }
+
+div.screenshot {
+	text-align: center;
+}
+
+span.code {
+	font-family: "Courier New";
+}
+
+span.shortcut {
+	font-family: "Courier New";
+	color: blue;
+}
