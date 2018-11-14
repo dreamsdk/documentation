@@ -95,7 +95,7 @@
 			<param name="Local" value="pages\shell\overview.html">
 			</OBJECT>
 		<LI> <OBJECT type="text/sitemap">
-			<param name="Name" value="Run DreamSDK Shell commands without opening prompt">
+			<param name="Name" value="Windows Integration">
 			<param name="Local" value="pages\shell\outside.html">
 			</OBJECT>
 		<LI> <OBJECT type="text/sitemap">

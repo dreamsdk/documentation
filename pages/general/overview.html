@@ -1,44 +1,135 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML>
-<HEAD>
-  <META http-equiv="Content-Type" content="text/html; charset=Windows-1252">
-  <TITLE>Overview</TITLE>
-  <LINK href="../../css/style.css" rel="stylesheet" type="text/css">
-</HEAD>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252">
+  <title>Overview</title>
+  <link href="../../css/style.css" rel="stylesheet" type="text/css">
+</head>
 
-<BODY>
+<body>
+<h1>DreamSDK Overview</h1>
 
-<H1>DreamSDK Overview</H1>
+<p><strong>DreamSDK</strong> is a modern, ready-to-use environment for
+<strong>Sega Dreamcast</strong> development, designed for the <strong>Microsoft
+Windows</strong> platform.</p>
 
-<p><b>DreamSDK</b> is a ready-to-use environment for <b>Sega Dreamcast</b> development running on the <b>Microsoft Windows</b> platform.</p>
+<p>It's a big, self-contained package embedding all needed software to freely
+develop for the <strong>Sega Dreamcast</strong> system on
+<strong>Windows</strong>. This package is built on open-source software only
+thus it doesn't contains any copyrighted software. See <a
+href="licenses.html">the licenses section</a> for more information.</p>
 
-<p>It's a self-contained package embedding all needed software to freely develop for the <b>Sega Dreamcast</b> system on Windows. This package is built on open-source software only thus it doesn't contains any copyrighted software. See <a href="licenses.html">licenses</a> for more information.</p>
-
-<p><b>DreamSDK</b> is composed by several components, mainly:</p>
+<p>In clear, <strong>DreamSDK</strong> provides you:</p>
 <ul>
-	<li>MinGW/MSYS for the core system and foundation;</li>
-	<li>Binutils, GNU Compiler Collection (GCC), Newlib and GNU Debugger (GDB) for all the toolchains;</li>
-	<li>Additional components made specially for this package:
-		<ul>
-			<li>DreamSDK Manager, which handles the <b>KallistiOS</b> library;</li>
-			<li>DreamSDK Shell, a component which is built on the top of MSYS.</li>	
-		</ul>
-	</li>
+  <li>An <em>UNIX®</em> like environment;</li>
+  <li>Two pre-built toolchains for the <strong>Dreamcast</strong>, each
+    targetting differents processors: 
+    <ul>
+      <li>The <strong>SuperH</strong> CPU (the main processor);</li>
+      <li>The <strong>Yamaha AICA</strong> (the sound processor).</li>
+    </ul>
+  </li>
+  <li>Some side utilities in order to manage the whole environment.</li>
 </ul>
 
-<p><b>DreamSDK</b> uses <b>KallistiOS</b> (KOS), which is the best option today to develop for the Dreamcast. It's a pro-grade development system for the Dreamcast. KOS has been used to produce multiple commercial quality games for sale like Feet of Fury.</p>
+<p>All the sub-sections below describes in details the environment
+composition.</p>
 
-<p>Instead of the majority of the previous released packages of this kind (e.g. <b>dcfreedev</b> &mdash; with GCC 3.4.6 &mdash;, <b>DC Dev Environment (DDE)</b>, <b>Code::Blocks DC Development</b>...), this package only includes the pre-compiled toolchains (both for the <b>SuperH</b> CPU and <b>Yamaha AICA</b>) but not the <b>KallistiOS</b> library itself: <b>KallistiOS</b> is handled by the <b>DreamSDK Manager</b> application.</p>
+<h2>Architecture</h2>
 
-<p>The whole package is built and optimized for Windows. It respects the KallistiOS requirements and prerequisites, which means that you'll need to compile your Dreamcast programs from the DreamSDK Shell.</p>
+<p>As described in the introduction, <strong>DreamSDK</strong> is a package
+which is built upon a lot of components. The schema below describes the
+environment architecture:</p>
 
-<p>This environment should work with <a target="_blank" href="https://bitbucket.org/ihi/libronin">Libronin</a> too, the only other viable alternative for the Dreamcast development but this scenario was not tested.</p>
+<div class="schema">
+<img src="../../img/general/overview.gif"> </div>
 
-<p>Please read the rest of this help file to learn more!</p>
+<p>In more details, the <strong>DreamSDK</strong> environment package is
+composed by several components:</p>
+<ul>
+  <li>The <em>UNIX®</em> like environment is provided by <a
+    href="http://mingw.org/" target="_blank">MinGW/MSYS</a>;</li>
+  <li>All the toolchains are assembled by <a
+    href="https://www.gnu.org/software/binutils/" target="_blank">Binutils</a>,
+    <a href="https://gcc.gnu.org/" target="_blank">GNU Compiler Collection</a>
+    (GCC), <a href="http://sourceware.org/newlib/" target="_blank">Newlib</a>
+    and <a href="https://www.gnu.org/software/gdb/" target="_blank">GNU
+    Debugger</a> (GDB);</li>
+  <li>Plus, some additional components made specially for the
+    <strong>DreamSDK</strong> environment: 
+    <ul>
+      <li><a href="../manager/index.html">DreamSDK Manager</a>, which handles
+        the <strong>KallistiOS</strong> library;</li>
+      <li><a href="../shell/index.html">DreamSDK Shell</a>, a component which
+        is built on the top of <strong>MSYS</strong>.</li>
+    </ul>
+  </li>
+</ul>
 
+<p>Keep reading the document to learn what is <strong>KallistiOS</strong> and
+how it's managed in <strong>DreamSDK</strong>.</p>
+
+<h2>KallistiOS</h2>
+
+<p><strong>DreamSDK</strong> uses <a
+href="http://cadcdev.sourceforge.net/softprj/kos/"
+target="_blank">KallistiOS</a> (<span class="code">KOS)</span>, which is the
+best option for <strong>Dreamcast</strong> development. <span
+class="code">KOS</span> is a pro-grade development system for the
+<strong>Dreamcast</strong>. It has been used to produce multiple commercial
+quality games for sale, like <strong>Feet of Fury</strong>,
+<strong>Maqiupai</strong>, <strong>Inhabitants</strong>, <strong>Cool
+Herders</strong>, <strong>Dynamite Dreams</strong>... </p>
+
+<p>In clear, <strong>KallistiOS</strong> provides you a ready-to-use software
+library to interact with the <strong>Dreamcast</strong> hardware.</p>
+
+<p><strong>DreamSDK</strong> respects all the standard <span
+class="code">KOS</span> prerequisites and requirements.</p>
+
+<h3>KallistiOS Ports</h3>
+
+<p>KallistiOS Ports are ports collection.</p>
+
+<h3>Dreamcast Tool</h3>
+
+<p>yyy</p>
+
+<h3>Managing KallistiOS</h3>
+
+<p>Instead of the majority of previous released packages of this kind (e.g.
+<em>dcfreedev</em> — with that out-dated GCC 3.4.6 —, <em>DC Dev
+Environment</em> (DDE), <em>Code::Blocks DC Development</em>...),
+<strong>DreamSDK</strong> only includes the pre-built toolchains (both for the
+<strong>SuperH</strong> CPU and <strong>Yamaha AICA</strong>) but not the
+<strong>KallistiOS</strong> library itself.</p>
+
+<p>Instead, <strong>KallistiOS</strong> is handled by the <a
+href="../manager/index.html">DreamSDK Manager</a> application.</p>
+
+<p>This is the reason why <strong>DreamSDK</strong> asks the user to be
+connected to Internet; <span class="code">KOS</span> is installed automatically
+at the end of the installation. If you have cancelled the process or the
+process has failed, just fire-up <a href="../manager/index.html">DreamSDK
+Manager</a> and the application will (re)install <span class="code">KOS</span>
+if needed.</p>
+
+<h2>Alternatives to KallistiOS</h2>
+
+<p><strong>DreamSDK</strong> uses by default <strong>KallistiOS</strong>, as
+this software library is the most advanced library for <strong>Sega
+Dreamcast</strong> development. </p>
+
+<p>The other alternative is <a target="_blank"
+href="https://bitbucket.org/ihi/libronin">Libronin</a>. This software library
+was used for making <a href="http://mc.pp.se/dc/dreamsnes/"
+target="_blank">DreamSNES</a>. It should work under <strong>DreamSDK</strong>,
+even if this scenario was not tested.</p>
 <!--FOOTER:START-->
-<div id="footer">&copy; Copyleft 2018 &mdash; <a href="http://dreamsdk.sizious.com/" target="_blank">The DreamSDK Team</a> and contributors.</div>
-<!--FOOTER:END-->
 
+<div id="footer">
+© Copyleft 2018 — <a href="http://dreamsdk.sizious.com/" target="_blank">The
+DreamSDK Team</a> and contributors.</div>
+<!--FOOTER:END-->
 </body>
 </html>

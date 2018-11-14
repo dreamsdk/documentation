@@ -1,5 +1,5 @@
 body { 
-	background-image: url('../img/Classic-45-degree-seamless-pattern-for-website-background.jpg');
+	background-image: url('../img/bkgnd.jpg');
 	background-repeat: fixed;
 	background-attachment: fixed;
 	font-family: Tahoma, Arial, Verdana, Geneva, Helvetica, sans-serif;
@@ -33,6 +33,7 @@ a {
 	text-decoration: underline;
 }
 
+div.schema,
 div.screenshot {
 	text-align: center;
 }
@@ -44,4 +45,12 @@ span.code {
 span.shortcut {
 	font-family: "Courier New";
 	color: blue;
+}
+
+h1 {
+	border-bottom: 3px double black;
+}
+
+h2 {
+	border-bottom: 1px solid black;
 }
