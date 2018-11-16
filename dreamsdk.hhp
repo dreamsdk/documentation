@@ -12,7 +12,7 @@ Index File=dreamsdk.hhk
 Error log file=dreamsdk.log
 Full-text search=Yes
 Language=0x409 English (United States)
-Title=DreamSDK Help
+Title=DreamSDK Help — Ver. 201811XX
 Default Topic=pages\index.html
 Default Window=
 Default Font=Arial, 9, 000
@@ -30,6 +30,7 @@ pages\general\requirements.html
 pages\general\faq.html
 pages\general\changes.html
 pages\general\licenses.html
+pages\general\contribute.html
 pages\general\credits.html
 pages\manager\index.html
 pages\manager\home.html

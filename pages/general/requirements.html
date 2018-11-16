@@ -1,65 +1,119 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
 <head>
-	<META http-equiv="Content-Type" content="text/html; charset=Windows-1252">
-	<meta name="Keywords" content="system requirements,windows,git,python,subversion,svn" />  
-	<TITLE>System Requirements</TITLE>
-	<link href="../../css/style.css" rel="stylesheet" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <meta name="Keywords"
+  content="system requirements,windows,git,python,subversion,svn">
+  <title>Requirements</title>
+  <link href="../../css/style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
+<h1>Requirements</h1>
 
-<H1>System Requirements</H1>
-
-<p>This section explains the requirements needed to use <strong>DreamSDK</strong> properly.</p>
-
-<h2>Required external components</h2>
-
-<p><strong>DreamSDK</strong> needs the following external components to work properly:</p>
-
+<p>This section explains the requirements needed for DreamSDK.</p>
 <ul>
-	<li><a target="_blank" href="http://git-scm.org">Git</a></li>	
-	<li><a target="_blank" href="http://python.org/">Python</a> 2.7.x</li>	
-	<li><a target="_blank" href="http://subversion.apache.org/">Subversion Client</a> (SVN)</li>	
+  <li><a href="#ext">Required external components</a></li>
+  <li><a href="#os">Required operating system</a></li>
+  <li><a href="#net">Internet connection</a></li>
 </ul>
 
-<p>Theses components aren't provided by the <strong>DreamSDK</strong> package thus they need to be installed separately.</p>
+<h2><a name="ext">Required external components</a></h2>
 
-<p>All of these components should be available in the <span class="code">PATH</span> environment variable. To check if it's the case:</p>
+<p>DreamSDK needs the following external components to work properly:</p>
+<ul>
+  <li><a target="_blank" href="http://git-scm.org">Git</a></li>
+  <li><a target="_blank" href="http://python.org/">Python</a> <span
+    class="font-fixed">2.7.x</span></li>
+  <li><a target="_blank" href="http://subversion.apache.org/">Subversion
+    Client</a> (SVN)</li>
+</ul>
+
+<p>Theses components are not embedded in the DreamSDK package thus they need to
+be installed separately.</p>
+
+<p>All of these components should be available in the <span
+class="font-fixed">PATH</span> environment variable. You can verify that by following
+this procedure:</p>
 <ol>
-<li>Open a <strong>Command Prompt</strong> (Hit the <span class="shortcut">Win + R</span> keyboard shortcut, enter <span class="code">cmd</span> and hit <span class="shortcut">Enter</span>);</li>
-<li>Enter the following commands:
-<ul>
-<li><span class="code">git --version</span></li>
-<li><span class="code">python --version</span></li>
-<li><span class="code">svn --version</span></li>
-</ul>
-</li>
-<li>All of these commands should prints components version.</li>
+  <li>Open a <strong>Command Prompt</strong> (Hit the <span
+    class="shortcut">Win + R</span> keyboard shortcut, enter <span
+    class="font-fixed">cmd</span> and hit <span class="shortcut">Enter</span>);</li>
+  <li>Enter the following commands: 
+    <ul>
+      <li><span class="font-fixed">git --version</span></li>
+      <li><span class="font-fixed">python --version</span></li>
+      <li><span class="font-fixed">svn --version</span></li>
+    </ul>
+  </li>
+  <li>All of these commands should print the version of each components.</li>
 </ol>
 
-<p>If at least one of them prints an incorrect message like <span class="code">Bad command or filename</span>, then you should (re)install the problematic component, and please don't forget to check the <span class="code">PATH</span> option when asked!</p>
+<p>If at least one of them prints an incorrect message like <span
+class="font-fixed">Bad command or filename</span>, then you should (re)install the
+problematic component, and please don't forget to check the <span
+class="font-fixed">PATH</span> option when asked!</p>
 
-<h2>Required operating system</h2>
+<p><strong>These components are absolutely required</strong>, so if they are
+not installed, DreamSDK will refuses to install.</p>
 
-<p>For the <strong>Windows</strong> Operating System (OS), <strong>Windows XP Service Pack 3</strong> or later is required.</p>
+<h2><a name="os">Required operating system</a></h2>
 
-<p>If you want to install <strong>DreamSDK</strong> on <strong>Windows XP</strong>, please pay attention to the external components version to use. The <strong>Windows XP</strong> support was dropped almost everywhere, the reason why <strong>DreamSDK</strong> supports it today is the fact that the <strong>Sega Dreamcast</strong> is a legacy system released back in 1998; some of useful utilities were made for this operating system (or more exactly, for <strong>Windows NT</strong> which is older!).</p>
+<p>For the Windows Operating System (OS), <strong>Windows XP Service Pack 3 or
+later</strong> is required.</p>
 
-<p>So if you want to install <strong>DreamSDK</strong> on <strong>Windows XP Service Pack 3</strong>, please use these components versions:</p>
+<p>If you want to install DreamSDK on Windows XP, please pay attention to the
+external components version to use. The Windows XP support was dropped almost
+everywhere, the reason why DreamSDK supports it today is the fact that the Sega
+Dreamcast is a legacy system released back in 1998; some of useful utilities
+were made for this operating system (or more exactly, for Windows NT which is
+older!).</p>
+
+<p>So if you want to install DreamSDK on Windows XP Service Pack 3, please use
+these components versions:</p>
 <ul>
-	<li><a target="_blank" href="http://git-scm.org">Git</a>: <a target="_blank" href="https://github.com/git-for-windows/git/releases/download/v2.10.0.windows.1/Git-2.10.0-32-bit.exe">2.10.0</a> and optionally <a target="_blank" href="https://download.tortoisegit.org/tgit/1.8.16.0/TortoiseGit-1.8.16.0-32bit.msi">TortoiseGit 1.8.16.0</a></li>	
-	<li><a target="_blank" href="http://python.org/">Python</a>: any of 2.7.x release, e.g. <a target="_blank" href="https://www.python.org/ftp/python/2.7.15/python-2.7.15.msi">2.7.15</a> is compatible</li>	
-	<li><a target="_blank" href="http://subversion.apache.org/">Subversion Client (SVN)</a>: <a target="_blank" href="https://www.collab.net/downloads/subversion-1.7.19-windows-32">1.7.19 from CollabNet</a></li>	
+  <li><a target="_blank" href="http://git-scm.org">Git</a>: <a target="_blank"
+    href="https://github.com/git-for-windows/git/releases/download/v2.10.0.windows.1/Git-2.10.0-32-bit.exe">2.10.0</a>
+    and optionally <a target="_blank"
+    href="https://download.tortoisegit.org/tgit/1.8.16.0/TortoiseGit-1.8.16.0-32bit.msi">TortoiseGit
+    1.8.16.0</a>;</li>
+  <li><a target="_blank" href="http://python.org/">Python</a>: any of <span
+    class="font-fixed">2.7.x</span> release, e.g. <a target="_blank"
+    href="https://www.python.org/ftp/python/2.7.15/python-2.7.15.msi">2.7.15</a>
+    is compatible;</li>
+  <li><a target="_blank" href="http://subversion.apache.org/">Subversion Client
+    (SVN)</a>: <a target="_blank"
+    href="https://www.collab.net/downloads/subversion-1.7.19-windows-32">1.7.19
+    from CollabNet</a>.</li>
 </ul>
 
-<p>In my case, I have a workstation dedicated to the <strong>Sega Dreamcast</strong> environment running <strong>Windows XP</strong>. This explains also the choice of using the legacy <a target="_blank" href="http://mingw.org/">MinGW/MSYS</a> environment instead of the modern (and better) <a target="_blank" href="http://mingw-w64.org/">MinGW-w64/MSYS2</a> environment, as they officially dropped <strong>Windows XP</strong> support.</p>
+<p>In my case, I have a workstation dedicated to the Sega Dreamcast environment
+running Windows XP. This explains also the choice of using the legacy <a
+target="_blank" href="http://mingw.org/">MinGW/MSYS</a> environment instead of
+the modern (and better) <a target="_blank"
+href="http://mingw-w64.org/">MinGW-w64/MSYS2</a> environment, as they
+officially dropped Windows XP support.</p>
 
-<p>Of course, you can use <strong>DreamSDK</strong> on modern Windows, if you plan to develop for your Dreamcast and execute your programs on emulators or even use <strong>Dreamcast Tool</strong>. This software package is compatible with <strong>Windows 10</strong>.</p>
+<p>Of course, you can use DreamSDK on modern Windows, if you plan to develop
+for your Dreamcast and execute your programs on emulators or even use Dreamcast
+Tool. This software package is compatible with Windows 10.</p>
 
+<h2><a name="net">Internet connection</a></h2>
+
+<p>In order to install the DreamSDK environment on your computer, <strong>you
+need an active Internet connection</strong>.</p>
+
+<p>This is required as the KallistiOS library will be downloaded at the
+installation time.</p>
+
+<p>If you don't have any Internet connection, you will have to install
+KallistiOS manually, but in this case, the Update feature of the <a href="../manager/index.html">DreamSDK
+Manager</a> will be impossible.</p>
 <!--FOOTER:START-->
-<div id="footer">&copy; Copyleft 2018 &mdash; <a href="http://dreamsdk.sizious.com/" target="_blank">The DreamSDK Team</a> and contributors.</div>
-<!--FOOTER:END-->
 
+<div id="footer">
+&copy; Copyleft 2018 — <a href="http://dreamsdk.sizious.com/" target="_blank">The
+DreamSDK Team</a> and contributors.</div>
+<!--FOOTER:END-->
 </body>
 </html>

@@ -26,14 +26,54 @@
 			<param name="Name" value="Overview">
 			<param name="Local" value="pages\general\overview.html">
 			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Architecture summary">
+				<param name="Local" value="pages\general\overview.html#arch">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="MinGW/MSYS">
+				<param name="Local" value="pages\general\overview.html#mingw">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DreamSDK Shell">
+				<param name="Local" value="pages\general\overview.html#shell">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Toolchains">
+				<param name="Local" value="pages\general\overview.html#tool">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="KallistiOS">
+				<param name="Local" value="pages\general\overview.html#kos">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="DreamSDK Manager">
+				<param name="Local" value="pages\general\overview.html#mgr">
+				</OBJECT>
+		</UL>
 		<LI> <OBJECT type="text/sitemap">
 			<param name="Name" value="Features">
 			<param name="Local" value="pages\general\features.html">
 			</OBJECT>
 		<LI> <OBJECT type="text/sitemap">
-			<param name="Name" value="System Requirements">
+			<param name="Name" value="Requirements">
 			<param name="Local" value="pages\general\requirements.html">
 			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Required external components">
+				<param name="Local" value="pages\general\requirements.html#ext">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Required operating system">
+				<param name="Local" value="pages\general\requirements.html#os">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Internet connection">
+				<param name="Local" value="pages\general\requirements.html#net">
+				</OBJECT>
+		</UL>
 		<LI> <OBJECT type="text/sitemap">
 			<param name="Name" value="Frequently Asked Questions (FAQ)">
 			<param name="Local" value="pages\general\faq.html">
@@ -45,6 +85,36 @@
 		<LI> <OBJECT type="text/sitemap">
 			<param name="Name" value="Licenses Information">
 			<param name="Local" value="pages\general\licenses.html">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Environment">
+				<param name="Local" value="pages\general\licenses.html#env">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Toolchains">
+				<param name="Local" value="pages\general\licenses.html#tool">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Libraries">
+				<param name="Local" value="pages\general\licenses.html#lib">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Dependencies">
+				<param name="Local" value="pages\general\licenses.html#deps">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Miscellaneous">
+				<param name="Local" value="pages\general\licenses.html#misc">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Resources">
+				<param name="Local" value="pages\general\licenses.html#rsrc">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Contribute">
+			<param name="Local" value="pages\general\contribute.html">
 			</OBJECT>
 		<LI> <OBJECT type="text/sitemap">
 			<param name="Name" value="Credits">

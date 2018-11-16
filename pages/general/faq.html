@@ -1,20 +1,89 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML>
-<HEAD>
-  <META http-equiv="Content-Type" content="text/html; charset=Windows-1252">
-  <TITLE>Frequently Asked Questions (FAQ)</TITLE>
-  <LINK href="../../css/style.css" rel="stylesheet" type="text/css">
-</HEAD>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252">
+  <meta name="Keywords" content="faq,frequently asked questions">
+  <title>Frequently Asked Questions (FAQ)</title>
+  <link href="../../css/style.css" rel="stylesheet" type="text/css">
+</head>
 
-<BODY>
+<body>
+<h1>Frequently Asked Questions (FAQ)</h1>
 
-<H1>Frequently Asked Questions (FAQ)</H1>
+<p class="question">Q: What is DreamSDK?</p>
 
+<p>A: It's a package which contains everything you need to develop for the Sega
+Dreamcast on Microsoft Windows. This package is called the <strong>DreamSDK
+environment</strong>.</p>
 
+<p class="question">Q: Why another package? Again?</p>
 
+<p>A: Because this one is of course better! More seriously, this package is
+different from the others since it includes only absolutely required binaries
+plus the two required precompiled toolchains (<span
+class="font-fixed">SH-4</span> and <span class="font-fixed">ARM</span>). It
+doesn't contains KallistiOS itself, which is handled by <a
+href="../manager/index.html" target="_blank">DreamSDK Manager</a>. Doing so
+will allow the DreamSDK package and your local installation staying always
+up-to-date.</p>
+
+<p class="question">Q: What is KallistiOS?</p>
+
+<p>A: It's the software library which handles the Sega Dreamcast hardware. It's
+a great way to develop freely for your Sega Dreamcast. This library is not
+included in the DreamSDK package, instead it's handled by the <a
+href="../manager/index.html" target="_blank">DreamSDK Manager</a> tool, part of
+the DreamSDK environment.</p>
+
+<p class="question">Q: What is KallistiOS Ports?</p>
+
+<p>A: It's a port collection made by the KallistiOS team. Ports are additional
+libraries to extend KallistiOS, e.g. adding <span
+class="font-fixed">PNG</span>, <span class="font-fixed">JPEG</span> or <span
+class="font-fixed">SDL</span> support to your program.</p>
+
+<p class="question">Q: And... what is Dreamcast Tool?</p>
+
+<p>A: It's the program responsible of sending your program to the Dreamcast
+through the serial (Coders Cable) cable or via your Broadband/LAN Adapter (if
+you have the luck to have one), in order to execute/debug them. Dreamcast Tool,
+also called <span class="font-fixed">dc-tool</span>, is the server part. The
+Sega Dreamcast part is called <span class="font-fixed">dcload</span>, it exists
+in two version, <span class="font-fixed">serial</span> and <span
+class="font-fixed">ip</span>.</p>
+
+<p class="question">Q: I found a bug or a missing software. How can I contact
+you?</p>
+
+<p>A: Please visit the <a href="http://dreamsdk.sizious.com/"
+target="_blank">DreamSDK Website</a> and use the <strong>Contact</strong>
+form.</p>
+
+<p class="question">Q: It's really mandatory to use the DreamSDK Shell to build
+Dreamcast programs?</p>
+
+<p>A: It's better, but not mandatory. Check the <a href="../shell/index.html"
+target="_blank">DreamSDK Shell</a> documentation to learn the possibilities.</p>
+
+<p class="question">Q: Can I use the package with an IDE (Integrated
+development environment)?</p>
+
+<p>A: Since all Sega Dreamcast development tools (e.g. toolchains binaries)
+have been statically linked, you can use them outside the DreamSDK environment.
+This hasn't been tested however. By the way this should be a side project upon
+the DreamSDK package!</p>
+
+<p class="question">Q: Can I contribute to the DreamSDK project? The first
+thing I want to submit is a fix for that horrible Frenglish!</p>
+
+<p>A: Of course! The project is hosted on <a
+href="https://github.com/dreamsdk/" target="_blank">GitHub</a>. Feel free to
+send a <span class="font-fixed">Pull Request</span>!</p>
 <!--FOOTER:START-->
-<div id="footer">&copy; Copyleft 2018 &mdash; <a href="http://dreamsdk.sizious.com/" target="_blank">The DreamSDK Team</a> and contributors.</div>
-<!--FOOTER:END-->
 
-</BODY>
-</HTML>
+<div id="footer">
+© Copyleft 2018 — <a href="http://dreamsdk.sizious.com/" target="_blank">The
+DreamSDK Team</a> and contributors.</div>
+<!--FOOTER:END-->
+</body>
+</html>
