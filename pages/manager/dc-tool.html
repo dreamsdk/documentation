@@ -1,36 +1,55 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML>
-<HEAD>
-  <META http-equiv="Content-Type" content="text/html; charset=Windows-1252">
-  <TITLE>Dreamcast Tool</TITLE>
-  <LINK href="../../css/style.css" rel="stylesheet" type="text/css">
-</HEAD>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252">
+  <title>Dreamcast Tool</title>
+  <link href="../../css/style.css" rel="stylesheet" type="text/css">
+</head>
 
-<BODY>
+<body>
+<h1>Dreamcast Tool</h1>
 
-<H1>Dreamcast Tool</H1>
+<p>The Dreamcast Tool is the tool responsible of sending your program to the
+Sega Dreamcast, in order to execute/debug it. This tab handles the
+configuration of this tool.</p>
 
-<P><strong>Welcome to DreamSDK!</strong></P> 
-<P>DreamSDK is a full, self-contained and easy to use environment for Sega Dreamcast development on the <strong>Microsoft Windows</strong> platform.</P>
+<div class="screenshot">
+<img src="../../img/manager/dc-tool.png" alt="Dreamcast Tool Tab"
+title="Dreamcast Tool Tab"></div>
 
-<H4>The documentation for DreamSDK includes:</H4>
+<p>Please choose the configuration accordingly to your scenario:</p>
+<ul>
+  <li>If you have a Serial (Coders Cable), you should check the <span
+    class="font-fixed">Serial</span> button.</li>
+  <li>If you have a Broadband or LAN Adapter (which is a Ethernet card for the
+    Sega Dreamcast), you should check the <span class="font-fixed">Internet
+    Protocol (IP)</span> button.</li>
+  <li>Or you can click the <span class="font-fixed">None</span> button to
+    disable Dreamcast Tool.</li>
+</ul>
 
-<UL>
-	<LI><A href = "general/index.htm">General information about DreamSDK</A></LI>  
-	<LI><A href = "shell/index.htm">User's Guide for DreamSDK Shell</A></LI>
-	<LI><A href = "manager/index.htm">User's Guide for DreamSDK Manager</A></LI>  
-</UL>
+<p>After choosing your tool version, the settings panel will activate. The
+description of the effect's options are described in the KallistiOS
+documentation.</p>
 
-<H4>See Also</H4>
+<p>Please note, these options are applied all the time, every time you will run
+the <span class="font-fixed">dc-tool</span> program.</p>
 
-<UL>
-  <LI><A href = "general/faq.htm">Frequently Asked Questions (FAQ)</A></LI>
-  <!-- <LI><A href = "general/license.htm">License for use and distribution</A></LI> -->
-</UL>
+<p>At the Shell prompt, you just have to run the following command:</p>
 
+<div class="fixed-block">
+dc-tool -x &lt;yourprog.elf&gt;</div>
+
+<p><strong>This will start Dreamcast Tool with the settings you have set to
+run/debug <span class="font-fixed">&lt;yourprog.elf&gt;</span>!</strong></p>
+
+<p>Please note, you have the possibility to run GDB to debug your program,
+please read the KOS manual about this.</p>
 <!--FOOTER:START-->
-<div id="footer">&copy; Copyleft 2018 &mdash; <a href="http://dreamsdk.sizious.com/" target="_blank">The DreamSDK Team</a> and contributors.</div>
-<!--FOOTER:END-->
 
+<div id="footer">
+© Copyleft 2018 — <a href="http://dreamsdk.sizious.com/" target="_blank">The
+DreamSDK Team</a> and contributors.</div>
+<!--FOOTER:END-->
 </body>
 </html>
