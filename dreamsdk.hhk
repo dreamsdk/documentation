@@ -10,34 +10,390 @@
 </OBJECT>
 <UL>
 	<LI> <OBJECT type="text/sitemap">
-		<param name="Name" value="system requirements">
-		<param name="Name" value="system requirements">
+		<param name="Name" value="Architecture">
+		<param name="Name" value="Architecture">
+		<param name="Local" value="pages\general\overview.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Toolchain">
+		<param name="Name" value="Toolchain">
+		<param name="Local" value="pages\general\overview.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Overview">
+		<param name="Name" value="Overview">
+		<param name="Local" value="pages\general\overview.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Libronin">
+		<param name="Name" value="Libronin">
+		<param name="Local" value="pages\general\overview.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="KallistiOS">
+		<param name="See Also" value="KallistiOS">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Overview">
+			<param name="Name" value="Overview">
+			<param name="Local" value="pages\general\overview.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="KallistiOS">
+			<param name="Name" value="KallistiOS">
+			<param name="Local" value="pages\manager\kos.html">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="kos">
+		<param name="See Also" value="kos">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Overview">
+			<param name="Name" value="Overview">
+			<param name="Local" value="pages\general\overview.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="KallistiOS">
+			<param name="Name" value="KallistiOS">
+			<param name="Local" value="pages\manager\kos.html">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="kos-ports">
+		<param name="See Also" value="kos-ports">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Overview">
+			<param name="Name" value="Overview">
+			<param name="Local" value="pages\general\overview.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="KallistiOS Ports">
+			<param name="Name" value="KallistiOS Ports">
+			<param name="Local" value="pages\manager\kos-ports.html">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="KallistiOS Ports">
+		<param name="See Also" value="KallistiOS Ports">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Overview">
+			<param name="Name" value="Overview">
+			<param name="Local" value="pages\general\overview.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="KallistiOS Ports">
+			<param name="Name" value="KallistiOS Ports">
+			<param name="Local" value="pages\manager\kos-ports.html">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Features">
+		<param name="Name" value="Features">
+		<param name="Local" value="pages\general\features.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="System Requirements">
+		<param name="Name" value="System Requirements">
 		<param name="Local" value="pages\general\requirements.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
-		<param name="Name" value="windows">
-		<param name="Name" value="windows">
+		<param name="Name" value="Requirements">
+		<param name="Name" value="Requirements">
 		<param name="Local" value="pages\general\requirements.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
-		<param name="Name" value="git">
-		<param name="Name" value="git">
+		<param name="Name" value="Windows">
+		<param name="Name" value="Windows">
 		<param name="Local" value="pages\general\requirements.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
-		<param name="Name" value="python">
-		<param name="Name" value="python">
+		<param name="Name" value="Git">
+		<param name="Name" value="Git">
 		<param name="Local" value="pages\general\requirements.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
-		<param name="Name" value="subversion">
-		<param name="Name" value="subversion">
+		<param name="Name" value="Python">
+		<param name="Name" value="Python">
 		<param name="Local" value="pages\general\requirements.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
-		<param name="Name" value="svn">
-		<param name="Name" value="svn">
+		<param name="Name" value="Subversion">
+		<param name="Name" value="Subversion">
 		<param name="Local" value="pages\general\requirements.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="SVN">
+		<param name="Name" value="SVN">
+		<param name="Local" value="pages\general\requirements.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FAQ">
+		<param name="Name" value="FAQ">
+		<param name="Local" value="pages\general\faq.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Frequently Asked Questions">
+		<param name="Name" value="Frequently Asked Questions">
+		<param name="Local" value="pages\general\faq.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Bootable">
+		<param name="Name" value="Bootable">
+		<param name="Local" value="pages\general\faq.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Selfboot">
+		<param name="Name" value="Selfboot">
+		<param name="Local" value="pages\general\faq.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Autoboot">
+		<param name="Name" value="Autoboot">
+		<param name="Local" value="pages\general\faq.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="1ST_READ.BIN">
+		<param name="Name" value="1ST_READ.BIN">
+		<param name="Local" value="pages\general\faq.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="IP.BIN">
+		<param name="Name" value="IP.BIN">
+		<param name="Local" value="pages\general\faq.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Bootstrap">
+		<param name="Name" value="Bootstrap">
+		<param name="Local" value="pages\general\faq.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Contribute">
+		<param name="See Also" value="Contribute">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Frequently Asked Questions (FAQ)">
+			<param name="Name" value="Frequently Asked Questions (FAQ)">
+			<param name="Local" value="pages\general\faq.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Contribute">
+			<param name="Name" value="Contribute">
+			<param name="Local" value="pages\general\contribute.html">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Changes Log">
+		<param name="Name" value="Changes Log">
+		<param name="Local" value="pages\general\changes.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Changes">
+		<param name="Name" value="Changes">
+		<param name="Local" value="pages\general\changes.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="License">
+		<param name="Name" value="License">
+		<param name="Local" value="pages\general\licenses.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Copyright">
+		<param name="Name" value="Copyright">
+		<param name="Local" value="pages\general\licenses.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Copyleft">
+		<param name="Name" value="Copyleft">
+		<param name="Local" value="pages\general\licenses.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Source Code">
+		<param name="Name" value="Source Code">
+		<param name="Local" value="pages\general\contribute.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Contribution">
+		<param name="Name" value="Contribution">
+		<param name="Local" value="pages\general\contribute.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GitHub">
+		<param name="Name" value="GitHub">
+		<param name="Local" value="pages\general\contribute.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Credits">
+		<param name="Name" value="Credits">
+		<param name="Local" value="pages\general\credits.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Authors">
+		<param name="Name" value="Authors">
+		<param name="Local" value="pages\general\credits.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Team">
+		<param name="Name" value="Team">
+		<param name="Local" value="pages\general\credits.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Website">
+		<param name="Name" value="Website">
+		<param name="Local" value="pages\general\credits.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Home">
+		<param name="Name" value="Home">
+		<param name="Local" value="pages\manager\home.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Tasks">
+		<param name="Name" value="Tasks">
+		<param name="Local" value="pages\manager\home.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Ports Collection">
+		<param name="Name" value="Ports Collection">
+		<param name="Local" value="pages\manager\kos-ports.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Ports">
+		<param name="Name" value="Ports">
+		<param name="Local" value="pages\manager\kos-ports.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Dreamcast Tool">
+		<param name="Name" value="Dreamcast Tool">
+		<param name="Local" value="pages\manager\dc-tool.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="dc-tool">
+		<param name="Name" value="dc-tool">
+		<param name="Local" value="pages\manager\dc-tool.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Serial">
+		<param name="Name" value="Serial">
+		<param name="Local" value="pages\manager\dc-tool.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="IP">
+		<param name="Name" value="IP">
+		<param name="Local" value="pages\manager\dc-tool.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="dcload">
+		<param name="Name" value="dcload">
+		<param name="Local" value="pages\manager\dc-tool.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Internet Protocol">
+		<param name="Name" value="Internet Protocol">
+		<param name="Local" value="pages\manager\dc-tool.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Environment Versions">
+		<param name="Name" value="Environment Versions">
+		<param name="Local" value="pages\manager\environ.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Environment">
+		<param name="Name" value="Environment">
+		<param name="Local" value="pages\manager\environ.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Version">
+		<param name="See Also" value="Version">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Environment">
+			<param name="Name" value="Environment">
+			<param name="Local" value="pages\manager\environ.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="About">
+			<param name="Name" value="About">
+			<param name="Local" value="pages\manager\about.html">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Options">
+		<param name="Name" value="Options">
+		<param name="Local" value="pages\manager\options.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Repositories">
+		<param name="Name" value="Repositories">
+		<param name="Local" value="pages\manager\options.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="About">
+		<param name="Name" value="About">
+		<param name="Local" value="pages\manager\about.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Shell">
+		<param name="Name" value="Shell">
+		<param name="Local" value="pages\shell\overview.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DreamSDK Shell">
+		<param name="Name" value="DreamSDK Shell">
+		<param name="Local" value="pages\shell\overview.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Shell Integration">
+		<param name="Name" value="Shell Integration">
+		<param name="Local" value="pages\shell\outside.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Integration">
+		<param name="Name" value="Integration">
+		<param name="Local" value="pages\shell\outside.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Batch">
+		<param name="Name" value="Batch">
+		<param name="Local" value="pages\shell\outside.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Command Line">
+		<param name="Name" value="Command Line">
+		<param name="Local" value="pages\shell\outside.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="terminal">
+		<param name="Name" value="terminal">
+		<param name="Local" value="pages\shell\terminal\index.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="cmd">
+		<param name="Name" value="cmd">
+		<param name="Local" value="pages\shell\terminal\cmd.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Command Prompt">
+		<param name="Name" value="Command Prompt">
+		<param name="Local" value="pages\shell\terminal\cmd.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Windows Prompt">
+		<param name="Name" value="Windows Prompt">
+		<param name="Local" value="pages\shell\terminal\cmd.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="MinTTY">
+		<param name="Name" value="MinTTY">
+		<param name="Local" value="pages\shell\terminal\mintty.html">
 		</OBJECT>
 </UL>
 </BODY>

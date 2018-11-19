@@ -6,13 +6,14 @@ body {
 	font-size: 1em;
 	color: black;
 
-	scrollbar-face-color:#0000A0;
-	scrollbar-arrow-color:#FFFFFF;
-	scrollbar-track-color:#0000A0;
-	scrollbar-highlight-color:#CCCCCC;
-	scrollbar-3dlight-color:#FFFFFF;
-	scrollbar-shadow-color:#000000;
-	scrollbar-darkshadow-color:#999999;
+	scrollbar-base-color: #000;
+	scrollbar-face-color: #ccc;
+	scrollbar-arrow-color: #fff;
+	scrollbar-track-color: #ccc;
+	scrollbar-highlight-color: #fff;
+	scrollbar-3dlight-color: #ccc;
+	scrollbar-shadow-color: #555;
+	scrollbar-darkshadow-color: #ccc;
 }
 
 #footer {
@@ -24,7 +25,7 @@ body {
 }
 
 a:hover {
-	color: #ccc;
+	color: #1E90FF;
 	text-decoration: underline;
 }
 
@@ -50,7 +51,6 @@ span.font-fixed {
 
 span.shortcut {
 	font-family: "Courier New";
-	color: blue;
 }
 
 h1 {
@@ -63,6 +63,10 @@ h2 {
 
 p.question {
 	font-weight: bold;
+}
+
+p.answer-more {
+	padding-left: 20px;
 }
 
 div.fixed-block {

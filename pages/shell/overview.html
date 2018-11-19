@@ -2,6 +2,7 @@
 <html>
 <head>
   <meta http-equiv="content-type" content="text/html; charset=windows-1252">
+  <meta name="Keywords" content="Shell,DreamSDK Shell">  
   <title>Overview</title>
   <link href="../../css/style.css" rel="stylesheet" type="text/css">
 </head>
@@ -19,16 +20,97 @@ allow building of applications and programs which depend on traditionally
 and the deficiencies of the <span class="font-fixed">cmd</span> shell.</p>
 
 <p>The Shell component basically replaces the <span
-class="font-fixed">msys.bat</span> file. This was made for two reasons:</p>
+class="font-fixed">msys.bat</span> file, provided in MinGW/MSYS standard
+installation, even if it is still there. This was made for two reasons:</p>
 <ul>
   <li>You have the possibility to <a href="terminal/index.html">choose the
-    Shell interface of your choice</a>;</li>
+    Shell interface of your choice really easilly</a>;</li>
   <li>And you have the possibility to <a href="outside.html">execute commands
-    into the MSYS Shell directly from a batch file</a>.</li>
+    into the MSYS Shell directly from a Windows batch file, without opening the
+    regular MSYS Shell</a>.</li>
 </ul>
 
 <p><strong>To be clear, the DreamSDK Shell is only a launcher which starts the
 real MSYS Shell.</strong></p>
+
+<p>Learn more about topics covered by this document:</p>
+<ul>
+  <li><a href="#install">Installation details</a></li>
+  <li><a href="#conf">Configuration details</a></li>
+  <li><a href="#use">Usage details</a></li>
+</ul>
+
+<h2><a name="install">Installation details</a></h2>
+
+<p>Everything custom items related to the DreamSDK environment package are
+installed in the <span class="font-fixed">/opt</span> directory. You can access
+to this directory by opening the Shell and entering the following:</p>
+
+<div class="fixed-block">
+cd /opt</div>
+
+<p>In summary, every toolchains and KallistiOS components are in <span
+class="font-fixed">/opt/toolchains/dc/</span> directory when all DreamSDK
+binaries are in <span class="font-fixed">/opt/dreamsdk</span>/ directory.</p>
+
+<p>More precisely:</p>
+<ul>
+  <li>The <strong>SuperH</strong> toolchain is installed in <span
+    class="font-fixed">/opt/toolchains/dc/sh-elf/</span>.</li>
+  <li>The <strong>Yamaha AICA</strong> toolchain is installed in <span
+    class="font-fixed">/opt/toolchains/dc/arm-eabi/</span>.</li>
+  <li>The <strong>KallistiOS</strong> main library is installed in <span
+    class="font-fixed">/opt/toolchains/dc/kos/</span>.</li>
+  <li>The <strong>KallistiOS Ports</strong> collection is in <span
+    class="font-fixed">/opt/toolchains/dc/kos-ports/</span>.</li>
+  <li>The <strong>Dreamcast Tool sources</strong> (both for Serial and Internet
+    Protocol) are in <span
+  class="font-fixed">/opt/toolchains/dc/dcload/</span>.</li>
+  <li>The <strong>Dreamcast Tool binaries</strong> are in <span
+    class="font-fixed">/opt/toolchains/dc/bin/</span>.</li>
+  <li>The <strong>DreamSDK helpers applications</strong> are in <span
+    class="font-fixed">/opt/dreamsdk/</span>.</li>
+</ul>
+
+<p>Please note that the <span class="font-fixed">/opt/toolchains/dc/</span>
+directory is the standard location specified in the KallistiOS documentation.
+This directory location was used for the DreamSDK environment package to
+respect the standard documentation.</p>
+
+<h2><a name="conf">Configuration details</a></h2>
+
+<p>The DreamSDK configuration is located in <span
+class="font-fixed">/etc/dreamsdk/</span> directory, where the MSYS
+configuration is located in <span class="font-fixed">/etc/</span> directory,
+mainly in the <span class="font-fixed">/etc/fstab</span> file which indicates
+all mount points used by your DreamSDK environment (i.e. the MSYS
+environment).</p>
+
+<h2><a name="use">Usage details</a></h2>
+
+<p>So now that everything is setup what are the main steps to develop for the
+Sega Dreamcast? Basically the steps are:</p>
+<ul>
+  <li>You can starts from a KallistiOS example, which are stored in <span
+    class="font-fixed">/opt/toolchains/dc/kos/examples/</span>. This is a good
+    idea as the <span class="font-fixed">Makefile</span> of almost all
+    KallistiOS samples are nice, clear and ready to be used.</li>
+  <li>Duplicate an example project from KallistiOS and copy it on your <span
+    class="font-fixed">/home</span> directory (<a
+    href="../general/faq.html#otherdir">or somewhere else</a>).</li>
+  <li>Use <a href="https://notepad-plus-plus.org/"
+    target="_blank">Notepad++</a> or something else and develop your
+  program.</li>
+  <li>Build it by entering the <span class="font-fixed">make</span> command in
+    the project's directory.</li>
+  <li>Execute it (<a href="../manager/dc-tool.html">if available</a>) by
+    entering the <span class="font-fixed">make run</span> command.</li>
+  <li>When everything is done you can clean all files by entering <span
+    class="font-fixed">make clean</span>.</li>
+</ul>
+
+<p>When your program is ready, you should be able to distribute it, <a
+href="../general/faq.html">by putting it on a selfboot disc</a>.</p>
 <!--FOOTER:START-->
 
 <div id="footer">

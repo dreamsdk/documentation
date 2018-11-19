@@ -164,6 +164,20 @@
 			<param name="Name" value="Overview">
 			<param name="Local" value="pages\shell\overview.html">
 			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Installation details">
+				<param name="Local" value="pages\shell\overview.html#install">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Configuration details">
+				<param name="Local" value="pages\shell\overview.html#conf">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Usage details">
+				<param name="Local" value="pages\shell\overview.html#use">
+				</OBJECT>
+		</UL>
 		<LI> <OBJECT type="text/sitemap">
 			<param name="Name" value="Windows Integration">
 			<param name="Local" value="pages\shell\outside.html">

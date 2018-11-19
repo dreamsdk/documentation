@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=windows-1252">
   <meta name="keywords"
-  content="shell integration,integration,batch,command line">
+  content="Shell Integration,Integration,Batch,Command Line">
   <title>Windows Integration</title>
   <link href="../../css/style.css" rel="stylesheet" type="text/css">
 </head>
@@ -23,21 +23,25 @@ KallistiOS <span class="font-fixed">Makefile</span> structure (i.e. look to the
 <span class="font-fixed">/opt/toolchains/dc/kos/examples/dreamcast/</span>
 directory for templates).</p>
 
-<p>Create a new batch file, call it <span class="font-fixed">build.cmd</span>
-and copy this content on it:</p>
+<p>Create a new batch file in that <span
+class="font-fixed">D:\Dreamcast\MyProgram\</span> directory and call it <span
+class="font-fixed">build.cmd</span>. Copy this content on it:</p>
 
 <div class="fixed-block">
 @dreamsdk "make"</div>
 
 <p>Now, double-click to run it: <strong>You will have your program
 built</strong>, exactly if you had manually entered that <span
-class="font-fixed">make</span> command in the MSYS Shell !</p>
+class="font-fixed">make</span> command in the MSYS Shell!</p>
 
 <div class="screenshot">
 <img src="../../img/shell/outside2.png"> </div>
 
 <p><strong>Of course, this will work only if you have added DreamSDK in your
-<span class="font-fixed">PATH</span> variable at the installation!</strong></p>
+<span class="font-fixed">PATH</span> variable at the installation! </strong>If
+you have not updated the PATH variable, you will need to put the full path to
+the dreamsdk binary, e.g. <span
+class="font-fixed">${DREAMSDK_HOME}\msys\1.0\opt\dreamsdk\dreamsdk.exe</span>.</p>
 
 <p>Now, you can even do the same for the clean target of your <span
 class="font-fixed">Makefile</span>, by creating a <span
@@ -51,12 +55,13 @@ class="font-fixed">clean.cmd</span> file and putting this content on it:</p>
 <div class="screenshot">
 <img src="../../img/shell/outside1.png"></div>
 
-<p>Double-click on that <span class="font-fixed">clean.cmd</span> batch file to
+<p>Double-click on that <span class="font-fixed">clean.cmd</span> batch file in
+your <span class="font-fixed">D:\Dreamcast\MyProgram\</span> directory to
 execute the <span class="font-fixed">make clean</span> command directly on the
-directory where that script is located.</p>
+current directory, where that script is located.</p>
 
 <p>Of course you can pass any command to the DreamSDK Shell, but usually, it's
-a great feature for <span class="font-fixed">make</span> commands.</p>
+a great feature used only for <span class="font-fixed">make</span> commands.</p>
 <!--FOOTER:START-->
 
 <div id="footer">
