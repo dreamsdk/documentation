@@ -24,7 +24,7 @@
 <ul>
   <li><a target="_blank" href="http://git-scm.org">Git</a></li>
   <li><a target="_blank" href="http://python.org/">Python</a> <span
-    class="font-fixed">2.7.x</span></li>
+    class="font-fixed">2.7.x</span> (32-bit)</li>
   <li><a target="_blank" href="http://subversion.apache.org/">Subversion
     Client</a> (SVN)</li>
 </ul>
@@ -33,12 +33,13 @@
 be installed separately.</p>
 
 <p>All of these components should be available in the <span
-class="font-fixed">PATH</span> environment variable. You can verify that by following
-this procedure:</p>
+class="font-fixed">PATH</span> environment variable. You can verify that by
+following this procedure:</p>
 <ol>
   <li>Open a <strong>Command Prompt</strong> (Hit the <span
     class="shortcut">Win + R</span> keyboard shortcut, enter <span
-    class="font-fixed">cmd</span> and hit <span class="shortcut">Enter</span>);</li>
+    class="font-fixed">cmd</span> and hit <span
+  class="shortcut">Enter</span>);</li>
   <li>Enter the following commands: 
     <ul>
       <li><span class="font-fixed">git --version</span></li>
@@ -50,12 +51,16 @@ this procedure:</p>
 </ol>
 
 <p>If at least one of them prints an incorrect message like <span
-class="font-fixed">Bad command or filename</span>, then you should (re)install the
-problematic component, and please don't forget to check the <span
+class="font-fixed">Bad command or filename</span>, then you should (re)install
+the problematic component, and please don't forget to check the <span
 class="font-fixed">PATH</span> option when asked!</p>
 
 <p><strong>These components are absolutely required</strong>, so if they are
 not installed, DreamSDK will refuses to be installed.</p>
+
+<p>Please also note, <strong>for Python, only the <span
+class="font-fixed">2.7.x</span> 32-bit version is compatible</strong>, as it's
+statically linked to <strong>GNU Debugger (GDB)</strong>.</p>
 
 <h2><a name="os">Required operating system</a></h2>
 
@@ -107,12 +112,13 @@ need an active Internet connection</strong>.</p>
 installation time.</p>
 
 <p>If you don't have any Internet connection, you will have to install
-KallistiOS manually, but in this case, the Update feature of the <a href="../manager/index.html">DreamSDK
-Manager</a> will be impossible. Sorry, this possibility is not documented at this time.</p>
+KallistiOS manually, but in this case, the Update feature of the <a
+href="../manager/index.html">DreamSDK Manager</a> will be impossible. Sorry,
+this possibility is not documented at this time.</p>
 <!--FOOTER:START-->
 
 <div id="footer">
-&copy; Copyleft 2018 — <a href="http://dreamsdk.sizious.com/" target="_blank">The
+© Copyleft 2018 — <a href="http://dreamsdk.sizious.com/" target="_blank">The
 DreamSDK Team</a> and contributors.</div>
 <!--FOOTER:END-->
 </body>
