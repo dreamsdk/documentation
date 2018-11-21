@@ -58,9 +58,31 @@ class="font-fixed">PATH</span> option when asked!</p>
 <p><strong>These components are absolutely required</strong>, so if they are
 not installed, DreamSDK will refuses to be installed.</p>
 
-<p>Please also note, <strong>for Python, only the <span
-class="font-fixed">2.7.x</span> 32-bit version is compatible</strong>, as it's
-statically linked to <strong>GNU Debugger (GDB)</strong>.</p>
+<h3>About Python: What if I need 64-bit Python for my own use?</h3>
+
+<p><strong>The <span class="font-fixed">2.7.x</span> 32-bit version is required for DreamSDK</strong>, as it was linked to the <strong>GNU Debugger (GDB)</strong> for SuperH.</p>
+
+<p>But if you need 64-bit Python for another usage and want to install it on the same computer as DreamSDK, it's possible:</p>
+
+<ol>
+<li><strong>Start the 64-bit Python installation first</strong>, and install it in <span class="font-fixed">C:\Python\2.7\x64\</span>.</li>
+<li>Add it to the <span class="font-fixed">PATH</span> variable by using the proper option in the <span class="font-fixed">Customize Python</span> page. This Python installation will be the default Python runtime.
+
+<div class="screenshot">
+<img src="../../img/general/python-path.png"></div>
+
+</li>
+<li><strong>Start the 32-bit Python installation now</strong>, and install it in <span class="font-fixed">C:\Python\2.7\x86\</span>.</li>
+<li>At the <span class="font-fixed">Customize Python</span> page, unset the <span class="font-fixed">Register Extensions</span> option.
+
+<div class="screenshot">
+<img src="../../img/general/python-setup.png"></div>
+
+</li>
+<li>Done!</li>
+</ol>
+
+<p>Now, your 64-bit Python is your default Python runtime, but the 32-bit is also available when needed, i.e. for the the <strong>GNU Debugger (GDB)</strong> built for SuperH.</p>
 
 <h2><a name="os">Required operating system</a></h2>
 
