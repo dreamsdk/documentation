@@ -4,20 +4,28 @@
   <meta http-equiv="content-type" content="text/html; charset=windows-1252">
   <meta name="keywords"
   content="Shell Integration,Integration,Batch,Command Line">
-  <title>Windows Integration</title>
+  <title>DreamSDK Runner</title>
   <link href="../../css/style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-<h1>Windows Integration</h1>
+<h1>DreamSDK Runner</h1>
 
-<p><strong>DreamSDK Shell is an interesting component as it allows usage of the
-DreamSDK environment outside it!</strong></p>
+<p><strong>DreamSDK Runner is an interesting component as it allows usage of
+the DreamSDK environment outside it!</strong></p>
+<ul>
+  <li><a href="#overview">Overview</a></li>
+  <li><a href="#limit">Limitation</a></li>
+</ul>
+
+<h2><a name="overview">Overview</a></h2>
 
 <p>With this component, you have the possibility to execute commands inside the
 MSYS Shell without actually opening it.</p>
 
-<p>Supposing your homebrew program directory is located in <span
+<p>This component is used internally by the <a
+href="../ide/index.html">Code::Blocks integration</a> but it can be useful for
+you as well: supposing your homebrew program directory is located in <span
 class="font-fixed">D:\Dreamcast\MyProgram\</span> and you are using a standard
 KallistiOS <span class="font-fixed">Makefile</span> structure (i.e. look to the
 <span class="font-fixed">/opt/toolchains/dc/kos/examples/dreamcast/</span>
@@ -28,44 +36,61 @@ class="font-fixed">D:\Dreamcast\MyProgram\</span> directory and call it <span
 class="font-fixed">build.cmd</span>. Copy this content on it:</p>
 
 <div class="fixed-block">
-@dreamsdk "make"</div>
+@echo off<br>
+dreamsdk-runner "make"<br>
+pause<br>
+</div>
 
 <p>Now, double-click to run it: <strong>You will have your program
 built</strong>, exactly if you had manually entered that <span
 class="font-fixed">make</span> command in the MSYS Shell!</p>
 
 <div class="screenshot">
-<img src="../../img/shell/outside2.png"> </div>
+<img src="../../img/runner/runner1.png"> </div>
 
 <p><strong>Of course, this will work only if you have added DreamSDK in your
 <span class="font-fixed">PATH</span> variable at the installation! </strong>If
-you have not updated the PATH variable, you will need to put the full path to
-the dreamsdk binary, e.g. <span
-class="font-fixed">${DREAMSDK_HOME}\msys\1.0\opt\dreamsdk\dreamsdk.exe</span>.</p>
+you have not updated the <span class="font-fixed">PATH</span> variable, you
+will need to put the full path to the <span
+class="font-fixed">dreamsdk-runner</span> binary, e.g. <span
+class="font-fixed">${DREAMSDK_HOME}\msys\1.0\opt\dreamsdk\dreamsdk-runner.exe</span>.</p>
 
 <p>Now, you can even do the same for the clean target of your <span
 class="font-fixed">Makefile</span>, by creating a <span
 class="font-fixed">clean.cmd</span> file and putting this content on it:</p>
 
 <div class="fixed-block">
-@dreamsdk "make clean"</div>
+@echo off<br>
+dreamsdk-runner "make clean"<br>
+pause<br>
+</div>
 
 <p>So the result will be:</p>
 
 <div class="screenshot">
-<img src="../../img/shell/outside1.png"></div>
+<img src="../../img/runner/runner2.png"></div>
 
 <p>Double-click on that <span class="font-fixed">clean.cmd</span> batch file in
 your <span class="font-fixed">D:\Dreamcast\MyProgram\</span> directory to
 execute the <span class="font-fixed">make clean</span> command directly on the
 current directory, where that script is located.</p>
 
-<p>Of course you can pass any command to the DreamSDK Shell, but usually, it's
+<p>Of course you can pass any command to the DreamSDK Runner, but usually, it's
 a great feature used only for <span class="font-fixed">make</span> commands.</p>
+
+<p>You have the possibility to process the output of the DreamSDK Runner by
+catching it with redirections.</p>
+
+<h2><a name="limit">Limitation</a></h2>
+
+<p>Only one command can be executed at once so passing commands like <span
+class="font-fixed">make clean &amp;&amp; echo "YESS"</span> <strong>will not
+work</strong>. In that case, you just have to execute two commands by executing
+the Runner twice.</p>
 <!--FOOTER:START-->
 
 <div id="footer">
-&copy; Copyleft 2018 — <a href="http://dreamsdk.sizious.com/" target="_blank">The
+© Copyleft 2018 — <a href="http://dreamsdk.sizious.com/" target="_blank">The
 DreamSDK Team</a> and contributors.</div>
 <!--FOOTER:END-->
 </body>

@@ -143,12 +143,12 @@
 			<param name="Local" value="pages\manager\dc-tool.html">
 			</OBJECT>
 		<LI> <OBJECT type="text/sitemap">
-			<param name="Name" value="Environment">
-			<param name="Local" value="pages\manager\environ.html">
-			</OBJECT>
-		<LI> <OBJECT type="text/sitemap">
 			<param name="Name" value="Options">
 			<param name="Local" value="pages\manager\options.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Environment">
+			<param name="Local" value="pages\manager\environ.html">
 			</OBJECT>
 		<LI> <OBJECT type="text/sitemap">
 			<param name="Name" value="About">
@@ -179,24 +179,42 @@
 				</OBJECT>
 		</UL>
 		<LI> <OBJECT type="text/sitemap">
-			<param name="Name" value="Windows Integration">
-			<param name="Local" value="pages\shell\outside.html">
-			</OBJECT>
-		<LI> <OBJECT type="text/sitemap">
 			<param name="Name" value="Terminal">
-			<param name="Local" value="pages\shell\terminal\index.html">
+			<param name="Local" value="pages\shell\terminal.html">
 			</OBJECT>
 		<UL>
 			<LI> <OBJECT type="text/sitemap">
 				<param name="Name" value="Command Prompt">
-				<param name="Local" value="pages\shell\terminal\cmd.html">
+				<param name="Local" value="pages\shell\terminal.html#cmd">
 				</OBJECT>
 			<LI> <OBJECT type="text/sitemap">
 				<param name="Name" value="MinTTY">
-				<param name="Local" value="pages\shell\terminal\mintty.html">
+				<param name="Local" value="pages\shell\terminal.html#mintty">
 				</OBJECT>
 		</UL>
 	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DreamSDK Runner">
+		<param name="Local" value="pages\runner\index.html">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Overview">
+			<param name="Local" value="pages\runner\index.html#overview">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Limitation">
+			<param name="Local" value="pages\runner\index.html#limit">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Code::Blocks 17.12 Integration">
+		<param name="Local" value="pages\ide\index.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Additional command line tools">
+		<param name="Local" value="pages\addons\index.html">
+		</OBJECT>
 </UL>
 </BODY>
 </HTML>

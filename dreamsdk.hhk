@@ -350,51 +350,6 @@
 		<param name="Name" value="DreamSDK Shell">
 		<param name="Local" value="pages\shell\overview.html">
 		</OBJECT>
-	<LI> <OBJECT type="text/sitemap">
-		<param name="Name" value="Shell Integration">
-		<param name="Name" value="Shell Integration">
-		<param name="Local" value="pages\shell\outside.html">
-		</OBJECT>
-	<LI> <OBJECT type="text/sitemap">
-		<param name="Name" value="Integration">
-		<param name="Name" value="Integration">
-		<param name="Local" value="pages\shell\outside.html">
-		</OBJECT>
-	<LI> <OBJECT type="text/sitemap">
-		<param name="Name" value="Batch">
-		<param name="Name" value="Batch">
-		<param name="Local" value="pages\shell\outside.html">
-		</OBJECT>
-	<LI> <OBJECT type="text/sitemap">
-		<param name="Name" value="Command Line">
-		<param name="Name" value="Command Line">
-		<param name="Local" value="pages\shell\outside.html">
-		</OBJECT>
-	<LI> <OBJECT type="text/sitemap">
-		<param name="Name" value="terminal">
-		<param name="Name" value="terminal">
-		<param name="Local" value="pages\shell\terminal\index.html">
-		</OBJECT>
-	<LI> <OBJECT type="text/sitemap">
-		<param name="Name" value="cmd">
-		<param name="Name" value="cmd">
-		<param name="Local" value="pages\shell\terminal\cmd.html">
-		</OBJECT>
-	<LI> <OBJECT type="text/sitemap">
-		<param name="Name" value="Command Prompt">
-		<param name="Name" value="Command Prompt">
-		<param name="Local" value="pages\shell\terminal\cmd.html">
-		</OBJECT>
-	<LI> <OBJECT type="text/sitemap">
-		<param name="Name" value="Windows Prompt">
-		<param name="Name" value="Windows Prompt">
-		<param name="Local" value="pages\shell\terminal\cmd.html">
-		</OBJECT>
-	<LI> <OBJECT type="text/sitemap">
-		<param name="Name" value="MinTTY">
-		<param name="Name" value="MinTTY">
-		<param name="Local" value="pages\shell\terminal\mintty.html">
-		</OBJECT>
 </UL>
 </BODY>
 </HTML>
