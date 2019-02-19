@@ -9,23 +9,76 @@
 <body>
 <h1>Code::Blocks 17.12 Integration</h1>
 
-<p>This sections details generalities about the DreamSDK environment.</p>
+<p>Starting from DreamSDK R2, <strong>you have the possibility to use the Code::Blocks IDE in the top of the DreamSDK package!</strong></p>
 
-<p>Please select a chapter below to learn more:</p>
+<p>This will help you to use all the possibilities of the Sega Dreamcast development on Windows, in a really user-friendly way.</p>
+
+<p>Please select a chapter below:</p>
 <ul>
-  <li><a href="overview.html">Overview</a></li>
-  <li><a href="features.html">Features</a></li>
-  <li><a href="requirements.html">System Requirements</a></li>
-  <li><a href="faq.html">Frequently Asked Questions (FAQ)</a></li>
-  <li><a href="changes.html">Changes Log</a></li>
-  <li><a href="licenses.html">Licenses Information</a></li>
-  <li><a href="credits.html">Credits</a></li>
+	<li><a href="#prerequisites">Prerequisites</a></li>
+	<li><a href="#installation">Installation</a></li>
+	<li><a href="#overview">Overview</a></li>
+	<li><a href="#wizard">Creating a Sega Dreamcast Project</a></li>
 </ul>
-<!--FOOTER:START-->
 
+<h2><a name="#prerequisites">Prerequisites</a></h2>
+
+<p>If you want to use the Code::Blocks IDE integration, you need to:</p>
+
+<ul>
+<li><strong>Install the Code::Blocks IDE Ver. 17.12 release package</strong>. You have the choice to use the package form you prefer (e.g. you may install the embedded MinGW version or the standalone version only). The only critical prerequisite is the version revision: <strong>it should be the 17.12 stable release</strong>, i.e. the latest official build as today (February 2019). <strong>Code::Blocks needs to be installed before starting the DreamSDK installation.</strong></li>
+<li>After installing the Code::Blocks IDE, <strong>run it at least once</strong>. This will generate the <span class="font-fixed">default.conf</span> file, which will be patched by the DreamSDK installation program, as some parameters need to be written in it.</li>
+<li>Optional: If you want to use the Code::Blocks debug capabilities, you will need to have either a Coders Cable, a LAN Adapter or a Broadband Adapter (best choice).</li>
+</ul>
+
+<p>If you have respected the prerequisites, you may now startup the DreamSDK installation.</p>
+
+<h2><a name="installation">Installation</a></h2>
+
+<p>When running the DreamSDK installation, at the <span class="font-fixed">Select Components</span> step, you should select the <span class="font-fixed">Code::Blocks 17.12 IDE integration</span> option.</p>
+
+<p>This will add a new step of the DreamSDK installation which will allow you to select:</p>
+
+<ul>
+<li>The Code::Blocks installation directory (usually <span class="font-fixed">%ProgramFiles%\CodeBlocks\</span>) ;</li>
+<li>The Code::Blocks profile file (usually <span class="font-fixed">%AppData%\CodeBlocks\default.conf</span>).</li>
+</ul>
+
+<p>Of course this will work only if you have respected the <a href="#prerequisites">prerequisites</a>!</p>
+
+<h2><a name="overview">Overview</a></h2>
+	
+<p>After installing the Code::Blocks Integration, your Code::Blocks installation will have several new features, made for the DreamSDK package. This includes, but not limited to:</p>
+	
+<ul>
+	<li>The Debugger plugin will run a loader before trying to connect to the target (i.e. Dreamcast Tool will be run before GDB) ;</li>
+	<li>The Compiler plugin will run a loader instead of trying to run the compiled program (again, Dreamcast Tool will run the compiled program on the target).</li>
+	<li>The <span class="font-fixed">GNU GCC Compiler for Sega Dreamcast</span> profile will be installed.</li>
+	<li>The <span class="font-fixed">Sega Dreamcast Project</span> wizard will be installed.</li>
+</ul>
+	
+<p>All these features are available only if you are installing the 17.12 release. <strong>It won't work with any other release!</strong></p>
+
+<h2><a name="wizard">Creating a Sega Dreamcast Project</a></h2>
+	
+<p>Before using the <span class="font-fixed">Sega Dreamcast Project</span> wizard, it would be a great idea to execute the <a href="../manager/index.html">DreamSDK Manager</a> utility at least once, in order to install additional libraries. These additional libraries are managed throught the <a href="../manager/kos-ports.html">KallistiOS Ports</a> tab.</p>
+	
+<p>If you don't install any <a href="../manager/kos-ports.html">KallistiOS Ports</a> libraries, you will have at least 4 libraries installed anyway:</p>
+
+<ul>
+	<li><span class="font-fixed">libkosext2fs</span></li>
+	<li><span class="font-fixed">libkosutils</span></li>
+	<li><span class="font-fixed">math</span></li>
+	<li><span class="font-fixed">libppp</span></li>
+</ul>
+	
+<p><span class="font-fixed">libkosext2fs</span>, <span class="font-fixed">libkosutils</span> and <span class="font-fixed">libppp</span> are installed along <a href="../general/overview.html#kallistios">KallistiOS</a>, when <span class="font-fixed">math</span> (aka <span class="font-fixed">libm</span>) is installed with <a target="_blank" href="https://sourceware.org/newlib/libm.html">Newlib</a>. That's why all these libraries are always installed, even if you don't select any additional <a href="../manager/kos-ports.html">KallistiOS Ports</a>.</p>
+	
+<!--FOOTER:START-->
 <div id="footer">
 &copy; Copyleft 2018 — <a href="http://dreamsdk.sizious.com/" target="_blank">The
 DreamSDK Team</a> and contributors.</div>
 <!--FOOTER:END-->
+
 </body>
 </html>
