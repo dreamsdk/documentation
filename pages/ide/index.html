@@ -20,17 +20,17 @@
 	<li><a href="#overview">Overview</a></li>
 	<li><a href="#wizard">Creating a Sega Dreamcast Project</a>
 		<ul>
-			<li><a href="#wizard-intro">Introduction</a></li>
-			<li><a href="#wizard-startup">Create a project by using the Project Wizard</a></li>
-			<li><a href="#project-overview">Overview of the created project</a></li>
+			<li><a href="#wizardintro">Introduction</a></li>
+			<li><a href="#wizardstartup">Create a project by using the Project Wizard</a></li>
+			<li><a href="#projectoverview">Overview of the created project</a></li>
 		</ul>
 	</li>
-	<li><a href="#project-usage">Using the created Sega Dreamcast Project</a>
+	<li><a href="#projectusage">Using the created Sega Dreamcast Project</a>
 	<ul>
-		<li><a href="#debug-target">The Debug Target</a></li>
-		<li><a href="#release-target">The Release Target</a></li>
+		<li><a href="#debugtarget">The Debug Target</a></li>
+		<li><a href="#releasetarget">The Release Target</a></li>
 	</ul></li>
-	<li><a href="#import-kos-existing-project">Import a KallistiOS existing project in Code::Blocks IDE</a></li>
+	<li><a href="#importkosexistingproject">Import a KallistiOS existing project in Code::Blocks IDE</a></li>
 </ul>
 
 <h2><a name="prerequisites">Prerequisites</a></h2>
@@ -75,7 +75,7 @@
 	
 <p>This section will explain how to use the <span class="font-fixed">Sega Dreamcast Project</span> wizard template installed in the Code::Blocks IDE by the DreamSDK package.</p>
 	
-<h3><a name="wizard-intro">Introduction</a></h3>
+<h3><a name="wizardintro">Introduction</a></h3>
 	
 <p>Before using the <span class="font-fixed">Sega Dreamcast Project</span> wizard, it would be a great idea to execute the <a href="../manager/index.html">DreamSDK Manager</a> utility at least once, in order to <strong>install additional libraries</strong>. These additional libraries are managed throught the <a href="../manager/kos-ports.html">KallistiOS Ports</a> tab of the <a href="../manager/index.html">DreamSDK Manager</a> tool.</p>
 	
@@ -92,7 +92,7 @@
 	
 <p>Please also note, <strong>you will need to configure Dreamcast Tool</strong> if you wish to use the debugging features of the Code::Blocks IDE. <a href="../manager/dc-tool.html">Click here to learn how to do that</a>.</p>
 	
-<h3><a name="wizard-startup">Create a project by using the Project Wizard</a></h3>
+<h3><a name="wizardstartup">Create a project by using the Project Wizard</a></h3>
 	
 <p>Now that you are ready to create your Sega Dreamcast project, open Code::Blocks, then:</p>
 
@@ -110,7 +110,7 @@
 	
 <p>That's it. Just click the <span class="font-fixed">Finish</span> button to create the project.</p>
 	
-<h3><a name="project-overview">Overview of the created project</a></h3>
+<h3><a name="projectoverview">Overview of the created project</a></h3>
 	
 <p>The Project Wizard have already setup everything for you, depending of the choice you made. At the end of the creation step, the project will be opened in the Code::Blocks IDE.</p>
 	
@@ -128,11 +128,11 @@
 	
 <p>As you have 2 targets in the project, <span class="font-fixed">Debug</span> and <span class="font-fixed">Release</span>, you will find a subdirectory <span class="font-fixed">Debug</span> and <span class="font-fixed">Release</span> in the <span class="font-fixed">obj</span> and <span class="font-fixed">bin</span> directories. That means, if you have selected the <span class="font-fixed">Release</span> target for your <span class="font-fixed">hello</span> project, you will have a <span class="font-fixed">bin/Release/hello.elf</span> file.</p>
 	
-<h2><a name="project-usage">Using the created project</a></h2>
+<h2><a name="projectusage">Using the created project</a></h2>
 	
 <p>As introduced in the <a href="#project-overview">section above</a>, 2 targets exists in the created project: <span class="font-fixed">Debug</span> and <span class="font-fixed">Release</span>.</p>
 	
-<h3><a name="debug-target">The Debug Target</a></h3>
+<h3><a name="debugtarget">The Debug Target</a></h3>
 	
 <p>The <span class="font-fixed">Debug</span> target is used <strong>when you want to debug the program through Dreamcast Tool</strong>. The most important thing to know about this target is the fact that it defines the <span class="font-fixed">DEBUG</span> preprocessor macro, mainly in order to call the <span class="font-fixed">gdb_init()</span> function in the <span class="font-fixed">main()</span> entry point. Of course, the <span class="font-fixed">Debug</span> target generates the binary program with debug symbols and with no optimization at all, allowing the debug session. If you used the <span class="font-fixed">Sega Dreamcast Project</span> template, everything is already set.</p>
 	
@@ -164,7 +164,7 @@
 	
 <p><strong>Note:</strong> If you are using a custom Dreamcast Tool executable (i.e. the <a href="../manager/dc-tool.html"><span class="font-fixed">Custom</span></a> option in <a href="../manager/dc-tool.html">DreamSDK Manager</a>), the debugging feature may not be available. This depends of course of the custom binary you set in the <a href="../manager/dc-tool.html">Dreamcast Tool tab</a>. So if you want to use a Sega Dreamcast emulator, debugging won't be possible.</p>
 	
-<h3><a name="release-target">The Release Target</a></h3>
+<h3><a name="releasetarget">The Release Target</a></h3>
 	
 <p>The <span class="font-fixed">Release</span> target will produces a runnable, final executable for your Sega Dreamcast. This binary won't be debuggable, except by using <span class="font-fixed">printf()</span> statements, which send the output to the Dreamcast Tool window.</p>
 
@@ -183,7 +183,7 @@
 
 <p><strong>Note:</strong> This binary version is the final binary version of your program. It can be distributed or used to master a CD-R image.</p>
 	
-<h2><a name="import-kos-existing-project">Import a KallistiOS existing project in Code::Blocks IDE</a></h2>
+<h2><a name="importkosexistingproject">Import a KallistiOS existing project in Code::Blocks IDE</a></h2>
 
 <p>If you wish to import an existing KallistiOS project using the classical <span class="font-fixed">Makefile</span> system, e.g. an example provided in the KallistiOS tree,  do the following:
 <ol>

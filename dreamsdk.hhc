@@ -231,34 +231,34 @@
 		<UL>
 			<LI> <OBJECT type="text/sitemap">
 				<param name="Name" value="Introduction">
-				<param name="Local" value="pages\ide\index.html#wizard-intro">
+				<param name="Local" value="pages\ide\index.html#wizardintro">
 				</OBJECT>
 			<LI> <OBJECT type="text/sitemap">
 				<param name="Name" value="Create a project by using the Project Wizard">
-				<param name="Local" value="pages\ide\index.html#wizard-startup">
+				<param name="Local" value="pages\ide\index.html#wizardstartup">
 				</OBJECT>
 			<LI> <OBJECT type="text/sitemap">
 				<param name="Name" value="Overview of the created project">
-				<param name="Local" value="pages\ide\index.html#project-overview">
+				<param name="Local" value="pages\ide\index.html#projectoverview">
 				</OBJECT>
 		</UL>
 		<LI> <OBJECT type="text/sitemap">
 			<param name="Name" value="Using the created project">
-			<param name="Local" value="pages\ide\index.html#project-usage">
+			<param name="Local" value="pages\ide\index.html#projectusage">
 			</OBJECT>
 		<UL>
 			<LI> <OBJECT type="text/sitemap">
 				<param name="Name" value="The Debug Target">
-				<param name="Local" value="pages\ide\index.html#debug-target">
+				<param name="Local" value="pages\ide\index.html#debugtarget">
 				</OBJECT>
 			<LI> <OBJECT type="text/sitemap">
 				<param name="Name" value="The Release Target">
-				<param name="Local" value="pages\ide\index.html#release-target">
+				<param name="Local" value="pages\ide\index.html#releasetarget">
 				</OBJECT>
 		</UL>
 		<LI> <OBJECT type="text/sitemap">
 			<param name="Name" value="Import a KallistiOS existing project in Code::Blocks IDE">
-			<param name="Local" value="pages\ide\index.html#import-kos-existing-project">
+			<param name="Local" value="pages\ide\index.html#importkosexistingproject">
 			</OBJECT>
 	</UL>
 	<LI> <OBJECT type="text/sitemap">

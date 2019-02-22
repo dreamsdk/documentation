@@ -45,12 +45,5 @@ pages\shell\overview.html
 pages\shell\terminal.html
 pages\runner\index.html
 pages\ide\index.html
-pages\ide\index.html#wizard-intro
-pages\ide\index.html#wizard-startup
-pages\ide\index.html#project-overview
-pages\ide\index.html#project-usage
-pages\ide\index.html#debug-target
-pages\ide\index.html#release-target
-pages\ide\index.html#import-kos-existing-project
 pages\addons\index.html
 img\bkgnd.jpg
