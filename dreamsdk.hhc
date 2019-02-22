@@ -211,6 +211,24 @@
 		<param name="Name" value="Code::Blocks 17.12 Integration">
 		<param name="Local" value="pages\ide\index.html">
 		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Prerequisites">
+			<param name="Local" value="pages\ide\index.html##prerequisites">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Installation">
+			<param name="Local" value="pages\ide\index.html#installation">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Overview">
+			<param name="Local" value="pages\ide\index.html#overview">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Creating a Sega Dreamcast Project">
+			<param name="Local" value="pages\ide\index.html#wizard">
+			</OBJECT>
+	</UL>
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="Additional command line tools">
 		<param name="Local" value="pages\addons\index.html">

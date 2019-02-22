@@ -34,6 +34,8 @@ a {
 	text-decoration: underline;
 }
 
+h3 a:hover,
+h3 a,
 h2 a:hover,
 h2 a {
 	color: black;
