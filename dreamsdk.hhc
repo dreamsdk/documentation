@@ -307,6 +307,20 @@
 			<param name="Local" value="pages\addons\index.html#vmutool">
 			</OBJECT>
 	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Useful information and tutorials">
+		<param name="Local" value="pages\tutorials\index.html">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="How to master a disc and release your program">
+			<param name="Local" value="pages\tutorials\index.html#master">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="How to generate dcload-serial and dcload-ip disc images">
+			<param name="Local" value="pages\tutorials\index.html#dcload">
+			</OBJECT>
+	</UL>
 </UL>
 </BODY>
 </HTML>
