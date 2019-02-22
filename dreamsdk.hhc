@@ -214,7 +214,7 @@
 	<UL>
 		<LI> <OBJECT type="text/sitemap">
 			<param name="Name" value="Prerequisites">
-			<param name="Local" value="pages\ide\index.html##prerequisites">
+			<param name="Local" value="pages\ide\index.html#prerequisites">
 			</OBJECT>
 		<LI> <OBJECT type="text/sitemap">
 			<param name="Name" value="Installation">
@@ -228,11 +228,85 @@
 			<param name="Name" value="Creating a Sega Dreamcast Project">
 			<param name="Local" value="pages\ide\index.html#wizard">
 			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Introduction">
+				<param name="Local" value="pages\ide\index.html#wizard-intro">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Create a project by using the Project Wizard">
+				<param name="Local" value="pages\ide\index.html#wizard-startup">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Overview of the created project">
+				<param name="Local" value="pages\ide\index.html#project-overview">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Using the created project">
+			<param name="Local" value="pages\ide\index.html#project-usage">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="The Debug Target">
+				<param name="Local" value="pages\ide\index.html#debug-target">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="The Release Target">
+				<param name="Local" value="pages\ide\index.html#release-target">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Import a KallistiOS existing project in Code::Blocks IDE">
+			<param name="Local" value="pages\ide\index.html#import-kos-existing-project">
+			</OBJECT>
 	</UL>
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="Additional command line tools">
 		<param name="Local" value="pages\addons\index.html">
 		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="IMG4DC — Dreamcast Selfboot Toolkit">
+			<param name="Local" value="pages\addons\index.html#img4dc">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="CDI4DC — Padus DiscJuggler image generator">
+				<param name="Local" value="pages\addons\index.html#cdi4dc">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="MDS4DC — Alcohol 120% image generator">
+				<param name="Local" value="pages\addons\index.html#mds4dc">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="IP.BIN Creator — Initial Program generator">
+			<param name="Local" value="pages\addons\index.html#ipcreate">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Make ISO File System — ISO9660 image generator">
+			<param name="Local" value="pages\addons\index.html#mkisofs">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="PVR to PNG — PowerVR image to PNG converter">
+			<param name="Local" value="pages\addons\index.html#pvr2png">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="TXF Utilities — Textured font format tools">
+			<param name="Local" value="pages\addons\index.html#ttf2txf">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Additional ready-to-use TXF fonts files">
+				<param name="Local" value="pages\addons\index.html#txflib">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="VMU Tool PC — Visual Memory data handler">
+			<param name="Local" value="pages\addons\index.html#vmutool">
+			</OBJECT>
+	</UL>
 </UL>
 </BODY>
 </HTML>
