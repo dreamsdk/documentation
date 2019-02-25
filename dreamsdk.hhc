@@ -257,7 +257,7 @@
 				</OBJECT>
 		</UL>
 		<LI> <OBJECT type="text/sitemap">
-			<param name="Name" value="Import a KallistiOS existing project in Code::Blocks IDE">
+			<param name="Name" value="Import an existing KallistiOS project in Code::Blocks IDE">
 			<param name="Local" value="pages\ide\index.html#importkosexistingproject">
 			</OBJECT>
 	</UL>
