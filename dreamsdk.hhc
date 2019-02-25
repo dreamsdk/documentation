@@ -47,6 +47,24 @@
 				<param name="Name" value="KallistiOS">
 				<param name="Local" value="pages\general\overview.html#kos">
 				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="KallistiOS Ports">
+					<param name="Local" value="pages\general\overview.html#kosports">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Dreamcast Tool">
+					<param name="Local" value="pages\general\overview.html#dctool">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Managing KallistiOS with DreamSDK environment">
+					<param name="Local" value="pages\general\overview.html#managekos">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Alternatives to KallistiOS">
+					<param name="Local" value="pages\general\overview.html#kosalt">
+					</OBJECT>
+			</UL>
 			<LI> <OBJECT type="text/sitemap">
 				<param name="Name" value="DreamSDK Manager">
 				<param name="Local" value="pages\general\overview.html#mgr">
