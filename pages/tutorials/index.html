@@ -2,8 +2,7 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-  <meta name="Keywords"
-  content="Useful Information,Tutorial,Tutorials">
+  <meta name="Keywords" content="Useful Information,Tutorial,Tutorials">
   <title>Useful information and tutorials</title>
   <link href="../../css/style.css" rel="stylesheet" type="text/css">
 </head>
@@ -11,58 +10,351 @@
 <body>
 <h1>Useful information and tutorials</h1>
 
-<p>This section is a collection of useful information and how-to. These may be interesting depending of your requirements and needs.</p>
+<p>This section is a collection of useful information and how-to. These may be
+interesting depending of your requirements and needs.</p>
 <ul>
-  <li><a href="#master">How to  release your Sega Dreamcast program</a>
+  <li><a href="#dcload">How to generate dcload-serial and dcload-ip disc
+    images</a> 
     <ul>
-	  <li><a href="#plain">Plain files</a></li>
+      <li><a href="#dcloadintro">Introduction</a></li>
+      <li><a href="#dcloadgen">Generate the dcload-serial or dcload-ip
+      image</a></li>
+    </ul>
+  </li>
+  <li><a href="#debug">How to debug a Sega Dreamcast program directly from the
+    DreamSDK Shell</a></li>
+  <li><a href="#master">How to release your Sega Dreamcast program</a> 
+    <ul>
+      <li><a href="#plain">Plain files</a></li>
       <li><a href="#selfboot">Selfboot disc image</a></li>
       <li><a href="#sbi">Selfboot Inducer (SBI) packages</a></li>
     </ul>
   </li>
-  <li><a href="#dcload">How to generate dcload-serial and dcload-ip disc images</a></li>
-  <li><a href="#debug">How to debug a Sega Dreamcast program directly from the DreamSDK Shell</a></li>
 </ul>
+
+<h2><a name="dcload">How to generate dcload-serial and dcload-ip disc
+images</a></h2>
+
+<p><strong>dcload/dc-tool</strong> is a set of programs made to send and
+receive data from your Sega Dreamcast system. The classic use of this tool is
+to send programs to the Dreamcast in order to <strong>run</strong> and
+<strong>debug</strong> them. </p>
+
+<h3><a name="dcloadintro">Introduction</a></h3>
+
+<p>To use <strong>dcload/dc-tool</strong>, you must have a way to connect your
+Sega Dreamcast to your computer, it can be one of the following:</p>
+<ul>
+  <li>A <strong>Coders Cable</strong>, a RS-232 serial cable (the historical
+    way to do that);</li>
+  <li>A <strong>LAN Adapter</strong>, a 10Mbits Ethernet card (pretty
+  rare);</li>
+  <li>A <strong>Broadband Adapter</strong>, often shortened as “BBA”, a
+    10/100Mbits network Ethernet card (this is far away the best mode
+    available).</li>
+</ul>
+
+<p>This program, <strong>dcload/dc-tool</strong>, originally developed by
+ADK/Napalm and now full part of the KallistiOS library is split in two
+components:</p>
+<ul>
+  <li><strong>dcload</strong>, the server part, started from the Dreamcast;</li>
+  <li><strong>dc-tool</strong>, the client part, started from the computer.</li>
+</ul>
+
+<p>Depending on the method chosen you must use the right version of the
+program:</p>
+<ul>
+  <li><strong>dcload-serial</strong> for the <strong>Coders Cable</strong>
+    RS-232 version;</li>
+  <li><strong>dcload-ip</strong> for the <strong>LAN Adapter</strong> or
+    <strong>Broadband Adapter</strong> version.</li>
+</ul>
+
+<p>This applies on the client part as well, which is called
+<strong>dc-tool</strong>, but the DreamSDK package will make abstraction of
+that. Depending of the choice made in the <a
+href="../manager/dc-tool.html">DreamSDK Manager</a> tool, the
+<strong>dc-tool</strong> wrapper specific to the DreamSDK package will call the
+right version, i.e. <span class="font-fixed">dc-tool-ser</span> for the Coders
+Cable or <span class="font-fixed">dc-tool-ip</span> for the LAN Adapter or
+Broadband Adapter version. In clear, you have to choose the right version in
+the <a href="../manager/dc-tool.html">DreamSDK Manager</a> tool and just call
+the <span class="font-fixed">dc-tool</span> command from the <a
+href="../shell/index.html">DreamSDK Shell</a>. An example is shown <a
+href="../manager/dc-tool.html">here</a>.</p>
+
+<p>Please note, <strong>dc-tool</strong> is displayed as <strong>Dreamcast
+Tool</strong> in the <a href="../manager/dc-tool.html">DreamSDK Manager</a>
+tool, this is just a cosmetic name for <strong>dc-tool</strong>.</p>
+
+<h3><a name="dcloadgen">Generate the dcload-serial or dcload-ip image</a></h3>
+
+<p>Now, you know everything about the <strong>dcload/dc-tool</strong>
+components, it's time to show you how to <strong>generate the dcload
+image</strong>, which is intended to be run on the Sega Dreamcast.</p>
+
+<p><strong>Please note, this will work only if you installed <a
+href="../addons/index.html#mkisofs">Make ISO File System</a> and <a
+href="../addons/index.html#cdi4dc">CDI4DC</a> additional tools when installing
+DreamSDK!</strong></p>
+
+<p>From the <a href="../shell/index.html">DreamSDK Shell</a>, enter the
+following:</p>
+
+<div class="fixed-block">
+cd /opt/toolchains/dc/dcload/dcload-&lt;mode&gt;/make-cd<br>
+mkdir cd_root<br>
+cp ../target-src/1st_read/1st_read.bin cd_root/1ST_READ.BIN<br>
+makedisc dcload-&lt;mode&gt;-1.0.5.cdi cd_root IP.BIN
+DCLOAD_&lt;mode&gt;_105<br>
+</div>
+
+<p>Replace the <span class="font-fixed">&lt;mode&gt;</span> keyword by <span
+class="font-fixed">serial</span> or <span class="font-fixed">ip</span>,
+depending of your connection mode.</p>
+
+<p>Open now the <span class="font-fixed">make-cd</span> directory in the
+Windows Explorer, enter the following in the DreamSDK Shell:</p>
+
+<div class="fixed-block">
+explorer . </div>
+
+<p>Below an example of commands entered:</p>
+
+<div class="screenshot">
+<img src="../../img/tutorials/dcload-makedisc.png" alt="Making dcload"
+title="Making dcload"></div>
+
+<p>Now in the <span class="font-fixed">make-cd</span> directory, you should
+have a <span class="font-fixed">dcload-serial-1.0.5.cdi</span> or <span
+class="font-fixed">dcload-ip-1.0.5.cdi</span> file. This file should be burn on
+a blank CD-R or put in a SD card if you are using a <strong>GDEMU</strong>,
+<strong>USB GD-ROM</strong> module or a <strong>DreamShell SD
+Loader</strong>:</p>
+
+<div class="screenshot">
+<img src="../../img/tutorials/dcload-image.png" alt="dcload image"
+title="dcload image"></div>
+
+<p>Please also note, the client part, <span
+class="font-fixed">dc-tool-ser</span> and <span
+class="font-fixed">dc-tool-ip</span> program binaries, are automatically
+generated when building KallistiOS through <a
+href="../manager/dc-tool.html">DreamSDK Manager</a>, so you don't have any
+other action to do except <a href="../manager/dc-tool.html">configure
+it</a>.</p>
+
+<h2><a name="debug">How to debug a Sega Dreamcast program directly from the
+DreamSDK Shell</a></h2>
+
+<p>To use the KallistiOS GDB-over-dcload feature in order to debug your Sega
+Dreamcast program using the GNU Debugger (GDB):</p>
+<ol>
+  <li>Put the <span class="font-fixed">gdb_init()</span> call at the beginning
+    of your <span class="font-fixed">main()</span> entry point function in your
+    program;</li>
+  <li>Build your program with the <span class="font-fixed">-g</span> GCC switch
+    to include debugging info;</li>
+  <li>Launch your program using <span class="font-fixed">dc-tool -g -x
+    &lt;prog.elf&gt;</span>;</li>
+  <li>From another DreamSDK Shell session, launch <span
+    class="font-fixed">sh-elf-gdb &lt;prog.elf&gt;</span> and connect to the
+    <span class="font-fixed">dc-tool</span> using <span
+    class="font-fixed">target remote :2159</span>;</li>
+  <li>Squash bugs!</li>
+</ol>
+
+<div class="screenshot">
+<img src="../../img/tutorials/dcload-debug.jpg" alt="dcload debug"
+title="dcload debug"></div>
+
+<p>Of course using GNU Debugger (GDB) from the command line isn't really
+user-friendly, so you have the possibility to use Code::Blocks instead. <a
+href="../ide/index.html">Click here to learn more</a>.</p>
+
+<p><strong>Note:</strong> Sometime, the debugger will take a little delay to
+step in/step out, this is normal, just wait. This behaviour happens in the
+Code::Blocks IDE too.</p>
 
 <h2><a name="master">How to release your Sega Dreamcast program</a></h2>
 
-<p>So after finishing the development of your Sega Dreamcast project (well done!) comes the following question: <strong>How to release your Sega Dreamcast program?</strong></p>
-<p>This is a good question and unfortunatelly, the KallistiOS library won't help you much, but as you are using DreamSDK, the answer is detailed here!</p>
-<p>Before starting reading this section, you should be aware of <span class="font-fixed">ELF</span>, <em>unscrambled</em> and <em>scrambled</em> files, this is explained in the <a href="../general/faq.html">FAQ</a>.</p>
-<p>The first thing to know is there is 3 ways to package a Sega Dreamcast program:</p>
+<p>So after finishing the development of your Sega Dreamcast project (well
+done!) comes the following question: <strong>How to release your Sega Dreamcast
+program?</strong></p>
+
+<p>This is a good question and unfortunatelly, the KallistiOS library won't
+help you much, but as you are using DreamSDK, the answer is detailed here!</p>
+
+<p>Before starting reading this section, you should be aware of <span
+class="font-fixed">ELF</span>, <em>unscrambled</em> and <em>scrambled</em>
+files, this is explained in the <a href="../general/faq.html">FAQ</a>.</p>
+
+<p>The first thing to know is there is 3 ways to package a Sega Dreamcast
+program:</p>
 <ul>
   <li><a href="#plain">Plain files</a></li>
-      <li><a href="#selfboot">Selfboot disc image</a></li>
+  <li><a href="#selfboot">Selfboot disc image</a></li>
   <li><a href="#sbi">Selfboot Inducer (SBI) packages</a></li>
 </ul>
-<p>The package kind will depends of your needs. Below you'll find an explanation of each kind.</p>
+
+<p>The package kind will depends of your needs. Below you'll find an
+explanation of each kind.</p>
+
 <h3><a name="plain">Plain files</a></h3>
-<p><strong>Plain files</strong> is the simplest form of packaging. Basically, it just a <span class="font-fixed">Zip</span> (or any other compressed format) file which contains the raw binary and required files of your program (such textures images, etc.).</p>
-<p>This package kind will usually contains an <span class="font-fixed">ELF</span> program (e.g. <span class="font-fixed">hello.elf</span>), a raw unscrambled binary (e.g. <span class="font-fixed">hello.bin</span>) and/or a scrambled binary (usually <span class="font-fixed">1ST_READ.BIN</span>). The end-user will deal with your files himself, i.e. using them as-is (through Sega Dreamcast emulator which have binary support, like nullDC) or making a selfboot disc image (see below).</p>
-<p><strong>Plain files</strong> are good for emulators or any other program that should be customized by the end-user, such adding ROM files, music (MP3, Ogg...) files, etc. But in that case, you should write a little <span class="font-fixed">README</span> file to teach the end-user how to use your program... basically, the content of the next chapter!</p>
-<p>Of course, your  program should be compiled/built in <span class="font-fixed">Release</span> mode (if using <a href="../ide/index.html">Code::Blocks</a>) and, very important, <strong>without</strong> the <span class="font-fixed">gdb_init()</span> call!</p>
+
+<p><strong>Plain files</strong> is the simplest form of packaging. Basically,
+it just a <span class="font-fixed">Zip</span> (or any other compressed format)
+file which contains the raw binary and required files of your program (such
+textures images, etc.).</p>
+
+<p>This package kind will usually contains an <span
+class="font-fixed">ELF</span> program (e.g. <span
+class="font-fixed">hello.elf</span>), a raw unscrambled binary (e.g. <span
+class="font-fixed">hello.bin</span>) and/or a scrambled binary (usually <span
+class="font-fixed">1ST_READ.BIN</span>). The end-user will deal with your files
+himself, i.e. using them as-is (through Sega Dreamcast emulator which have
+binary support, like <strong>nullDC</strong>) or making a selfboot disc image
+(see below).</p>
+
+<p><strong>Plain files</strong> are good for emulators or any other program
+that should be customized by the end-user, such adding ROM files, music (MP3,
+Ogg...) files, etc. But in that case, you should write a little <span
+class="font-fixed">README</span> file to teach the end-user how to use your
+program... basically, the content of the next chapter!</p>
+
+<p>Of course, your program should be compiled/built in <span
+class="font-fixed">Release</span> mode (if using <a
+href="../ide/index.html">Code::Blocks</a>) and, very important,
+<strong>without</strong> the <span class="font-fixed">gdb_init()</span>
+call!</p>
+
 <h3><a name="selfboot">Selfboot disc image</a></h3>
-<p><strong>Selfboot disc image</strong> (also known as <strong>Autoboot</strong> disc image) is the most common form of packaging and should be the one you are looking for. This form is basically a disc image, in <strong>Padus DiscJuggler</strong> (<span class="font-fixed">CDI</span>) or <strong>Alcohol 120%</strong> (<span class="font-fixed">MDS/MDF</span>), which may be burnt on a blank CD-R and startup like a genuine GD-ROM on any (almost) Sega Dreamcast hardware.</p>
+
+<p><strong>Selfboot disc image</strong> (also known as
+<strong>Autoboot</strong> disc image) is the most common form of packaging and
+should be the one you are looking for. This form is basically a disc image, in
+<strong>Padus DiscJuggler</strong> (<span class="font-fixed">CDI</span>) or
+<strong>Alcohol 120%</strong> (<span class="font-fixed">MDS/MDF</span>), which
+may be burnt on a blank CD-R and startup like a genuine GD-ROM on any (almost)
+Sega Dreamcast hardware.</p>
+
 <p>DreamSDK includes everything to make these kind of packages.</p>
-<p>xxxx</p>
+
+<p>The steps are:</p>
+<ol>
+  <li>Compile your program in <strong>Release</strong> mode, without debugging
+    symbols and without the <span class="font-fixed">gdb_init()</span>
+  call.</li>
+  <li>Converting the ELF file to a scrambled binary.</li>
+  <li>Making a bootstrap file (usually called <span
+    class="font-fixed">IP.BIN</span>).</li>
+  <li>Making the selfboot image.</li>
+</ol>
+
+<p>The commands to enter in the <a href="../shell/index.html">DreamSDK
+Shell</a> are:</p>
+
+<div class="fixed-block">
+cd &lt;your_program_dir&gt;<br>
+mkdir cd_root<br>
+make dist<br>
+elf2bin &lt;prog.elf&gt;<br>
+scramble &lt;prog.bin&gt; cd_root/1ST_READ.BIN<br>
+ipcreate -silent<br>
+makedisc &lt;prog.cdi&gt; cd_root IP.BIN &lt;PROG_NAME&gt;<br>
+explorer .<br>
+</div>
+
+<p><strong>Please note, this will work only if you installed <a
+href="../addons/index.html#mkisofs">Make ISO File System</a> and <a
+href="../addons/index.html#cdi4dc">CDI4DC</a> (or even <a
+href="../addons/index.html#mds4dc">MDS4DC</a>) additional tools when installing
+DreamSDK!</strong></p>
+
+<p>Adapt the commands to your context.</p>
+
+<p>To compile in Release mode, if you are using Code::Blocks, you just have to
+select the <a href="../ide/index.html#releasetarget">Release target</a> and
+click Build. If you are using KOS <span class="font-fixed">Makefile</span>,
+just enter <span class="font-fixed">make dist</span> in the DreamSDK Shell or
+even just <span class="font-fixed">make</span>.</p>
+
+<p>Then, in the <span class="font-fixed">bin\Release</span> folder (if using
+Code::Blocks) or in the project folder (if using KOS <span
+class="font-fixed">Makefile</span>), enter <span class="font-fixed">elf2bin
+&lt;prog.elf&gt;</span>. You should have a new file: <span
+class="font-fixed">&lt;prog.bin&gt;</span>. This is the unscrambled binary. In
+the capture below, you will see the <span class="font-fixed">hello.bin</span>
+file, which is the output of the <span class="font-fixed">elf2bin</span>
+command.</p>
+
+<div class="screenshot">
+<img src="../../img/tutorials/elf2bin.png" alt="elf2bin" title="elf2bin"> </div>
+
+<p>It's time to scramble the binary. Enter the following:</p>
+
+<div class="fixed-block">
+mkdir cd_root<br>
+scramble &lt;prog.bin&gt; cd_root/1ST_READ.BIN<br>
+</div>
+
+<p>This will generate the scrambled binary, usually called 1ST_READ.BIN.</p>
+
+<p>Now generate the bootstrap loader: <span class="font-fixed">ipcreate
+-silent</span>. The <span class="font-fixed">ipcreate</span> tool has
+interesting options, like inserting a custom logo which will displayed in the
+<strong>Sega License Screen</strong> shown when booting up the Dreamcast.</p>
+
+<p>Finalize by generating the selfboot image: <span class="font-fixed">makedisc
+&lt;prog.cdi&gt; cd_root IP.BIN &lt;PROG_NAME&gt;</span>. <span
+class="font-fixed">&lt;PROGNAME&gt;</span> will be the CD label. It can be
+whatever but with no spaces. If you want to generate an <strong>Alcohol
+120%</strong> image (<span class="font-fixed">MDS/MDF</span>) rather than a
+<strong>Padus DiscJuggler</strong> image (<span class="font-fixed">CDI</span>),
+enter <span class="font-fixed">&lt;prog.mds&gt;</span> instead of <span
+class="font-fixed">&lt;prog.cdi&gt;</span>.</p>
+
+<p>Your selfboot image is now ready! Below you will find an example of all
+commands entered:</p>
+
+<div class="screenshot">
+<img src="../../img/tutorials/selfboot-command.png" alt="Selfboot commands"
+title="Selfboot commands"></div>
+
+<p>Now, you just have to enter <span class="font-fixed">explorer .</span> to
+open the current directory in the Windows Explorer:</p>
+
+<div class="screenshot">
+<img src="../../img/tutorials/selfboot-final-command.png"
+alt="Selfboot final commands" title="Selfboot final commands"></div>
+
+<p><strong>Your image is now ready and can be distributed!</strong></p>
+
+<div class="screenshot">
+<img src="../../img/tutorials/selfboot-final-file.png"
+alt="Selfboot final file" title="Selfboot final file"></div>
+
 <h3><a name="sbi">Selfboot Inducer (SBI) packages</a></h3>
-<p>The third form is called Selfboot Inducer (SBI) packages. It's a special format made for putting several programs on the same CD. A menu is shown when this kind of disc is booted from the Sega Dreamcast, this menu is called DreamInducer.</p>
-<p>To generate SBI packages, you will use SBI Builder. to use these packages in order to make a disc, the end-user will need Selfboot Inducer.</p>
-<p>These tools aren't part of the DreamSDK package, but <a href="http://sizious.com/" target="_blank">you can find them here</a>.</p>
 
-<h2><a name="dcload">How to generate dcload-serial and dcload-ip disc images</a></h2>
+<p>The third form available to distribute Sega Dreamcast programs is called
+Selfboot Inducer (<span class="font-fixed">SBI</span>) packages. It's a special
+format made for putting several programs on the same CD. A menu is shown when
+this kind of disc is booted from the Sega Dreamcast, this menu is called
+<strong>DreamInducer</strong>.</p>
 
-<p>For th</p>
-	
-<h2><a name="debug">How to debug a Sega Dreamcast program directly from the DreamSDK Shell</a></h2>
-	
-<p>X</p>
+<p>To generate <span class="font-fixed">SBI</span> packages, you will use the
+<strong>SBI Builder</strong> tool. The end-user will need to use
+<strong>Selfboot Inducer</strong> to use your packages in order to generate the
+disc image he wants.</p>
 
+<p>These tools aren't part of the DreamSDK package, but <a
+href="http://sizious.com/download/dreamcast/#selfboot-inducer" target="_blank">you can find them here</a>.</p>
 <!--FOOTER:START-->
+
 <div id="footer">
-&copy; Copyleft 2018 — <a href="http://dreamsdk.sizious.com/" target="_blank">The
+© Copyleft 2018 — <a href="http://dreamsdk.sizious.com/" target="_blank">The
 DreamSDK Team</a> and contributors.</div>
 <!--FOOTER:END-->
-
 </body>
 </html>

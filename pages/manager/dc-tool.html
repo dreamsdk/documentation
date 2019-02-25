@@ -2,7 +2,8 @@
 <html>
 <head>
   <meta http-equiv="content-type" content="text/html; charset=windows-1252">
-  <meta name="Keywords" content="Dreamcast Tool,dc-tool,Serial,IP,dcload,Internet Protocol">
+  <meta name="Keywords"
+  content="Dreamcast Tool,dc-tool,Serial,IP,dcload,Internet Protocol">
   <title>Dreamcast Tool</title>
   <link href="../../css/style.css" rel="stylesheet" type="text/css">
 </head>
@@ -25,23 +26,32 @@ title="Dreamcast Tool Tab"></div>
   <li>If you have a Broadband or LAN Adapter (which is a Ethernet card for the
     Sega Dreamcast), you should check the <span class="font-fixed">Internet
     Protocol (IP)</span> button.</li>
+  <li>If you want to dc-tool run an emulator instead, you may choose the Custom
+    option. Please note, debug capabilities will be impossible in that mode (or
+    more exactly, this will depend of your emulator, and we aren't aware of any
+    emulator with a good debugger).</li>
   <li>Or you can click the <span class="font-fixed">None</span> button to
-    disable Dreamcast Tool.</li>
+    disable completely Dreamcast Tool.</li>
 </ul>
 
-<p>After choosing your tool version, the settings panel will activate. The
-description of the options are described in the KallistiOS
+<p>After choosing your tool version, the corresponding settings panel will
+activate. The description of the options are described in the KallistiOS
 documentation.</p>
 
-<p>Please note, these options are applied all the time, every time you will run
-the <span class="font-fixed">dc-tool</span> program.</p>
+<p>In order to use Dreamcast Tool, you will need the corresponding dcload.
+<a href="../tutorials/index.html#dcload">Click here to learn how to generate the dcload program</a>.</p>
 
-<p>At the Shell prompt, you just have to run the following command:</p>
+<p>Please note, <strong>these options are applied all the time</strong>, every
+time you will run the <span class="font-fixed">dc-tool</span> program.</p>
+
+<p>At the <a href="../shell/index.html">DreamSDK Shell</a> prompt, you just
+have to run the following command:</p>
 
 <div class="fixed-block">
 dc-tool -x &lt;yourprog.elf&gt;</div>
 
-<p>Or, most of the time, this is exactly the same command as:</p>
+<p>Or, most of the time, this is exactly the same command as, if you use
+standard KallistiOS <span class="font-fixed">Makefiles</span>:</p>
 
 <div class="fixed-block">
 make run</div>
@@ -49,12 +59,17 @@ make run</div>
 <p><strong>This will start Dreamcast Tool with the settings you have set to
 run/debug <span class="font-fixed">&lt;yourprog.elf&gt;</span>!</strong></p>
 
-<p>Please note, you have the possibility to run GDB to debug your program,
-please read the KOS manual about this.</p>
+<p>Please note, you have the possibility to run GDB to debug your program. <a
+href="../tutorials/index.html">Please read the dedicaced tutorial to know how
+to do that</a>.</p>
+
+<p>Note also, this option will have a huge impact in the debug features of the
+Code::Blocks IDE. <a href="../ide/index.html#debugtarget">Click here to learn
+more</a>.</p>
 <!--FOOTER:START-->
 
 <div id="footer">
-&copy; Copyleft 2018 — <a href="http://dreamsdk.sizious.com/" target="_blank">The
+© Copyleft 2018 — <a href="http://dreamsdk.sizious.com/" target="_blank">The
 DreamSDK Team</a> and contributors.</div>
 <!--FOOTER:END-->
 </body>

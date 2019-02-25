@@ -313,13 +313,41 @@
 		</OBJECT>
 	<UL>
 		<LI> <OBJECT type="text/sitemap">
-			<param name="Name" value="How to master a disc and release your program">
-			<param name="Local" value="pages\tutorials\index.html#master">
-			</OBJECT>
-		<LI> <OBJECT type="text/sitemap">
 			<param name="Name" value="How to generate dcload-serial and dcload-ip disc images">
 			<param name="Local" value="pages\tutorials\index.html#dcload">
 			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Introduction">
+				<param name="Local" value="pages\tutorials\index.html#dcloadintro">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Generate the dcload-serial or dcload-ip image">
+				<param name="Local" value="pages\tutorials\index.html#dcloadgen">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="How to debug a Sega Dreamcast program directly from the DreamSDK Shell">
+			<param name="Local" value="pages\tutorials\index.html#debug">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="How to release your Sega Dreamcast program">
+			<param name="Local" value="pages\tutorials\index.html#master">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Plain files">
+				<param name="Local" value="pages\tutorials\index.html#plain">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Selfboot disc image">
+				<param name="Local" value="pages\tutorials\index.html#selfboot">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Selfboot Inducer (SBI) packages">
+				<param name="Local" value="pages\tutorials\index.html#sbi">
+				</OBJECT>
+		</UL>
 	</UL>
 </UL>
 </BODY>

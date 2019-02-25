@@ -9,90 +9,137 @@
 <body>
 <h1>Additional command line tools</h1>
 
-<p>This sections details <strong>all additional and optional command line tools</strong> available when installing DreamSDK.</p>
+<p>This sections details <strong>all additional and optional command line
+tools</strong> available when installing DreamSDK.</p>
+
+<p>All these tools are installed in the <span
+class="font-fixed">/opt/dreamsdk/addons</span> directory.</p>
 
 <p>Please select a tool below to learn more:</p>
 <ul>
-  <li><a href="#img4dc"><strong>IMG4DC</strong> &mdash; Dreamcast Selfboot Toolkit</a>
-<ul>
-      <li><a href="#cdi4dc"><strong>CDI4DC</strong> &mdash; Padus DiscJuggler image generator</a> (<span
-        class="font-fixed">cdi4dc</span>)</li>
-      <li><a href="#mds4dc"><strong>MDS4DC</strong> &mdash; Alcohol 120% image generator</a> (<span
-        class="font-fixed">mds4dc</span>, <span
+  <li><a href="#img4dc"><strong>IMG4DC</strong> — Dreamcast Selfboot
+    Toolkit</a> 
+    <ul>
+      <li><a href="#cdi4dc"><strong>CDI4DC</strong> — Padus DiscJuggler image
+        generator</a> (<span class="font-fixed">cdi4dc</span>)</li>
+      <li><a href="#mds4dc"><strong>MDS4DC</strong> — Alcohol 120% image
+        generator</a> (<span class="font-fixed">mds4dc</span>, <span
         class="font-fixed">lbacalc</span>)</li>
     </ul>
   </li>
-  <li><a href="#ipcreate"><strong>IP.BIN Creator</strong> &mdash; Initial Program generator</a> (<span
-    class="font-fixed">ipcreate</span>)</li>
-  <li><a href="#mkisofs"><strong>Make ISO File System</strong> &mdash; ISO9660 image generator</a> (<span
-    class="font-fixed">mkisofs</span>)</li>
-  <li><a href="#pvr2png"><strong>PVR to PNG</strong> &mdash; PowerVR image to PNG converter</a> (<span
-    class="font-fixed">pvr2png</span>)</li>
-  <li><a href="#ttf2txf"><strong>TXF Utilities</strong> &mdash; Textured font format tools</a> (<span
-    class="font-fixed">showtxf</span>, <span class="font-fixed">ttf2txf</span>) 
+  <li><a href="#ipcreate"><strong>IP.BIN Creator</strong> — Initial Program
+    generator</a> (<span class="font-fixed">ipcreate</span>)</li>
+  <li><a href="#mkisofs"><strong>Make ISO File System</strong> — ISO9660 image
+    generator</a> (<span class="font-fixed">mkisofs</span>)</li>
+  <li><a href="#pvr2png"><strong>PVR to PNG</strong> — PowerVR image to PNG
+    converter</a> (<span class="font-fixed">pvr2png</span>)</li>
+  <li><a href="#ttf2txf"><strong>TXF Utilities</strong> — Textured font format
+    tools</a> (<span class="font-fixed">showtxf</span>, <span
+    class="font-fixed">ttf2txf</span>) 
     <ul>
-	  <li><a href="#txflib">Additional ready-to-use TXF fonts files</a></li>
+      <li><a href="#txflib">Additional ready-to-use TXF fonts files</a></li>
     </ul>
   </li>
-  <li><a href="#vmutool"><strong>VMU Tool PC</strong> &mdash; Visual Memory data handler</a> (<span
-    class="font-fixed">vmutool</span>)</li>
+  <li><a href="#vmutool"><strong>VMU Tool PC</strong> — Visual Memory data
+    handler</a> (<span class="font-fixed">vmutool</span>)</li>
 </ul>
 
-<h2><a name="img4dc">IMG4DC &mdash; Dreamcast Selfboot Toolkit</a></h2>
-	
-<p><strong>IMG4DC</strong> is a package that allows you to generate bootable CD images for your Sega Dreamcast. It's split in 2 separate programs, usable in command-line mode:</p>
+<h2><a name="img4dc">IMG4DC — Dreamcast Selfboot Toolkit</a></h2>
+
+<p><strong>IMG4DC</strong> is a package that allows you to generate bootable CD
+images for your Sega Dreamcast. It's split in 2 separate programs, usable in
+command-line mode:</p>
 <ul>
   <li><strong>CDI4DC</strong> : for generating Padus DiscJuggler CD images;</li>
-  <li><strong>MDS4DC</strong> : for generating&nbsp;Alcohol 120% CD images.</li>
+  <li><strong>MDS4DC</strong> : for generating Alcohol 120% CD images.</li>
 </ul>
-<p>These programs have become since 2007 a reference in the <strong>Sega Dreamcast</strong> homebrew world, and they are used in other third-party tools such <a title="BootDreams" href="https://code.google.com/p/bootdreams/" target="_blank">BootDreams</a>.</p>
-	
-<h3><a name="cdi4dc">CDI4DC &mdash; Padus DiscJuggler image generator (<span
-        class="font-fixed">cdi4dc</span>)</a></h3>
 
-<p><strong>CDI4DC</strong> generates Padus DiscJuggler CD images, which is the standard for the distribution of Sega Dreamcast programs.</p>
-<p><strong>Note:</strong> This tool is required for the makedisc script, if you want to use the <span class="font-fixed">cdi</span> format.</p>
-	
-<h3><a name="mds4dc">MDS4DC &mdash; Alcohol 120% image generator (<span
-        class="font-fixed">mds4dc</span>, <span class="font-fixed">lbacalc</span>)</a></h3>
+<p>These programs have become since 2007 a reference in the <strong>Sega
+Dreamcast</strong> homebrew world, and they are used in other third-party tools
+such <a title="BootDreams" href="https://code.google.com/p/bootdreams/"
+target="_blank">BootDreams</a>.</p>
 
-<p><strong>MDS4DC</strong> generates Alcohol 120% CD images. It's another format used for the distribution of Sega Dreamcast programs.</p>
-<p><strong>Note:</strong> This tool is required for the makedisc script, if you want to use the <span class="font-fixed">mds/mdf</span> format.</p>
-	
-<h2><a name="ipcreate">IP.BIN Creator &mdash; Initial Program generator (<span
-    class="font-fixed">ipcreate</span>)</a></h2>
-	
-<p><strong>IP.BIN Creator</strong> (<strong>IPCreate</strong>) was made to generate bootstrap <span class="font-fixed">IP.BIN</span> (<em>Initial Program</em>) files for your Sega Dreamcast console. This tool is used to generate customized bootstraps (e.g. with custom logos) for homebrew programs only, mainly KallistiOS programs (but it should be compatible with <span class="font-fixed">libronin</span> programs too).</p>
-<p>The bootstrap is the license screen shown at startup when you run any Dreamcast program (e.g. Shenmue or whatever).</p>
-<p>Note that <a href="http://sizious.com/download/dreamcast/#ipbin-creator" target="_blank">a GUI version of this program</a> is also available, but it isn't included in the DreamSDK package. By the way the GUI version isn't compatible with modern Windows like Windows 10.</p>
-	
-<h2><a name="mkisofs">Make ISO File System &mdash; ISO9660 image generator (<span
-    class="font-fixed">mkisofs</span>)</a></h2>
-	
-<p><strong>Make ISO File System </strong> is an utility that creates an <a href="https://wiki.osdev.org/ISO_9660" title="ISO 9660">ISO 9660</a> image from files on disk. </p>
+<h3><a name="cdi4dc">CDI4DC — Padus DiscJuggler image generator (<span
+class="font-fixed">cdi4dc</span>)</a></h3>
+
+<p><strong>CDI4DC</strong> generates Padus DiscJuggler CD images, which is the
+standard for the distribution of Sega Dreamcast programs.</p>
+
+<p><strong>Note:</strong> This tool is required for the makedisc script, if you
+want to use the <span class="font-fixed">cdi</span> format.</p>
+
+<h3><a name="mds4dc">MDS4DC — Alcohol 120% image generator (<span
+class="font-fixed">mds4dc</span>, <span
+class="font-fixed">lbacalc</span>)</a></h3>
+
+<p><strong>MDS4DC</strong> generates Alcohol 120% CD images. It's another
+format used for the distribution of Sega Dreamcast programs.</p>
+
+<p><strong>Note:</strong> This tool is required for the makedisc script, if you
+want to use the <span class="font-fixed">mds/mdf</span> format.</p>
+
+<h2><a name="ipcreate">IP.BIN Creator — Initial Program generator (<span
+class="font-fixed">ipcreate</span>)</a></h2>
+
+<p><strong>IP.BIN Creator</strong> (<strong>IPCreate</strong>) was made to
+generate bootstrap <span class="font-fixed">IP.BIN</span> (<em>Initial
+Program</em>) files for your Sega Dreamcast console. This tool is used to
+generate customized bootstraps (e.g. with custom logos) for homebrew programs
+only, mainly KallistiOS programs (but it should be compatible with <span
+class="font-fixed">libronin</span> programs too).</p>
+
+<p>The bootstrap is the license screen shown at startup when you run any
+Dreamcast program (e.g. Shenmue or whatever).</p>
+
+<p>Note that <a href="http://sizious.com/download/dreamcast/#ipbin-creator"
+target="_blank">a GUI version of this program</a> is also available, but it
+isn't included in the DreamSDK package. By the way the GUI version isn't
+compatible with modern Windows like Windows 10.</p>
+
+<h2><a name="mkisofs">Make ISO File System — ISO9660 image generator (<span
+class="font-fixed">mkisofs</span>)</a></h2>
+
+<p><strong>Make ISO File System </strong>is an utility that creates an <a
+href="https://wiki.osdev.org/ISO_9660" title="ISO 9660">ISO 9660</a> image from
+files on disk. </p>
+
 <p><strong>Note:</strong> This tool is required for the makedisc script.</p>
-	
-<h2><a name="pvr2png">PVR to PNG &mdash; PowerVR image to PNG converter (<span
-    class="font-fixed">pvr2png</span>)</a></h2>
-	
-<p><strong>PVR to PNG</strong> is a tool to convert PowerVR images (usually with the PVR extension) to the PNG format. It handles transparency as well.</p>
-	
-<h2><a name="ttf2txf">TXF Utilities &mdash; Textured font format tools (<span
-    class="font-fixed">showtxf</span>, <span class="font-fixed">ttf2txf</span>)</a></h2>
 
-<p>These utilities display TXF fonts (<span class="font-fixed">showtxf</span>) or convert TrueType fonts to TXF fonts (<span class="font-fixed">ttf2txf</span>).</p>
-<p>TXF fonts are fonts used for the OpenGL rendering. KallistiOS is compatible with this font format. Some examples provided in the KallistiOS tree uses this format.</p>
-	
+<h2><a name="pvr2png">PVR to PNG — PowerVR image to PNG converter (<span
+class="font-fixed">pvr2png</span>)</a></h2>
+
+<p><strong>PVR to PNG</strong> is a tool to convert PowerVR images (usually
+with the PVR extension) to the PNG format. It handles transparency as well.</p>
+
+<p>This tool may be useful to view <span class="font-fixed">PVR</span>
+textures.</p>
+
+<h2><a name="ttf2txf">TXF Utilities — Textured font format tools (<span
+class="font-fixed">showtxf</span>, <span
+class="font-fixed">ttf2txf</span>)</a></h2>
+
+<p>These utilities display TXF fonts (<span class="font-fixed">showtxf</span>)
+or convert TrueType fonts to TXF fonts (<span
+class="font-fixed">ttf2txf</span>).</p>
+
+<p>TXF fonts are fonts used for the OpenGL rendering. KallistiOS is compatible
+with this font format. Some examples provided in the KallistiOS tree uses this
+format.</p>
+
 <h3><a name="txflib">Additional ready-to-use TXF fonts files</a></h3>
 
-<p>For convenience, you may install some ready-to-use TXF fonts.</p>
-	
-<h2><a name="vmutool">VMU Tool PC &mdash; Visual Memory data handler (<span
-    class="font-fixed">vmutool</span>)</a></h2>
+<p>For convenience, you may install some ready-to-use <span
+class="font-fixed">TXF</span> fonts.</p>
 
-<p><strong>VMU Tool PC</strong> is a command-line tool allowing you to manage all VMU/VMS (saves) files in a single utility.</p>
-	
+<h2><a name="vmutool">VMU Tool PC — Visual Memory data handler (<span
+class="font-fixed">vmutool</span>)</a></h2>
+
+<p><strong>VMU Tool PC</strong> is a command-line tool allowing you to manage
+all <span class="font-fixed">VMU/VMS</span> (saves) files on your computer.</p>
+
+<p>This utility handles VMU dumps, even them used in Dreamcast emulators.</p>
 <!--FOOTER:START-->
+
 <div id="footer">
 © Copyleft 2018 — <a href="http://dreamsdk.sizious.com/" target="_blank">The
 DreamSDK Team</a> and contributors.</div>

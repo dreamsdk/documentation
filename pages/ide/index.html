@@ -9,214 +9,406 @@
 <body>
 <h1>Code::Blocks 17.12 Integration</h1>
 
-<p>Starting from DreamSDK R2, <strong>you have the possibility to use the Code::Blocks IDE in the top of the DreamSDK package!</strong></p>
+<p>Starting from DreamSDK R2, <strong>you have the possibility to use the
+Code::Blocks IDE in the top of the DreamSDK package!</strong></p>
 
-<p>This will help you to use all the possibilities of the Sega Dreamcast development on Windows, in a really user-friendly way.</p>
+<p>This will help you to use all the possibilities of the Sega Dreamcast
+development on Windows, in a really user-friendly way.</p>
 
 <p>Please select a chapter below:</p>
 <ul>
-	<li><a href="#prerequisites">Prerequisites</a></li>
-	<li><a href="#installation">Installation</a></li>
-	<li><a href="#overview">Overview</a></li>
-	<li><a href="#wizard">Creating a Sega Dreamcast Project</a>
-		<ul>
-			<li><a href="#wizardintro">Introduction</a></li>
-			<li><a href="#wizardstartup">Create a project by using the Project Wizard</a></li>
-			<li><a href="#projectoverview">Overview of the created project</a></li>
-		</ul>
-	</li>
-	<li><a href="#projectusage">Using the created Sega Dreamcast Project</a>
-	<ul>
-		<li><a href="#debugtarget">The Debug Target</a></li>
-		<li><a href="#releasetarget">The Release Target</a></li>
-	</ul></li>
-	<li><a href="#importkosexistingproject">Import a KallistiOS existing project in Code::Blocks IDE</a></li>
+  <li><a href="#prerequisites">Prerequisites</a></li>
+  <li><a href="#installation">Installation</a></li>
+  <li><a href="#overview">Overview</a></li>
+  <li><a href="#wizard">Creating a Sega Dreamcast Project</a> 
+    <ul>
+      <li><a href="#wizardintro">Introduction</a></li>
+      <li><a href="#wizardstartup">Create a project by using the Project
+        Wizard</a></li>
+      <li><a href="#projectoverview">Overview of the created project</a></li>
+    </ul>
+  </li>
+  <li><a href="#projectusage">Using the created Sega Dreamcast Project</a> 
+    <ul>
+      <li><a href="#debugtarget">The Debug Target</a></li>
+      <li><a href="#releasetarget">The Release Target</a></li>
+    </ul>
+  </li>
+  <li><a href="#importkosexistingproject">Import an existing KallistiOS project
+    in Code::Blocks IDE</a></li>
 </ul>
 
 <h2><a name="prerequisites">Prerequisites</a></h2>
 
 <p>If you want to use the Code::Blocks IDE integration, you need to:</p>
-
 <ul>
-<li><strong>Install the Code::Blocks IDE Ver. 17.12 release package</strong>. You have the choice to use the package form you prefer (e.g. you may install the embedded MinGW version or the standalone version only). The only critical prerequisite is the version revision: <strong>it should be the 17.12 stable release</strong>, i.e. the latest official build as today (February 2019). <strong>Code::Blocks needs to be installed before starting the DreamSDK installation.</strong></li>
-<li>After installing the Code::Blocks IDE, <strong>run it at least once</strong>. This will generate the <span class="font-fixed">default.conf</span> file, which will be patched by the DreamSDK installation program, as some parameters need to be written in it.</li>
-<li><strong>Optional:</strong> If you want to use the Code::Blocks debug capabilities, you will need to have either a Coders Cable, a LAN Adapter or a Broadband Adapter (best choice) and Dreamcast Tool configured. <a href="../manager/dc-tool.html">Click here to learn how to do that</a>.</li>
+  <li><strong>Install the Code::Blocks IDE Ver. 17.12 release package</strong>.
+    You have the choice to use the package form you prefer (e.g. you may
+    install the embedded MinGW version or the standalone version only). The
+    only critical prerequisite is the version revision: <strong>it should be
+    the 17.12 stable release</strong>, i.e. the latest official build as today
+    (February 2019). <strong>Code::Blocks needs to be installed before starting
+    the DreamSDK installation.</strong></li>
+  <li>After installing the Code::Blocks IDE, <strong>run it at least
+    once</strong>. This will generate the <span
+    class="font-fixed">default.conf</span> file, which will be patched by the
+    DreamSDK installation program, as some parameters need to be written in
+  it.</li>
+  <li><strong>Optional:</strong> If you want to use the Code::Blocks debug
+    capabilities, you will need to have either a Coders Cable, a LAN Adapter or
+    a Broadband Adapter (best choice) and Dreamcast Tool configured. <a
+    href="../manager/dc-tool.html">Click here to learn how to do that</a>.</li>
 </ul>
 
-<p>If you have respected the prerequisites, you may now startup the DreamSDK installation.</p>
+<p>If you have respected the prerequisites, you may now startup the DreamSDK
+installation.</p>
 
 <h2><a name="installation">Installation</a></h2>
 
-<p>When running the DreamSDK installation, at the <span class="font-fixed">Select Components</span> step, you should select the <span class="font-fixed">Code::Blocks 17.12 IDE integration</span> option.</p>
+<p>When running the DreamSDK installation, at the <span
+class="font-fixed">Select Components</span> step, you should select the <span
+class="font-fixed">Code::Blocks 17.12 IDE integration</span> option.</p>
 
-<p>This will add a new step of the DreamSDK installation which will allow you to select:</p>
-
+<p>This will add a new step of the DreamSDK installation which will allow you
+to select:</p>
 <ul>
-<li>The Code::Blocks installation directory (usually <span class="font-fixed">%ProgramFiles%\CodeBlocks\</span>) ;</li>
-<li>The Code::Blocks profile file (usually <span class="font-fixed">%AppData%\CodeBlocks\default.conf</span>).</li>
+  <li>The Code::Blocks installation directory (usually <span
+    class="font-fixed">%ProgramFiles%\CodeBlocks\</span>) ;</li>
+  <li>The Code::Blocks profile file (usually <span
+    class="font-fixed">%AppData%\CodeBlocks\default.conf</span>).</li>
 </ul>
 
-<p>Of course this will work only if you have respected the <a href="#prerequisites">prerequisites</a>!</p>
+<div class="screenshot">
+<img src="../../img/ide/codeblocks-installation.png"
+alt="Code::Blocks Installation"></div>
+
+<p>Of course this will work only if you have respected the <a
+href="#prerequisites">prerequisites</a>!</p>
 
 <h2><a name="overview">Overview</a></h2>
-	
-<p>After installing the Code::Blocks Integration, your Code::Blocks installation will have several new features, made for the DreamSDK package. This includes, but not limited to:</p>
-	
+
+<p>After installing the Code::Blocks Integration, your Code::Blocks
+installation will have several new features, made for the DreamSDK package.
+This includes, but not limited to:</p>
 <ul>
-	<li>The Debugger plugin will run a loader before trying to connect to the target (i.e. Dreamcast Tool will be run before GDB) ;</li>
-	<li>The Compiler plugin will run a loader instead of trying to run the compiled program (again, Dreamcast Tool will run the compiled program on the target).</li>
-	<li>The <span class="font-fixed">GNU GCC Compiler for Sega Dreamcast</span> profile will be installed.</li>
-	<li>The <span class="font-fixed">Sega Dreamcast Project</span> wizard will be installed.</li>
+  <li>The Debugger plugin will run a loader before trying to connect to the
+    target (i.e. Dreamcast Tool will be run before GDB) ;</li>
+  <li>The Compiler plugin will run a loader instead of trying to run the
+    compiled program (again, Dreamcast Tool will run the compiled program on
+    the target).</li>
+  <li>The <span class="font-fixed">GNU GCC Compiler for Sega Dreamcast</span>
+    profile will be installed.</li>
+  <li>The <span class="font-fixed">Sega Dreamcast Project</span> wizard will be
+    installed.</li>
 </ul>
-	
-<p>All these features are available only if you are installing the Code::Blocks 17.12 release. <strong>It won't work with any other release of Code::Blocks!</strong></p>
+
+<p>All these features are available only if you are installing the Code::Blocks
+17.12 release. <strong>It won't work with any other release of
+Code::Blocks!</strong></p>
 
 <h2><a name="wizard">Creating a Sega Dreamcast Project</a></h2>
-	
-<p>This section will explain how to use the <span class="font-fixed">Sega Dreamcast Project</span> wizard template installed in the Code::Blocks IDE by the DreamSDK package.</p>
-	
+
+<p>This section will explain how to use the <span class="font-fixed">Sega
+Dreamcast Project</span> wizard template installed in the Code::Blocks IDE by
+the DreamSDK package.</p>
+
 <h3><a name="wizardintro">Introduction</a></h3>
-	
-<p>Before using the <span class="font-fixed">Sega Dreamcast Project</span> wizard, it would be a great idea to execute the <a href="../manager/index.html">DreamSDK Manager</a> utility at least once, in order to <strong>install additional libraries</strong>. These additional libraries are managed throught the <a href="../manager/kos-ports.html">KallistiOS Ports</a> tab of the <a href="../manager/index.html">DreamSDK Manager</a> tool.</p>
-	
-<p>If you don't install any <a href="../manager/kos-ports.html">KallistiOS Ports</a> libraries, you will have at least 4 libraries installed anyway:</p>
 
+<p>Before using the <span class="font-fixed">Sega Dreamcast Project</span>
+wizard, it would be a great idea to execute the <a
+href="../manager/index.html">DreamSDK Manager</a> utility at least once, in
+order to <strong>install additional libraries</strong>. These additional
+libraries are managed throught the <a
+href="../manager/kos-ports.html">KallistiOS Ports</a> tab of the <a
+href="../manager/index.html">DreamSDK Manager</a> tool.</p>
+
+<p>If you don't install any <a href="../manager/kos-ports.html">KallistiOS
+Ports</a> libraries, you will have at least 4 libraries installed anyway:</p>
 <ul>
-	<li><span class="font-fixed">libkosext2fs</span></li>
-	<li><span class="font-fixed">libkosutils</span></li>
-	<li><span class="font-fixed">math</span></li>
-	<li><span class="font-fixed">libppp</span></li>
+  <li><span class="font-fixed">libkosext2fs</span></li>
+  <li><span class="font-fixed">libkosutils</span></li>
+  <li><span class="font-fixed">math</span></li>
+  <li><span class="font-fixed">libppp</span></li>
 </ul>
-	
-<p><span class="font-fixed">libkosext2fs</span>, <span class="font-fixed">libkosutils</span> and <span class="font-fixed">libppp</span> are installed with <a href="../general/overview.html#kallistios">KallistiOS</a>, when <span class="font-fixed">math</span> (aka <span class="font-fixed">libm</span>) is installed with <a target="_blank" href="https://sourceware.org/newlib/libm.html">Newlib</a>. That's why all these libraries are always installed, even if you don't select any additional <a href="../manager/kos-ports.html">KallistiOS Ports</a>.</p>
-	
-<p>Please also note, <strong>you will need to configure Dreamcast Tool</strong> if you wish to use the debugging features of the Code::Blocks IDE. <a href="../manager/dc-tool.html">Click here to learn how to do that</a>.</p>
-	
-<h3><a name="wizardstartup">Create a project by using the Project Wizard</a></h3>
-	
-<p>Now that you are ready to create your Sega Dreamcast project, open Code::Blocks, then:</p>
 
+<p><span class="font-fixed">libkosext2fs</span>, <span
+class="font-fixed">libkosutils</span> and <span
+class="font-fixed">libppp</span> are installed with <a
+href="../general/overview.html#kallistios">KallistiOS</a>, when <span
+class="font-fixed">math</span> (aka <span class="font-fixed">libm</span>) is
+installed with <a target="_blank"
+href="https://sourceware.org/newlib/libm.html">Newlib</a>. That's why all these
+libraries are always installed, even if you don't select any additional <a
+href="../manager/kos-ports.html">KallistiOS Ports</a>.</p>
+
+<p>Please also note, <strong>you will need to configure Dreamcast Tool</strong>
+if you wish to use the debugging features of the Code::Blocks IDE. <a
+href="../manager/dc-tool.html">Click here to learn how to do that</a>.</p>
+
+<h3><a name="wizardstartup">Create a project by using the Project
+Wizard</a></h3>
+
+<p>Now that you are ready to create your Sega Dreamcast project, open
+Code::Blocks, then:</p>
 <ol>
-	<li>In Code::Blocks, select <span class="font-fixed">File &gt; New &gt; Project...</span>.</li>
-	<li>In the <span class="font-fixed">New from template</span> window, select the <span class="font-fixed">Embedded Systems</span> in the <span class="font-fixed">Category</span> dropdown list.</li>
-	<li>Select the <span class="font-fixed">Sega Dreamcast Project</span> template, then click the <span class="font-fixed">Go</span> button.</li>
+  <li>In Code::Blocks, select <span class="font-fixed">File &gt; New &gt;
+    Project...</span>.</li>
+  <li>In the <span class="font-fixed">New from template</span> window, select
+    the <span class="font-fixed">Embedded Systems</span> in the <span
+    class="font-fixed">Category</span> dropdown list.</li>
+  <li>Select the <span class="font-fixed">Sega Dreamcast Project</span>
+    template, then click the <span class="font-fixed">Go</span> button.</li>
 </ol>
-	
-<p>The Project Wizard will startup. The first step is just an <strong>introduction</strong>, you can safely skip it. After that, <strong>you have to enter the project location</strong>, as any Code::Blocks project.</p> 
-	
-<p>Then comes the <strong>choice of the language</strong> you will use for your Sega Dreamcast project. The programming language choice have a huge impact on which libraries that will be available. For example, <span class="font-fixed">libtsunami</span> is a <span class="font-fixed">C++</span> only library.</p>
-	
-<p>The next step after the language selection are the <strong>project options</strong>, i.e. the <strong>available libraries</strong> (which you have installed through the <a href="../manager/kos-ports.html">KallistiOS Ports</a> tab of the <a href="../manager/index.html">DreamSDK Manager</a> tool). In that step, you will also indicates if you wish to <strong>use a <span class="font-fixed">romdisk</span></strong>, which can be seen as a embedded resources: your Sega Dreamcast program will have access to the files inside of it through the <span class="font-fixed">/rd</span> mount point, when the <span class="font-fixed">romdisk</span> is embedded in the binary.</p>
-	
-<p>That's it. Just click the <span class="font-fixed">Finish</span> button to create the project.</p>
-	
+
+<div class="screenshot">
+<img src="../../img/ide/codeblocks-wizard-go.png"
+alt="Code::Blocks Wizard Go!"></div>
+
+<p>The Project Wizard will startup. The first step is just an
+<strong>introduction</strong>, you can safely skip it. After that, <strong>you
+have to enter the project location</strong>, as any Code::Blocks project.</p>
+
+<p>Then comes the <strong>choice of the language</strong> you will use for your
+Sega Dreamcast project. The programming language choice have a huge impact on
+which libraries that will be available. For example, <span
+class="font-fixed">libtsunami</span> is a <span class="font-fixed">C++</span>
+only library.</p>
+
+<div class="screenshot">
+<img src="../../img/ide/codeblocks-wizard-lang.png"
+alt="Code::Blocks Wizard Language Selection"></div>
+
+<p>The next step after the language selection are the <strong>project
+options</strong>, i.e. the <strong>available libraries</strong> (which you have
+installed through the <a href="../manager/kos-ports.html">KallistiOS Ports</a>
+tab of the <a href="../manager/index.html">DreamSDK Manager</a> tool). In that
+step, you will also indicates if you wish to <strong>use a <span
+class="font-fixed">romdisk</span></strong>, which can be seen as a embedded
+resources: your Sega Dreamcast program will have access to the files inside of
+it through the <span class="font-fixed">/rd</span> mount point, when the <span
+class="font-fixed">romdisk</span> is embedded in the binary.</p>
+
+<div class="screenshot">
+<img src="../../img/ide/codeblocks-wizard-libraries.png"
+alt="Code::Blocks Wizard Libraries Selection"></div>
+
+<p>That's it. Just click the <span class="font-fixed">Finish</span> button to
+create the project.</p>
+
 <h3><a name="projectoverview">Overview of the created project</a></h3>
-	
-<p>The Project Wizard have already setup everything for you, depending of the choice you made. At the end of the creation step, the project will be opened in the Code::Blocks IDE.</p>
-	
+
+<p>The Project Wizard have already setup everything for you, depending of the
+choice you made. At the end of the creation step, the project will be opened in
+the Code::Blocks IDE.</p>
+
 <p>Starting from that point, you may use the Code::Blocks IDE as usual.</p>
-	
+
 <p>Basically, you will have 2 targets in your created project:</p>
 <ul>
-	<li><span class="font-fixed">Debug</span></li>
-	<li><span class="font-fixed">Release</span></li>
+  <li><span class="font-fixed">Debug</span></li>
+  <li><span class="font-fixed">Release</span></li>
 </ul>
-	
-<p>In contrary of classical projects created by the Project Wizard of the Code::Blocks IDE, <strong>you won't have the possibility to disable the creation of the targets</strong> described above. The reason is they have an impact on the generated binaries, and more important a huge impact on the Dreamcast Tool application. <a href="#project-usage">Details are explained below</a>.</p>
-	
-<p>In the project root directory, you will find an <span class="font-fixed">obj</span> and <span class="font-fixed">bin</span> directories. The <span class="font-fixed">obj</span> directory will contains intermediate objects files (e.g. <span class="font-fixed">*.o</span> files) when the <span class="font-fixed">bin</span> directory will contains your output program, in the <em>Executable and Linkable Format</em> (<span class="font-fixed">ELF</span>) format. So basically if your project name is called <span class="font-fixed">hello</span>, the output file will be <span class="font-fixed">hello.elf</span>.</p>
-	
-<p>As you have 2 targets in the project, <span class="font-fixed">Debug</span> and <span class="font-fixed">Release</span>, you will find a subdirectory <span class="font-fixed">Debug</span> and <span class="font-fixed">Release</span> in the <span class="font-fixed">obj</span> and <span class="font-fixed">bin</span> directories. That means, if you have selected the <span class="font-fixed">Release</span> target for your <span class="font-fixed">hello</span> project, you will have a <span class="font-fixed">bin/Release/hello.elf</span> file.</p>
-	
+
+<div class="screenshot">
+<img src="../../img/ide/codeblocks-build-targets.png"
+alt="Code::Blocks Build Targets"></div>
+
+<p>In contrary of classical projects created by the Project Wizard of the
+Code::Blocks IDE, <strong>you won't have the possibility to disable the
+creation of the targets</strong> described above. The reason is they have an
+impact on the generated binaries, and more important a huge impact on the
+Dreamcast Tool application. <a href="#project-usage">Details are explained
+below</a>.</p>
+
+<p>In the project root directory, you will find an <span
+class="font-fixed">obj</span> and <span class="font-fixed">bin</span>
+directories. The <span class="font-fixed">obj</span> directory will contains
+intermediate objects files (e.g. <span class="font-fixed">*.o</span> files)
+when the <span class="font-fixed">bin</span> directory will contains your
+output program, in the <em>Executable and Linkable Format</em> (<span
+class="font-fixed">ELF</span>) format. So basically if your project name is
+called <span class="font-fixed">hello</span>, the output file will be <span
+class="font-fixed">hello.elf</span>.</p>
+
+<div class="screenshot">
+<img src="../../img/ide/codeblocks-directories.png"
+alt="Code::Blocks Project Directories"></div>
+
+<p>As you have 2 targets in the project, <span class="font-fixed">Debug</span>
+and <span class="font-fixed">Release</span>, you will find a subdirectory <span
+class="font-fixed">Debug</span> and <span class="font-fixed">Release</span> in
+the <span class="font-fixed">obj</span> and <span class="font-fixed">bin</span>
+directories. That means, if you have selected the <span
+class="font-fixed">Release</span> target for your <span
+class="font-fixed">hello</span> project, you will have a <span
+class="font-fixed">bin/Release/hello.elf</span> file.</p>
+
 <h2><a name="projectusage">Using the created project</a></h2>
-	
-<p>As introduced in the <a href="#project-overview">section above</a>, 2 targets exists in the created project: <span class="font-fixed">Debug</span> and <span class="font-fixed">Release</span>.</p>
-	
+
+<p>As introduced in the <a href="#project-overview">section above</a>, 2
+targets exists in the created project: <span class="font-fixed">Debug</span>
+and <span class="font-fixed">Release</span>.</p>
+
 <h3><a name="debugtarget">The Debug Target</a></h3>
-	
-<p>The <span class="font-fixed">Debug</span> target is used <strong>when you want to debug the program through Dreamcast Tool</strong>. The most important thing to know about this target is the fact that it defines the <span class="font-fixed">DEBUG</span> preprocessor macro, mainly in order to call the <span class="font-fixed">gdb_init()</span> function in the <span class="font-fixed">main()</span> entry point. Of course, the <span class="font-fixed">Debug</span> target generates the binary program with debug symbols and with no optimization at all, allowing the debug session. If you used the <span class="font-fixed">Sega Dreamcast Project</span> template, everything is already set.</p>
-	
-<p>Calling the <span class="font-fixed">gdb_init()</span> function <strong>is very important</strong> if you want to use the Code::Blocks debugger through Dreamcast Tool. This function initialize Dreamcast Tool and KallistiOS to allow debugging of your program.</p>
-	
-<p>Of course, this target will be usable only if:
+
+<p>The <span class="font-fixed">Debug</span> target is used <strong>when you
+want to debug the program through Dreamcast Tool</strong>. The most important
+thing to know about this target is the fact that it defines the <span
+class="font-fixed">DEBUG</span> preprocessor macro, mainly in order to call the
+<span class="font-fixed">gdb_init()</span> function in the <span
+class="font-fixed">main()</span> entry point. Of course, the <span
+class="font-fixed">Debug</span> target generates the binary program with debug
+symbols and with no optimization at all, allowing the debug session. If you
+used the <span class="font-fixed">Sega Dreamcast Project</span> template,
+everything is already set.</p>
+
+<p>Calling the <span class="font-fixed">gdb_init()</span> function <strong>is
+very important</strong> if you want to use the Code::Blocks debugger through
+Dreamcast Tool. This function initialize Dreamcast Tool and KallistiOS to allow
+debugging of your program.</p>
+
+<p>Of course, this target will be usable only if: </p>
 <ul>
-	<li>You have a <strong>Coders Cable</strong>, <strong>LAN Adapter</strong> or <strong>Broadband Adapter</strong> piece of hardware;</li>
-	<li>You have configured <a href="../manager/dc-tool.html">Dreamcast Tool in DreamSDK Manager</a>.</li>
+  <li>You have a <strong>Coders Cable</strong>, <strong>LAN Adapter</strong> or
+    <strong>Broadband Adapter</strong> piece of hardware;</li>
+  <li>You have configured <a href="../manager/dc-tool.html">Dreamcast Tool in
+    DreamSDK Manager</a>.</li>
 </ul>
-<strong>This won't be usable in any other cases</strong>, e.g. debugging through Sega Dreamcast emulators is not possible.
-</p>
-	
-<p>So, to launch a debug session if you have everything ready:
+<strong>This won't be usable in any other cases</strong>, e.g. debugging
+through Sega Dreamcast emulators is not possible. 
+
+<p>So, to launch a debug session if you have everything ready: </p>
 <ol>
-	<li>Startup your Sega Dreamcast and run the appropriate <span class="font-fixed">dcload</span> program, depending of your link method (i.e. <span class="font-fixed">dcload-serial</span> for the Coders Cable or <span class="font-fixed">dcload-ip</span> for the LAN Adapter/Broadband Adapter).</li>
-	<li>Select the <span class="font-fixed">Debug</span> target in the toolbar.</li>
-	<li>Click on the <span class="font-fixed">Build</span> button.</li>
-	<li>Set the breakpoints by clicking on the rows in the Code::Blocks IDE, as usual.</li>
-	<li>Click on the <span class="font-fixed">Debug / Continue</span> button, as shown below.</li>
-</ol></p>
-
-<div class="screenshot">
-<img src="../../img/ide/codeblocks-debug-start.png" alt="Code::Blocks Debug Start"></div>
-	
-<p>The <span class="font-fixed">Debug</span> target <strong>can't be run</strong> from the <span class="font-fixed">Run</span> button, it can only be used for debugging, i.e. through the <span class="font-fixed">Debug / Continue</span> button. Trying to run the <span class="font-fixed">Debug</span> target will show a warning message.</p>
-
-<p>Another option to trace your program is to use <span class="font-fixed">printf()</span> statements, as they are sent to the Dreamcast Tool console window. This can be useful too, combined with classical breakpoints.</p>
-	
-<p><strong>Note:</strong> If you are using a custom Dreamcast Tool executable (i.e. the <a href="../manager/dc-tool.html"><span class="font-fixed">Custom</span></a> option in <a href="../manager/dc-tool.html">DreamSDK Manager</a>), the debugging feature may not be available. This depends of course of the custom binary you set in the <a href="../manager/dc-tool.html">Dreamcast Tool tab</a>. So if you want to use a Sega Dreamcast emulator, debugging won't be possible.</p>
-	
-<h3><a name="releasetarget">The Release Target</a></h3>
-	
-<p>The <span class="font-fixed">Release</span> target will produces a runnable, final executable for your Sega Dreamcast. This binary won't be debuggable, except by using <span class="font-fixed">printf()</span> statements, which send the output to the Dreamcast Tool window.</p>
-
-<p>With that target, debug symbols aren't present, so the only action possible will be run through the <span class="font-fixed">Run</span> button.</p>
-
-<p>To execute the program in <span class="font-fixed">Release</span> mode:
-<ol>
-<li>Startup your Sega Dreamcast and run the appropriate <span class="font-fixed">dcload</span> program, depending of your link method (i.e. <span class="font-fixed">dcload-serial</span> for the Coders Cable or <span class="font-fixed">dcload-ip</span> for the LAN Adapter/Broadband Adapter).</li>
-<li>Select the <span class="font-fixed">Release</span> target in the toolbar.</li>
-<li>Click on the <span class="font-fixed">Build</span> button.</li>
-<li>Click on the <span class="font-fixed">Run</span> button, as shown below.</li></ol>
-</p>
-
-<div class="screenshot">
-<img src="../../img/ide/codeblocks-run-start.png" alt="Code::Blocks Run Start"></div>
-
-<p><strong>Note:</strong> This binary version is the final binary version of your program. It can be distributed or used to master a CD-R image.</p>
-	
-<h2><a name="importkosexistingproject">Import a KallistiOS existing project in Code::Blocks IDE</a></h2>
-
-<p>If you wish to import an existing KallistiOS project using the classical <span class="font-fixed">Makefile</span> system, e.g. an example provided in the KallistiOS tree,  do the following:
-<ol>
-<li>Determine if the project to import is written in <span class="font-fixed">C</span> or <span class="font-fixed">C++</span>. This can be done by checking the file extension of your project, basically <span class="font-fixed">*.c</span> stands for <span class="font-fixed">C</span> projects when <span class="font-fixed">*.cpp</span>, <span class="font-fixed">*.cxx</span>, <span class="font-fixed">*.cc</span> and <span class="font-fixed">*.cp</span> stands for <span class="font-fixed">C++</span>.</li>
-<li>Determine the libraries used by the project. This can be done by checking the content of the <span class="font-fixed">Makefile</span>. Check for <span class="font-fixed">LDFLAGS</span> and for <span class="font-fixed">-l</span> switches, e.g. <span class="font-fixed">-lm</span> (for <span class="font-fixed">libm</span>, math library), <span class="font-fixed">-lpng</span> (for <span class="font-fixed">libpng</span>), etc.</li>
-<li>Use the <span class="font-fixed">Sega Dreamcast Project</span> wizard as usual. Select <span class="font-fixed">C</span> or <span class="font-fixed">C++</span> programming language and all required libraries (don't forget to install them with <a href="../manager/kos-ports.html">DreamSDK Manager</a>).</li>
-<li>Import all original source files in the project. Replace all the content of the <span class="font-fixed">main.c</span> / <span class="font-fixed">main.cpp</span> file with the original source files.</li>
-<li>In the <span class="font-fixed">main()</span> function entry-point, add the following code, <strong>this should be the first line of the code before everything else</strong>:
-<div class="fixed-block">int main(int argc, char *argv[]) {<br>
-#ifdef DEBUG<br>
-&nbsp;&nbsp;gdb_init();<br>
-#endif<br>
-...<br>
-}</div></li>
-<li>In the top of the file main file, where is located the <span class="font-fixed">main()</span> entry point, after all includes, add the following:
-  <div class="fixed-block">...
-<br>
-#ifdef DEBUG<br>
-#include &lt;arch/gdb.h&gt;<br>
-#endif<br>
-...</div></li>
-<li>Don't forget to add files to the <span class="font-fixed">romdisk</span> if needed.</li>
-<li>Done!</li>
+  <li>Startup your Sega Dreamcast and run the appropriate <span
+    class="font-fixed">dcload</span> program, depending of your link method
+    (i.e. <span class="font-fixed">dcload-serial</span> for the Coders Cable or
+    <span class="font-fixed">dcload-ip</span> for the LAN Adapter/Broadband
+    Adapter).</li>
+  <li>Select the <span class="font-fixed">Debug</span> target in the
+  toolbar.</li>
+  <li>Click on the <span class="font-fixed">Build</span> button.</li>
+  <li>Set the breakpoints by clicking on the rows in the Code::Blocks IDE, as
+    usual.</li>
+  <li>Click on the <span class="font-fixed">Debug / Continue</span> button, as
+    shown below.</li>
 </ol>
-</p>
 
+<div class="screenshot">
+<img src="../../img/ide/codeblocks-debug-start.png"
+alt="Code::Blocks Debug Start"></div>
 
+<p>The <span class="font-fixed">Debug</span> target <strong>can't be
+run</strong> from the <span class="font-fixed">Run</span> button, it can only
+be used for debugging, i.e. through the <span class="font-fixed">Debug /
+Continue</span> button. Trying to run the <span class="font-fixed">Debug</span>
+target will show a warning message.</p>
 
+<p>Another option to trace your program is to use <span
+class="font-fixed">printf()</span> statements, as they are sent to the
+Dreamcast Tool console window. This can be useful too, combined with classical
+breakpoints.</p>
+
+<p><strong>Note:</strong> If you are using a custom Dreamcast Tool executable
+(i.e. the <a href="../manager/dc-tool.html"><span
+class="font-fixed">Custom</span></a> option in <a
+href="../manager/dc-tool.html">DreamSDK Manager</a>), the debugging feature may
+not be available. This depends of course of the custom binary you set in the <a
+href="../manager/dc-tool.html">Dreamcast Tool tab</a>. So if you want to use a
+Sega Dreamcast emulator, debugging won't be possible.</p>
+
+<h3><a name="releasetarget">The Release Target</a></h3>
+
+<p>The <span class="font-fixed">Release</span> target will produces a runnable,
+final executable for your Sega Dreamcast. This binary won't be debuggable,
+except by using <span class="font-fixed">printf()</span> statements, which send
+the output to the Dreamcast Tool window.</p>
+
+<p>With that target, debug symbols aren't present, so the only action possible
+will be run through the <span class="font-fixed">Run</span> button.</p>
+
+<p>To execute the program in <span class="font-fixed">Release</span> mode: </p>
+<ol>
+  <li>Startup your Sega Dreamcast and run the appropriate <span
+    class="font-fixed">dcload</span> program, depending of your link method
+    (i.e. <span class="font-fixed">dcload-serial</span> for the Coders Cable or
+    <span class="font-fixed">dcload-ip</span> for the LAN Adapter/Broadband
+    Adapter).</li>
+  <li>Select the <span class="font-fixed">Release</span> target in the
+  toolbar.</li>
+  <li>Click on the <span class="font-fixed">Build</span> button.</li>
+  <li>Click on the <span class="font-fixed">Run</span> button, as shown
+  below.</li>
+</ol>
+
+<div class="screenshot">
+<img src="../../img/ide/codeblocks-run-start.png"
+alt="Code::Blocks Run Start"></div>
+
+<p><strong>Note:</strong> This binary version is the final binary version of
+your program. It can be distributed or used to master a CD-R image.</p>
+
+<h2><a name="importkosexistingproject">Import an existing KallistiOS project in
+Code::Blocks IDE</a></h2>
+
+<p>If you wish to import an existing KallistiOS project using the classical
+<span class="font-fixed">Makefile</span> system, e.g. an example provided in
+the KallistiOS tree, do the following: </p>
+<ol>
+  <li>Determine if the project to import is written in <span
+    class="font-fixed">C</span> or <span class="font-fixed">C++</span>. This
+    can be done by checking the file extension of your project, basically <span
+    class="font-fixed">*.c</span> stands for <span class="font-fixed">C</span>
+    projects when <span class="font-fixed">*.cpp</span>, <span
+    class="font-fixed">*.cxx</span>, <span class="font-fixed">*.cc</span> and
+    <span class="font-fixed">*.cp</span> stands for <span
+    class="font-fixed">C++</span>.</li>
+  <li>Determine the libraries used by the project. This can be done by checking
+    the content of the <span class="font-fixed">Makefile</span>. Check for
+    <span class="font-fixed">LDFLAGS</span> and for <span
+    class="font-fixed">-l</span> switches, e.g. <span
+    class="font-fixed">-lm</span> (for <span class="font-fixed">libm</span>,
+    math library), <span class="font-fixed">-lpng</span> (for <span
+    class="font-fixed">libpng</span>), etc.</li>
+  <li>Use the <span class="font-fixed">Sega Dreamcast Project</span> wizard as
+    usual. Select <span class="font-fixed">C</span> or <span
+    class="font-fixed">C++</span> programming language and all required
+    libraries (don't forget to install them with <a
+    href="../manager/kos-ports.html">DreamSDK Manager</a>).</li>
+  <li>Import all original source files in the project. Replace all the content
+    of the <span class="font-fixed">main.c</span> / <span
+    class="font-fixed">main.cpp</span> file with the original source files.</li>
+  <li>In the <span class="font-fixed">main()</span> function entry-point, add
+    the following code, <strong>this should be the first line of the code
+    before everything else</strong>: 
+
+    <div class="fixed-block">
+    int main(int argc, char *argv[]) {<br>
+    #ifdef DEBUG<br>
+      gdb_init();<br>
+    #endif<br>
+    ...<br>
+    }</div>
+  </li>
+  <li>In the top of the file main file, where is located the <span
+    class="font-fixed">main()</span> entry point, after all includes, add the
+    following: 
+
+    <div class="fixed-block">
+    ... <br>
+    #ifdef DEBUG<br>
+    #include &lt;arch/gdb.h&gt;<br>
+    #endif<br>
+    ...</div>
+  </li>
+  <li>Don't forget to add files to the <span class="font-fixed">romdisk</span>
+    if needed.</li>
+  <li>Done!</li>
+</ol>
 <!--FOOTER:START-->
+
 <div id="footer">
-&copy; Copyleft 2018 — <a href="http://dreamsdk.sizious.com/" target="_blank">The
+© Copyleft 2018 — <a href="http://dreamsdk.sizious.com/" target="_blank">The
 DreamSDK Team</a> and contributors.</div>
 <!--FOOTER:END-->
-
 </body>
 </html>
