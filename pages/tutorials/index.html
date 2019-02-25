@@ -11,28 +11,52 @@
 <body>
 <h1>Useful information and tutorials</h1>
 
-<p>This section explains the requirements needed for DreamSDK.</p>
+<p>This section is a collection of useful information and how-to. These may be interesting depending of your requirements and needs.</p>
 <ul>
-  <li><a href="#master">How to master a disc and release your program</a></li>
+  <li><a href="#master">How to  release your Sega Dreamcast program</a>
+    <ul>
+	  <li><a href="#plain">Plain files</a></li>
+      <li><a href="#selfboot">Selfboot disc image</a></li>
+      <li><a href="#sbi">Selfboot Inducer (SBI) packages</a></li>
+    </ul>
+  </li>
   <li><a href="#dcload">How to generate dcload-serial and dcload-ip disc images</a></li>
+  <li><a href="#debug">How to debug a Sega Dreamcast program directly from the DreamSDK Shell</a></li>
 </ul>
 
-<h2><a name="master">How to master a disc and release your program</a></h2>
+<h2><a name="master">How to release your Sega Dreamcast program</a></h2>
 
-<p>Theses components are not embedded in the DreamSDK package thus they need to
-be installed separately.</p>
+<p>So after finishing the development of your Sega Dreamcast project (well done!) comes the following question: <strong>How to release your Sega Dreamcast program?</strong></p>
+<p>This is a good question and unfortunatelly, the KallistiOS library won't help you much, but as you are using DreamSDK, the answer is detailed here!</p>
+<p>Before starting reading this section, you should be aware of <span class="font-fixed">ELF</span>, <em>unscrambled</em> and <em>scrambled</em> files, this is explained in the <a href="../general/faq.html">FAQ</a>.</p>
+<p>The first thing to know is there is 3 ways to package a Sega Dreamcast program:</p>
+<ul>
+  <li><a href="#plain">Plain files</a></li>
+      <li><a href="#selfboot">Selfboot disc image</a></li>
+  <li><a href="#sbi">Selfboot Inducer (SBI) packages</a></li>
+</ul>
+<p>The package kind will depends of your needs. Below you'll find an explanation of each kind.</p>
+<h3><a name="plain">Plain files</a></h3>
+<p><strong>Plain files</strong> is the simplest form of packaging. Basically, it just a <span class="font-fixed">Zip</span> (or any other compressed format) file which contains the raw binary and required files of your program (such textures images, etc.).</p>
+<p>This package kind will usually contains an <span class="font-fixed">ELF</span> program (e.g. <span class="font-fixed">hello.elf</span>), a raw unscrambled binary (e.g. <span class="font-fixed">hello.bin</span>) and/or a scrambled binary (usually <span class="font-fixed">1ST_READ.BIN</span>). The end-user will deal with your files himself, i.e. using them as-is (through Sega Dreamcast emulator which have binary support, like nullDC) or making a selfboot disc image (see below).</p>
+<p><strong>Plain files</strong> are good for emulators or any other program that should be customized by the end-user, such adding ROM files, music (MP3, Ogg...) files, etc. But in that case, you should write a little <span class="font-fixed">README</span> file to teach the end-user how to use your program... basically, the content of the next chapter!</p>
+<p>Of course, your  program should be compiled/built in <span class="font-fixed">Release</span> mode (if using <a href="../ide/index.html">Code::Blocks</a>) and, very important, <strong>without</strong> the <span class="font-fixed">gdb_init()</span> call!</p>
+<h3><a name="selfboot">Selfboot disc image</a></h3>
+<p><strong>Selfboot disc image</strong> (also known as <strong>Autoboot</strong> disc image) is the most common form of packaging and should be the one you are looking for. This form is basically a disc image, in <strong>Padus DiscJuggler</strong> (<span class="font-fixed">CDI</span>) or <strong>Alcohol 120%</strong> (<span class="font-fixed">MDS/MDF</span>), which may be burnt on a blank CD-R and startup like a genuine GD-ROM on any (almost) Sega Dreamcast hardware.</p>
+<p>DreamSDK includes everything to make these kind of packages.</p>
+<p>xxxx</p>
+<h3><a name="sbi">Selfboot Inducer (SBI) packages</a></h3>
+<p>The third form is called Selfboot Inducer (SBI) packages. It's a special format made for putting several programs on the same CD. A menu is shown when this kind of disc is booted from the Sega Dreamcast, this menu is called DreamInducer.</p>
+<p>To generate SBI packages, you will use SBI Builder. to use these packages in order to make a disc, the end-user will need Selfboot Inducer.</p>
+<p>These tools aren't part of the DreamSDK package, but <a href="http://sizious.com/" target="_blank">you can find them here</a>.</p>
 
 <h2><a name="dcload">How to generate dcload-serial and dcload-ip disc images</a></h2>
 
-<p>For the Windows Operating System (OS), <strong>Windows XP Service Pack 3 or
-later</strong> is required.</p>
-
-<p>If you want to install DreamSDK on Windows XP, please pay attention to the
-external components version to use. The Windows XP support was dropped almost
-everywhere, the reason why DreamSDK support it today is the fact that the Sega
-Dreamcast is a legacy system released back in 1998; some of useful utilities
-were made for this operating system (or more exactly, for Windows NT which is
-older!).</p>
+<p>For th</p>
+	
+<h2><a name="debug">How to debug a Sega Dreamcast program directly from the DreamSDK Shell</a></h2>
+	
+<p>X</p>
 
 <!--FOOTER:START-->
 <div id="footer">
