@@ -1,31 +1,43 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML>
-<HEAD>
-  <META http-equiv="Content-Type" content="text/html; charset=Windows-1252">
-  <meta name="Keywords" content="Options,Repositories">  
-  <TITLE>Options</TITLE>
-  <LINK href="../../css/style.css" rel="stylesheet" type="text/css">
-</HEAD>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <meta name="Keywords" content="Options,Repositories">
+  <title>Options</title>
+  <link href="../../css/style.css" rel="stylesheet" type="text/css">
+</head>
 
-<BODY>
+<body>
+<h1>Options</h1>
 
-<H1>Options</H1>
-
-<p>The Options tab display all the repositories URL used by DreamSDK Manager to download the KallistiOS components, <a href="../shell/terminal.html">plus the Terminal choice</a>, between the Windows Prompt or MinTTY for the DreamSDK Shell.</p>
+<p>The Options tab display all the repositories URL used by DreamSDK Manager to
+download the KallistiOS components, <a href="../shell/terminal.html">plus the
+Terminal choice</a>, between the Windows Prompt or MinTTY for the DreamSDK
+Shell.</p>
 
 <div class="screenshot">
 <img src="../../img/manager/options.png" alt="Options Tab"
 title="Options Tab"></div>
 
-<p><strong>Note:</strong> If you already have installed KallistiOS, then the URL
-were not be used anymore. They are used only one time when cloning all the
-repositories.</strong>.</p>
+<p><strong>Note:</strong> If you already have installed KallistiOS, then the
+URL fields will be grayed out, because the repositories already exists. If you
+want to choose another repositories source, you will need to delete the <span
+class="font-fixed">/opt/toolchains/dc/kos</span>, <span
+class="font-fixed">/opt/toolchains/dc/kos-ports</span> and <span
+class="font-fixed">/opt/toolchains/dc/dcload</span> directories. After that,
+the URL fields will be unlocked. You will just need to <a
+href="kos.html">Update KallistiOS</a> and everything will be set up after that
+operation.</p>
 
-<p>You have also the possibility to run the original MinGW Installation Manager, if you want to add some features to the MinGW/MSYS environment used by your DreamSDK environment. Please also note, all the required MinGW/MSYS packages are already installed.</p>
-
+<p>You have also the possibility to run the original MinGW Installation
+Manager, if you want to add some features to the MinGW/MSYS environment used by
+your DreamSDK environment. Please also note, all the required MinGW/MSYS
+packages for the DreamSDK environment are already installed.</p>
 <!--FOOTER:START-->
-<div id="footer">&copy; Copyleft 2018-2019 &mdash; <a href="http://dreamsdk.sizious.com/" target="_blank">The DreamSDK Team</a> and contributors.</div>
-<!--FOOTER:END-->
 
+<div id="footer">
+© Copyleft 2018-2019 — <a href="http://dreamsdk.sizious.com/"
+target="_blank">The DreamSDK Team</a> and contributors.</div>
+<!--FOOTER:END-->
 </body>
 </html>

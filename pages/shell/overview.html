@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta http-equiv="content-type" content="text/html; charset=windows-1252">
-  <meta name="Keywords" content="Shell,DreamSDK Shell">  
+  <meta name="Keywords" content="Shell,DreamSDK Shell">
   <title>Overview</title>
   <link href="../../css/style.css" rel="stylesheet" type="text/css">
 </head>
@@ -25,9 +25,8 @@ installation, even if it is still there. This was made for two reasons:</p>
 <ul>
   <li>You have the possibility to <a href="terminal/index.html">choose the
     Shell interface of your choice really easilly</a>;</li>
-  <li>And you have the possibility to <a href="outside.html">execute commands
-    into the MSYS Shell directly from a Windows batch file, without opening the
-    regular MSYS Shell</a>.</li>
+  <li>And you have the possibility to <a href="opendir">open the Shell in a
+    specific directory</a>.</li>
 </ul>
 
 <p><strong>To be clear, the DreamSDK Shell is only a launcher which starts the
@@ -38,6 +37,8 @@ real MSYS Shell.</strong></p>
   <li><a href="#install">Installation details</a></li>
   <li><a href="#conf">Configuration details</a></li>
   <li><a href="#use">Usage details</a></li>
+  <li><a href="#opendir">Open the Shell directly in a specific
+  directory</a></li>
 </ul>
 
 <h2><a name="install">Installation details</a></h2>
@@ -109,13 +110,21 @@ Sega Dreamcast? Basically the steps are:</p>
     class="font-fixed">make clean</span>.</li>
 </ul>
 
-<p>When your program is ready, you should be able to distribute it, <a
-href="../general/faq.html">by putting it on a selfboot disc</a>.</p>
+<p>When your program is ready, <a href="../tutorials/index.html#master">you
+should be able to distribute it</a>.</p>
+
+<h2><a name="opendir">Open the Shell directly in a specific directory</a></h2>
+
+<p>If you pass a directory to the <span class="font-fixed">dreamsdk.exe</span>
+binary, the DreamSDK Shell will be opened directly in that directory.</p>
+
+<p>Example: <span class="font-fixed">dreamsdk C:\Temp</span> will open the
+Shell in the <span class="font-fixed">/C/Temp</span> directory.</p>
 <!--FOOTER:START-->
 
 <div id="footer">
-&copy; Copyleft 2018-2019 — <a href="http://dreamsdk.sizious.com/" target="_blank">The
-DreamSDK Team</a> and contributors.</div>
+© Copyleft 2018-2019 — <a href="http://dreamsdk.sizious.com/"
+target="_blank">The DreamSDK Team</a> and contributors.</div>
 <!--FOOTER:END-->
 </body>
 </html>

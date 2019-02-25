@@ -28,7 +28,11 @@ class="font-fixed">/opt/dreamsdk/addons</span> directory.</p>
     </ul>
   </li>
   <li><a href="#ipcreate"><strong>IP.BIN Creator</strong> — Initial Program
-    generator</a> (<span class="font-fixed">ipcreate</span>)</li>
+    generator</a> (<span class="font-fixed">ipcreate</span>) 
+    <ul>
+      <li><a href="#iplogos">Additional ready-to-use IP logos</a></li>
+    </ul>
+  </li>
   <li><a href="#mkisofs"><strong>Make ISO File System</strong> — ISO9660 image
     generator</a> (<span class="font-fixed">mkisofs</span>)</li>
   <li><a href="#pvr2png"><strong>PVR to PNG</strong> — PowerVR image to PNG
@@ -91,10 +95,38 @@ class="font-fixed">libronin</span> programs too).</p>
 <p>The bootstrap is the license screen shown at startup when you run any
 Dreamcast program (e.g. Shenmue or whatever).</p>
 
+<p>If you wish to create a custom logo, it can be in <span
+class="font-fixed">BMP</span>, <span class="font-fixed">PNG</span>, <span
+class="font-fixed">GIF</span> or <span class="font-fixed">JPEG</span> format,
+with <span class="font-fixed">320</span> × <span class="font-fixed">90</span>
+in size, and with 128 colors max in the palette. The custom logo is in a custom
+format called MR, so using a BMP, <span class="font-fixed">PNG</span>, <span
+class="font-fixed">GIF</span> or <span class="font-fixed">JPEG</span> format
+will convert the file in that <span class="font-fixed">MR</span> format. The
+transparent color is <span class="font-fixed">#c0c0c0</span>
+(<strong>R:</strong> <span class="font-fixed">192</span>, <strong>G:</strong>
+<span class="font-fixed">192</span>, <strong>B:</strong> <span
+class="font-fixed">192</span>).</p>
+
+<p>Here is an example of a custom logo inserted:</p>
+
+<div class="screenshot">
+<img src="../../img/addons/bootstrap.png" alt="IPCreate"
+title="License Screen Preview"></div>
+
 <p>Note that <a href="http://sizious.com/download/dreamcast/#ipbin-creator"
 target="_blank">a GUI version of this program</a> is also available, but it
 isn't included in the DreamSDK package. By the way the GUI version isn't
 compatible with modern Windows like Windows 10.</p>
+
+<h3><a name="iplogos">Additional ready-to-use IP logos</a></h3>
+
+<p>You have the possibility to install some ready-to-use <span
+class="font-fixed">IP.BIN</span> logos at the same time with
+<strong>IPCreate</strong>.</p>
+
+<p>Logos will be available in <span
+class="font-fixed">/opt/dreamsdk/addons/iplogos/</span> directory.</p>
 
 <h2><a name="mkisofs">Make ISO File System — ISO9660 image generator (<span
 class="font-fixed">mkisofs</span>)</a></h2>
@@ -126,10 +158,27 @@ class="font-fixed">ttf2txf</span>).</p>
 with this font format. Some examples provided in the KallistiOS tree uses this
 format.</p>
 
+<p>Example of <span class="font-fixed">showtxf</span> run:</p>
+
+<div class="screenshot">
+<img src="../../img/addons/showtxf.png" alt="Show TXF" title="Show TXF"></div>
+
+<p>Here is a sample command line of <span class="font-fixed">ttf2txf</span>,
+which will convert the <strong>OCR A Extended</strong> font provided with
+<strong>Microsoft Office 2010</strong>:</p>
+
+<div class="fixed-block">
+chars='1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
+ttf2txf -o ocraext10.txf -s 10 -w 128 -h 64 OCRAEXT.TTF -c \
+\!\@\#\$\%^\&amp;\*\(\)-_=+{}[]\\\|\;\:\'\"\&lt;\&gt;\,\.\?\/\`\~$chars </div>
+
 <h3><a name="txflib">Additional ready-to-use TXF fonts files</a></h3>
 
 <p>For convenience, you may install some ready-to-use <span
 class="font-fixed">TXF</span> fonts.</p>
+
+<p>All provided fonts are installed in <span
+class="font-fixed">/opt/dreamsdk/addons/txf/</span>.</p>
 
 <h2><a name="vmutool">VMU Tool PC — Visual Memory data handler (<span
 class="font-fixed">vmutool</span>)</a></h2>
@@ -141,8 +190,8 @@ all <span class="font-fixed">VMU/VMS</span> (saves) files on your computer.</p>
 <!--FOOTER:START-->
 
 <div id="footer">
-© Copyleft 2018-2019 — <a href="http://dreamsdk.sizious.com/" target="_blank">The
-DreamSDK Team</a> and contributors.</div>
+© Copyleft 2018-2019 — <a href="http://dreamsdk.sizious.com/"
+target="_blank">The DreamSDK Team</a> and contributors.</div>
 <!--FOOTER:END-->
 </body>
 </html>

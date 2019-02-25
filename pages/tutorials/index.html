@@ -252,6 +252,12 @@ Sega Dreamcast hardware.</p>
   <li>Making the selfboot image.</li>
 </ol>
 
+<p>It can be summarized like:</p>
+
+<div class="screenshot">
+<img src="../../img/general/boot.gif" alt="Selfboot Image Summary"
+title="Selfboot Image Summary"></div>
+
 <p>The commands to enter in the <a href="../shell/index.html">DreamSDK
 Shell</a> are:</p>
 
@@ -278,7 +284,8 @@ DreamSDK!</strong></p>
 select the <a href="../ide/index.html#releasetarget">Release target</a> and
 click Build. If you are using KOS <span class="font-fixed">Makefile</span>,
 just enter <span class="font-fixed">make dist</span> in the DreamSDK Shell or
-even just <span class="font-fixed">make</span>.</p>
+even just <span class="font-fixed">make</span> (in case of the <span
+class="font-fixed">dist</span> target isn't defined).</p>
 
 <p>Then, in the <span class="font-fixed">bin\Release</span> folder (if using
 Code::Blocks) or in the project folder (if using KOS <span
@@ -315,8 +322,8 @@ whatever but with no spaces. If you want to generate an <strong>Alcohol
 enter <span class="font-fixed">&lt;prog.mds&gt;</span> instead of <span
 class="font-fixed">&lt;prog.cdi&gt;</span>.</p>
 
-<p>Your selfboot image is now ready! Below you will find an example of all
-commands entered:</p>
+<p><strong>Your selfboot image is now ready!</strong> Below you will find an
+example of all commands entered:</p>
 
 <div class="screenshot">
 <img src="../../img/tutorials/selfboot-command.png" alt="Selfboot commands"
@@ -349,12 +356,13 @@ this kind of disc is booted from the Sega Dreamcast, this menu is called
 disc image he wants.</p>
 
 <p>These tools aren't part of the DreamSDK package, but <a
-href="http://sizious.com/download/dreamcast/#selfboot-inducer" target="_blank">you can find them here</a>.</p>
+href="http://sizious.com/download/dreamcast/#selfboot-inducer"
+target="_blank">you can find them here</a>.</p>
 <!--FOOTER:START-->
 
 <div id="footer">
-© Copyleft 2018-2019 — <a href="http://dreamsdk.sizious.com/" target="_blank">The
-DreamSDK Team</a> and contributors.</div>
+© Copyleft 2018-2019 — <a href="http://dreamsdk.sizious.com/"
+target="_blank">The DreamSDK Team</a> and contributors.</div>
 <!--FOOTER:END-->
 </body>
 </html>

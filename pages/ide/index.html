@@ -4,6 +4,7 @@
   <meta http-equiv="content-type" content="text/html; charset=windows-1252">
   <title>Code::Blocks 17.12 Integration</title>
   <link href="../../css/style.css" rel="stylesheet" type="text/css">
+  <meta name="Keywords" content="Code::Blocks,IDE,Debug,Release,Import,Sega Dreamcast Project Wizard,Wizard,Integrated Development Environment">
 </head>
 
 <body>
@@ -11,6 +12,9 @@
 
 <p>Starting from DreamSDK R2, <strong>you have the possibility to use the
 Code::Blocks IDE in the top of the DreamSDK package!</strong></p>
+
+<div class="screenshot">
+<img src="../../img/ide/codeblocks-splash.png" alt="Code::Blocks Splash"></div>
 
 <p>This will help you to use all the possibilities of the Sega Dreamcast
 development on Windows, in a really user-friendly way.</p>
@@ -36,6 +40,7 @@ development on Windows, in a really user-friendly way.</p>
   </li>
   <li><a href="#importkosexistingproject">Import an existing KallistiOS project
     in Code::Blocks IDE</a></li>
+  <li><a href="#tools">Additional tools in Code::Blocks IDE</a></li>
 </ul>
 
 <h2><a name="prerequisites">Prerequisites</a></h2>
@@ -217,7 +222,7 @@ alt="Code::Blocks Build Targets"></div>
 Code::Blocks IDE, <strong>you won't have the possibility to disable the
 creation of the targets</strong> described above. The reason is they have an
 impact on the generated binaries, and more important a huge impact on the
-Dreamcast Tool application. <a href="#project-usage">Details are explained
+Dreamcast Tool application. <a href="#projectusage">Details are explained
 below</a>.</p>
 
 <p>In the project root directory, you will find an <span
@@ -245,9 +250,9 @@ class="font-fixed">bin/Release/hello.elf</span> file.</p>
 
 <h2><a name="projectusage">Using the created project</a></h2>
 
-<p>As introduced in the <a href="#project-overview">section above</a>, 2
-targets exists in the created project: <span class="font-fixed">Debug</span>
-and <span class="font-fixed">Release</span>.</p>
+<p>As introduced in the <a href="#projectoverview">section above</a>, 2 targets
+exists in the created project: <span class="font-fixed">Debug</span> and <span
+class="font-fixed">Release</span>.</p>
 
 <h3><a name="debugtarget">The Debug Target</a></h3>
 
@@ -345,7 +350,9 @@ will be run through the <span class="font-fixed">Run</span> button.</p>
 alt="Code::Blocks Run Start"></div>
 
 <p><strong>Note:</strong> This binary version is the final binary version of
-your program. It can be distributed or used to master a CD-R image. <a href="../tutorials/index.html#master">Click here to learn how to do that.</a></p>
+your program. It can be distributed or used to master a CD-R image. <a
+href="../tutorials/index.html#master">Click here to learn how to do
+that.</a></p>
 
 <h2><a name="importkosexistingproject">Import an existing KallistiOS project in
 Code::Blocks IDE</a></h2>
@@ -404,11 +411,26 @@ the KallistiOS tree, do the following: </p>
     if needed.</li>
   <li>Done!</li>
 </ol>
+
+<h2><a name="tools">Additional tools in the Code::Blocks IDE</a></h2>
+
+<p>In the <span class="font-fixed">Tools</span> menu of the Code::Blocks IDE,
+you'll find 3 additional tools:</p>
+<ul>
+  <li><span class="font-fixed">Open project directory</span>;</li>
+  <li><span class="font-fixed">DreamSDK Shell</span>;</li>
+  <li><span class="font-fixed">DreamSDK Manager</span>.</li>
+</ul>
+
+<p><span class="font-fixed">Open project directory</span> will open the current
+project in the Windows Explorer. <span class="font-fixed">DreamSDK Shell</span>
+will open the Shell in the current project directory. <span
+class="font-fixed">DreamSDK Manager</span> will just open the tool.</p>
 <!--FOOTER:START-->
 
 <div id="footer">
-© Copyleft 2018-2019 — <a href="http://dreamsdk.sizious.com/" target="_blank">The
-DreamSDK Team</a> and contributors.</div>
+© Copyleft 2018-2019 — <a href="http://dreamsdk.sizious.com/"
+target="_blank">The DreamSDK Team</a> and contributors.</div>
 <!--FOOTER:END-->
 </body>
 </html>

@@ -300,6 +300,16 @@
 		<param name="Local" value="pages\manager\dc-tool.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Options">
+		<param name="Name" value="Options">
+		<param name="Local" value="pages\manager\options.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Repositories">
+		<param name="Name" value="Repositories">
+		<param name="Local" value="pages\manager\options.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="Environment Versions">
 		<param name="Name" value="Environment Versions">
 		<param name="Local" value="pages\manager\environ.html">
@@ -326,16 +336,6 @@
 			</OBJECT>
 	</UL>
 	<LI> <OBJECT type="text/sitemap">
-		<param name="Name" value="Options">
-		<param name="Name" value="Options">
-		<param name="Local" value="pages\manager\options.html">
-		</OBJECT>
-	<LI> <OBJECT type="text/sitemap">
-		<param name="Name" value="Repositories">
-		<param name="Name" value="Repositories">
-		<param name="Local" value="pages\manager\options.html">
-		</OBJECT>
-	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="About">
 		<param name="Name" value="About">
 		<param name="Local" value="pages\manager\about.html">
@@ -349,6 +349,56 @@
 		<param name="Name" value="DreamSDK Shell">
 		<param name="Name" value="DreamSDK Shell">
 		<param name="Local" value="pages\shell\overview.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="terminal">
+		<param name="Name" value="terminal">
+		<param name="Local" value="pages\shell\terminal.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Shell Integration">
+		<param name="Name" value="Shell Integration">
+		<param name="Local" value="pages\runner\index.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Integration">
+		<param name="Name" value="Integration">
+		<param name="Local" value="pages\runner\index.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Batch">
+		<param name="Name" value="Batch">
+		<param name="Local" value="pages\runner\index.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Command Line">
+		<param name="Name" value="Command Line">
+		<param name="Local" value="pages\runner\index.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Code::Blocks">
+		<param name="Name" value="Code::Blocks">
+		<param name="Local" value="pages\ide\index.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="IDE">
+		<param name="Name" value="IDE">
+		<param name="Local" value="pages\ide\index.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Useful Information">
+		<param name="Name" value="Useful Information">
+		<param name="Local" value="pages\tutorials\index.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Tutorial">
+		<param name="Name" value="Tutorial">
+		<param name="Local" value="pages\tutorials\index.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Tutorials">
+		<param name="Name" value="Tutorials">
+		<param name="Local" value="pages\tutorials\index.html">
 		</OBJECT>
 </UL>
 </BODY>

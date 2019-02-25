@@ -2,7 +2,8 @@
 <html>
 <head>
   <meta http-equiv="content-type" content="text/html; charset=windows-1252">
-  <meta name="Keywords" content="FAQ,Frequently Asked Questions,Bootable,Selfboot,Autoboot,1ST_READ.BIN,IP.BIN,Bootstrap,Contribute">
+  <meta name="Keywords"
+  content="FAQ,Frequently Asked Questions,Bootable,Selfboot,Autoboot,1ST_READ.BIN,IP.BIN,Bootstrap,Contribute">
   <title>Frequently Asked Questions (FAQ)</title>
   <link href="../../css/style.css" rel="stylesheet" type="text/css">
 </head>
@@ -16,15 +17,24 @@
 Dreamcast on Microsoft Windows. This package is called the <strong>DreamSDK
 environment</strong>.</p>
 
+<p class="question">Q: What is NOT DreamSDK?</p>
+
+<p>A: It's not a easy-to-use framework. You will need to learn Sega Dreamcast
+programming and specially KallistiOS libraries capabilities. In clear, DreamSDK
+is just a ready-to-use environment that allow you to compile/build Sega
+Dreamcast programs, but won't help you to learn Sega Dreamcast programming
+itself.</p>
+
 <p class="question">Q: Why another package? Again?</p>
 
 <p>A: Because this one is of course better! More seriously, this package is
 different from the others since it includes only absolutely required binaries
 plus the two required precompiled toolchains (<span
-class="font-fixed">SH-4</span> and <span class="font-fixed">ARM</span>). It
-doesn't contains KallistiOS itself, which is handled by <a
-href="../manager/index.html">DreamSDK Manager</a>. Doing so will allow the
-DreamSDK package and your local installation staying always up-to-date.</p>
+class="font-fixed">SH-4</span> and <span class="font-fixed">ARM</span>) in
+order to build Sega Dreamcast programs. It doesn't contains KallistiOS itself,
+which is handled by <a href="../manager/index.html">DreamSDK Manager</a>. Doing
+so will allow the DreamSDK package and your local installation staying always
+up-to-date, without the need of downloading an updated DreamSDK package.</p>
 
 <p class="question">Q: What is a homebrew program?</p>
 
@@ -49,7 +59,8 @@ suitable for the Sega Dreamcast.</p>
 the software on it, like a real game disc. There is a big vulnerability in the
 BIOS code of the Sega Dreamcast, but to summarize, this vulnerability allows
 the boot of burned CD-R like genuine discs if these discs are burned in a
-special way. This kind of discs are usually called selfboot discs.</p>
+special way. This kind of discs are usually called selfboot discs. <a
+href="../tutorials/index.html#master">Click here to learn more</a>.</p>
 
 <p class="question">Q: What is an <span class="font-fixed">IP.BIN</span>
 file?</p>
@@ -61,11 +72,9 @@ target="_blank">bootstrap</a> used on <span class="font-fixed">CD-R</span>
 images. This little program tell the Sega Dreamcast the name of the boot
 program (usually <span class="font-fixed">1ST_READ.BIN</span>, see below) plus
 other informations. This file is not in the file system but it's inserted in
-the first <span class="font-fixed">CD-R</span> sectors. There is no programs to
-generate <span class="font-fixed">IP.BIN</span> files in the DreamSDK
-environment but you can usually find some external tools like <a
-href="http://sizious.com/download/dreamcast/#ipcreate"
-target="_blank">IPCreate</a> to do that task.</p>
+the first <span class="font-fixed">CD-R</span> sectors. If you select the <a
+href="../addons/index.html#ipcreate">IPCreate</a> program when installing
+DreamSDK, you'll be able to generate these kind of files.</p>
 
 <p class="question">Q: What is a <em>scrambled</em> program?</p>
 
@@ -85,8 +94,8 @@ command to generate the raw binary. Then finalize the process by scrambling the
 program by just typing <span class="font-fixed">scramble yourprog.bin
 1ST_READ.BIN</span>. Now, you just have to generate an <span
 class="font-fixed">IP.BIN</span> file and you are good to go: put everything on
-a disc image. This can be done with externals programs, e.g. with <a
-target="_blank" href="http://bit.ly/2zP9Uhj">the IMG4DC package</a>.</p>
+a disc image. <a href="../tutorials/index.html#master">The whole process is
+described here</a>.</p>
 
 <p class="question">Q: What is KallistiOS?</p>
 
@@ -95,7 +104,8 @@ library which allows access to the Sega Dreamcast hardware. It's a great way to
 develop freely for your Sega Dreamcast. This library is not included in the
 DreamSDK package, instead it's handled by the <a
 href="../manager/index.html">DreamSDK Manager</a> tool, part of the DreamSDK
-environment.</p>
+environment. Basically, KallistiOS will be downloaded by the DreamSDK Manager
+tool but it isn't embedded in the DreamSDK Setup program.</p>
 
 <p class="question">Q: What is KallistiOS Ports?</p>
 
@@ -112,22 +122,24 @@ you have the luck to have one), in order to execute/debug them. Dreamcast Tool,
 also called <span class="font-fixed">dc-tool</span>, is the server part. The
 Sega Dreamcast part is called <span class="font-fixed">dcload</span> and exists
 in two version, <span class="font-fixed">serial</span> and <span
-class="font-fixed">ip</span>.</p>
+class="font-fixed">ip</span>. <a href="../tutorials/index.html#dcload">Click
+here to learn everything on it</a>.</p>
 
 <p class="question">Q: It's really mandatory to use the DreamSDK Shell to build
 Dreamcast programs?</p>
 
 <p>A: It's better, but not mandatory. Check the <a
-href="../shell/index.html">DreamSDK Shell</a> documentation to learn the
-possibilities.</p>
+href="../runner/index.html">DreamSDK Runner</a> documentation or even better,
+<a href="../ide/index.html">use the Code::Blocks IDE</a>.</p>
 
 <p class="question">Q: Can I use the package with an IDE (Integrated
 development environment)?</p>
 
-<p>A: Since all Sega Dreamcast development tools (e.g. toolchains binaries)
-have been statically linked, you can use them outside the DreamSDK environment.
-This hasn't been tested however. By the way this should be a side project upon
-the DreamSDK package!</p>
+<p>A: Since DreamSDK R2, the environment is fully compatible with Code::Blocks
+17.12 stable release. Just install the IDE and select the appropriate option
+when installing DreamSDK. Code::Blocks was chosen because it's free,
+extensible, open source and nice to use, and even better, it's still compatible
+with the old Windows XP. There is no plan to support other IDE yet.</p>
 
 <p class="question"><a name="otherdir"></a>Q: From the DreamSDK Shell, how can
 I access to another directory which is NOT in the DreamSDK tree? Is it
@@ -138,7 +150,9 @@ the DreamSDK environment?</p>
 <p>A: No. You can access to all Windows drives by entering something like <span
 class="font-fixed">cd
 /&lt;drive_letter&gt;/&lt;my_folder1&gt;/&lt;my_folder2&gt;/</span>, e.g. <span
-class="font-fixed">cd /C/Dreamcast/My/Project/</span>.</p>
+class="font-fixed">cd /C/Dreamcast/My/Project/</span>, or <a
+href="../shell/overview.html#opendir">you can just pass the directory to
+open</a> to the <span class="font-fixed">dreamsdk.exe</span> binary.</p>
 
 <p class="question">Q: How can I test all the environment? Is there any way to
 test if everything is working correctly in my environment?</p>
@@ -149,27 +163,30 @@ href="../manager/kos-ports.html">you have to install all KallistiOS Ports</a>.
 After that, just type <span class="font-fixed">cd
 /opt/toolchains/dc/kos/examples/</span> then enter <span
 class="font-fixed">make</span>. All examples should compile fine, and all <span
-class="font-fixed">.elf</span> programs will be generated.</p>
+class="font-fixed">.elf</span> programs will be generated. But really, it
+should be not necessary to do that, plus, the generation time is really
+long.</p>
 
 <p class="question">Q: I found a bug or a missing software. How can I contact
 you?</p>
 
 <p>A: Please visit the <a href="http://dreamsdk.sizious.com/"
-target="_blank">DreamSDK Website</a> and use the <strong>Contact</strong> form.
-Or even better, <a href="http://dcemulation.org/phpBB/viewforum.php?f=29" target="_blank">you
-can post your issue on the official KallistiOS forum</a>.</p>
+target="_blank">DreamSDK Website</a> or even better, <a
+href="http://dcemulation.org/phpBB/viewforum.php?f=29" target="_blank">you can
+post your issue on the official KallistiOS forum</a>.</p>
 
 <p class="question">Q: Can I contribute to the DreamSDK project? The first
 thing I want to submit is a fix for that horrible Frenglish!</p>
 
 <p>A: Of course! The project is hosted on <a
 href="https://github.com/dreamsdk/" target="_blank">GitHub</a>. Feel free to
-send a <span class="font-fixed">Pull Request</span>!</p>
+send a <span class="font-fixed">Pull Request</span>! <a href="contribute.html">Click here to learn
+details on that topic</a>.</p>
 <!--FOOTER:START-->
 
 <div id="footer">
-&copy; Copyleft 2018-2019 — <a href="http://dreamsdk.sizious.com/" target="_blank">The
-DreamSDK Team</a> and contributors.</div>
+© Copyleft 2018-2019 — <a href="http://dreamsdk.sizious.com/"
+target="_blank">The DreamSDK Team</a> and contributors.</div>
 <!--FOOTER:END-->
 </body>
 </html>

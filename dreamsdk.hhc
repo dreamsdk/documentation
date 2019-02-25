@@ -83,7 +83,7 @@
 			<param name="Local" value="pages\general\changes.html">
 			</OBJECT>
 		<LI> <OBJECT type="text/sitemap">
-			<param name="Name" value="Licenses Information">
+			<param name="Name" value="License Information">
 			<param name="Local" value="pages\general\licenses.html">
 			</OBJECT>
 		<UL>
@@ -102,6 +102,10 @@
 			<LI> <OBJECT type="text/sitemap">
 				<param name="Name" value="Dependencies">
 				<param name="Local" value="pages\general\licenses.html#deps">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Code::Blocks">
+				<param name="Local" value="pages\general\licenses.html#codeblocks">
 				</OBJECT>
 			<LI> <OBJECT type="text/sitemap">
 				<param name="Name" value="Miscellaneous">
@@ -284,6 +288,12 @@
 			<param name="Name" value="IP.BIN Creator — Initial Program generator">
 			<param name="Local" value="pages\addons\index.html#ipcreate">
 			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Additional ready-to-use IP logos">
+				<param name="Local" value="pages\addons\index.html#iplogos">
+				</OBJECT>
+		</UL>
 		<LI> <OBJECT type="text/sitemap">
 			<param name="Name" value="Make ISO File System — ISO9660 image generator">
 			<param name="Local" value="pages\addons\index.html#mkisofs">
