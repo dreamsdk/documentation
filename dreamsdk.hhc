@@ -181,6 +181,10 @@
 				<param name="Name" value="Usage details">
 				<param name="Local" value="pages\shell\overview.html#use">
 				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Open the Shell directly in a specific directory">
+				<param name="Local" value="pages\shell\overview.html#opendir">
+				</OBJECT>
 		</UL>
 		<LI> <OBJECT type="text/sitemap">
 			<param name="Name" value="Terminal">
@@ -247,7 +251,7 @@
 				</OBJECT>
 		</UL>
 		<LI> <OBJECT type="text/sitemap">
-			<param name="Name" value="Using the created project">
+			<param name="Name" value="Using the created Sega Dreamcast Project">
 			<param name="Local" value="pages\ide\index.html#projectusage">
 			</OBJECT>
 		<UL>
@@ -263,6 +267,10 @@
 		<LI> <OBJECT type="text/sitemap">
 			<param name="Name" value="Import an existing KallistiOS project in Code::Blocks IDE">
 			<param name="Local" value="pages\ide\index.html#importkosexistingproject">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Additional tools in Code::Blocks IDE">
+			<param name="Local" value="pages\ide\index.html#tools">
 			</OBJECT>
 	</UL>
 	<LI> <OBJECT type="text/sitemap">
