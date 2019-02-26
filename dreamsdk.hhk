@@ -386,6 +386,36 @@
 		<param name="Local" value="pages\ide\index.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Debug">
+		<param name="Name" value="Debug">
+		<param name="Local" value="pages\ide\index.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Release">
+		<param name="Name" value="Release">
+		<param name="Local" value="pages\ide\index.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Import">
+		<param name="Name" value="Import">
+		<param name="Local" value="pages\ide\index.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Sega Dreamcast Project Wizard">
+		<param name="Name" value="Sega Dreamcast Project Wizard">
+		<param name="Local" value="pages\ide\index.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Wizard">
+		<param name="Name" value="Wizard">
+		<param name="Local" value="pages\ide\index.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Integrated Development Environment">
+		<param name="Name" value="Integrated Development Environment">
+		<param name="Local" value="pages\ide\index.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="Useful Information">
 		<param name="Name" value="Useful Information">
 		<param name="Local" value="pages\tutorials\index.html">
