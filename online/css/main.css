@@ -1,0 +1,93 @@
+body {
+	font-family: Tahoma, Arial, Verdana, Geneva, Helvetica, sans-serif;
+	font-size: 0.75em;
+	margin-left: 0px;
+	padding-left: 0px;
+	background-image: url('../img/bkgnd.jpg');
+}
+
+body.nojs ul#dynamic-toc {
+	display: none;
+}
+
+li {
+	margin-left: 0px;
+	padding-left: 0px;
+	margin-bottom: 8px;	
+}
+
+ul {
+	list-style-type: none;
+	margin: 0px;
+	padding: 5px;
+}
+
+.content {
+	padding-left: 50px;
+}
+
+.content li {
+	margin-bottom: 0px;
+	list-style-image: url('../img/file.gif');
+}
+
+a:link {	
+	color: black;
+	text-decoration: none;
+}
+
+a:visited {
+	color: black;
+	text-decoration: none;
+}
+
+a:hover {
+	color: blue;
+	text-decoration: underline;
+}
+
+a:active {
+	color: blue;
+	text-decoration: none;
+}
+
+a.fold {
+	text-decoration: none;
+	font-weight: bold;
+}
+
+a.fold:link {
+	color: black;
+	text-decoration: none;
+}
+
+a.fold:visited {
+	color: black;
+	text-decoration: none;
+}
+
+a.fold:hover {
+	color: blue;
+	text-decoration: none;
+}
+
+a.fold:active {
+	color: blue;
+	text-decoration: none;
+}
+
+div.content-wrapper {
+	display: block;
+}
+
+div.collapsed {
+	display: none;
+}
+
+.folder-icon {
+	padding: 0 4px;
+}
+
+div#information {
+	margin: 4px;
+}

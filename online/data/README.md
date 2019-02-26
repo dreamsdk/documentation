@@ -1,0 +1,1 @@
+Copy the whole help system file here, including css, js and pages directories.
