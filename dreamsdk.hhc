@@ -361,6 +361,10 @@
 				<param name="Name" value="Generate the dcload-serial or dcload-ip image">
 				<param name="Local" value="pages\tutorials\index.html#dcloadgen">
 				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Basic usage of the dcload/dc-tool programs">
+				<param name="Local" value="pages\tutorials\index.html#dcloadusage">
+				</OBJECT>
 		</UL>
 		<LI> <OBJECT type="text/sitemap">
 			<param name="Name" value="How to debug a Sega Dreamcast program directly from the DreamSDK Shell">

@@ -21,30 +21,71 @@ title="Dreamcast Tool Tab"></div>
 
 <p>Please choose the configuration accordingly to your scenario:</p>
 <ul>
-  <li>If you have a Serial (Coders Cable), you should check the <span
-    class="font-fixed">Serial</span> button.</li>
-  <li>If you have a Broadband or LAN Adapter (which is a Ethernet card for the
-    Sega Dreamcast), you should check the <span class="font-fixed">Internet
-    Protocol (IP)</span> button.</li>
-  <li>If you want Dreamcast Tool to run an emulator instead, you may choose the
-    <span class="font-fixed">Custom</span> option. Please note, debug
-    capabilities will be impossible in that mode (or more exactly, this will
-    depend of your emulator, and we aren't aware of any emulator with a good
-    debugger).</li>
-  <li>Or you can click the <span class="font-fixed">None</span> button to
-    disable completely Dreamcast Tool.</li>
+  <li>If you have a <strong>Serial (Coders Cable)</strong>, you should check
+    the <span class="font-fixed">Serial</span> button.</li>
+  <li>If you have a <strong>Broadband or LAN Adapter</strong> (which is a
+    Ethernet card for the Sega Dreamcast), you should check the <span
+    class="font-fixed">Internet Protocol (IP)</span> button.</li>
+  <li>If you want <strong>Dreamcast Tool to run an emulator instead</strong>,
+    you may choose the <span class="font-fixed">Custom</span> option. Please
+    note, debug capabilities will be impossible in that mode (or more exactly,
+    this will depend of your emulator, and we aren't aware of any emulator with
+    a good debugger).</li>
+  <li>Or you can <strong>click the <span class="font-fixed">None</span> button
+    to disable completely</strong> Dreamcast Tool.</li>
 </ul>
 
 <p>After choosing your tool version, the corresponding settings panel will
-activate. The description of the options are described in the KallistiOS
-documentation.</p>
+activate.</p>
 
-<p>In order to use Dreamcast Tool, you will need the corresponding dcload. <a
-href="../tutorials/index.html#dcload">Click here to learn how to generate the
-dcload program</a>.</p>
+<p>In order to use Dreamcast Tool, either Serial or IP versions, you will need
+the corresponding dcload. <a href="../tutorials/index.html#dcload">Click here
+to learn how to generate the dcload program</a>.</p>
 
-<p>Please note, <strong>these options are applied all the time</strong>, every
-time you will run the <span class="font-fixed">dc-tool</span> program.</p>
+<p>If you use a <strong>direct cross-cable connection between your Sega
+Dreamcast and your computer</strong>, you should use the ARP protocol. The
+configuration may be a bit complex, so to do that, you have to:</p>
+<ol>
+  <li>Plug the cross-cable in the Broadband Adapter/LAN Adapter and to your
+    computer.</li>
+  <li>Prepare the <a href="../tutorials/index.html#dcload">dcload-ip image or
+    CD</a>.</li>
+  <li>Choose an IPv4 address for your Sega Dreamcast (e.g. <span
+    class="font-fixed">192.168.1.1</span>). Enter that IP in the <span
+    class="font-fixed">Dreamcast Tool</span> tab, in the <span
+    class="font-fixed">IP Address</span> field. That IP should be of course not
+    already taken in your network configuration!</li>
+  <li>Enter the <span class="font-fixed">MAC Address</span> of your Broadband
+    Adapter/LAN Adapter in the <span class="font-fixed">Dreamcast Tool</span>
+    tab, after checking the <span class="font-fixed">Use Address Resolution
+    Protocol (ARP) to setup the Dreamcast IP (direct cross-cable
+    connection)</span> checkbox. The MAC address is usually printed directly on
+    your Broadband Adapter/LAN Adapter card. You should have now something like
+    (in that example, the IP address is MAC address is set to <span
+    class="font-fixed">aa-bb-cc-dd-ee-ff</span>): 
+
+    <div class="screenshot">
+    <img src="../../img/manager/dcload-ip-manager.png"
+    alt="Dreamcast Tool IP Example" title="Dreamcast Tool IP Example"></div>
+  </li>
+  <li>Setup the Windows network card to use the IPv4 address defined at the
+    step 3. You need to choose a IPv4 for your computer too, in the same
+    network range. 
+    <p>In that example, the IP address for the Sega Dreamcast is <span
+    class="font-fixed">192.168.1.1</span> and the computer IP is <span
+    class="font-fixed">192.168.1.254</span>.</p>
+
+    <div class="screenshot">
+    <img src="../../img/manager/dcload-ip-win.png"
+    alt="Setting up IP address in Windows"
+    title="Setting up IP address in Windows"></div>
+  </li>
+  <li>You are now ready to use Dreamcast Tool by using direct connection!</li>
+</ol>
+
+<p>The other options are described in the KallistiOS documentation. Please
+note, <strong>these options are applied all the time</strong>, every time you
+will run the <span class="font-fixed">dc-tool</span> program.</p>
 
 <p>At the <a href="../shell/index.html">DreamSDK Shell</a> prompt, you just
 have to run the following command:</p>
@@ -71,8 +112,8 @@ more</a>.</p>
 <!--FOOTER:START-->
 
 <div id="footer">
-© Copyleft 2018-2019 — <a href="https://www.dreamsdk.org/"
-target="_blank">The DreamSDK Team</a> and contributors.</div>
+© Copyleft 2018-2019 — <a href="https://www.dreamsdk.org/" target="_blank">The
+DreamSDK Team</a> and contributors.</div>
 <!--FOOTER:END-->
 </body>
 </html>
