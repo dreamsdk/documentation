@@ -4,7 +4,8 @@
   <meta http-equiv="content-type" content="text/html; charset=windows-1252">
   <title>Code::Blocks 17.12 Integration</title>
   <link href="../../css/style.css" rel="stylesheet" type="text/css">
-  <meta name="Keywords" content="Code::Blocks,IDE,Debug,Release,Import,Sega Dreamcast Project Wizard,Wizard,Integrated Development Environment">
+  <meta name="Keywords"
+  content="Code::Blocks,IDE,Debug,Release,Import,Sega Dreamcast Project Wizard,Wizard,Integrated Development Environment">
 </head>
 
 <body>
@@ -313,6 +314,57 @@ class="font-fixed">printf()</span> statements, as they are sent to the
 Dreamcast Tool console window. This can be useful too, combined with classical
 breakpoints.</p>
 
+<p>An important thing to notice is <strong>Dreamcast Tool is run before the GNU
+Debugger (GDB) when debugging</strong>. This is done because your target
+program that needs to be debugged should be running on the Sega Dreamcast
+before running the GNU Debugger. In order to do that, the Code::Blocks IDE
+will:</p>
+<ul>
+  <li>Run Dreamcast Tool;</li>
+  <li>Wait for <span class="font-fixed">10</span> seconds (by default);</li>
+  <li>Run the GNU Debugger (GDB);</li>
+  <li>GDB will connect to the Sega Dreamcast, then the debug session will
+  begin.</li>
+</ul>
+
+<p>If the delay (<span class="font-fixed">10</span> seconds by default) is not
+enough for your program, you can increase it in the Code::Blocks IDE :</p>
+<ol>
+  <li>In Code::Blocks, select <span class="font-fixed">Project &gt;
+    Properties...</span>.</li>
+  <li>Click on the <span class="font-fixed">Debugger</span> tab.</li>
+  <li>Select the <span class="font-fixed">Debug</span> target.</li>
+  <li>Increase the <span class="font-fixed">Waiting time</span> value (in
+    seconds). <span class="font-fixed">0</span> means it will use the system
+    default (<span class="font-fixed">10</span> by default).</li>
+</ol>
+
+<div class="screenshot">
+<img src="../../img/ide/codeblocks-project-loader-waiting-time.png"
+alt="Code::Blocks Loader Waiting Time for a specific project"
+title="Code::Blocks Loader Waiting Time for a specific project"></div>
+
+<p>If you want to change the <span class="font-fixed">Waiting time</span>
+default value (<span class="font-fixed">10</span> seconds by default), do the
+following:</p>
+<ol>
+  <li>In Code::Blocks, select <span class="font-fixed">Settings &gt;
+    Debugger...</span>.</li>
+  <li>In the <span class="font-fixed">Debugger settings</span> window, click on
+    the <span class="font-fixed">Sega Dreamcast</span> profile.</li>
+  <li>In the <span class="font-fixed">Loader</span> group box, increase the
+    <span class="font-fixed">Waiting time</span> value (in seconds).</li>
+</ol>
+
+<div class="screenshot">
+<img src="../../img/ide/codeblocks-loader-waiting-time.png"
+alt="Code::Blocks Loader Waiting Time (system default)"
+title="Code::Blocks Loader Waiting Time (system default)"></div>
+
+<p>The <span class="font-fixed">Waiting time</span> should be well adjusted.
+<strong>If the waiting time is too short, then the GNU Debugger will start to
+early and the debug session won't happen!</strong></p>
+
 <p><strong>Note:</strong> If you are using a custom Dreamcast Tool executable
 (i.e. the <a href="../manager/dc-tool.html"><span
 class="font-fixed">Custom</span></a> option in <a
@@ -429,8 +481,8 @@ class="font-fixed">DreamSDK Manager</span> will just open the tool.</p>
 <!--FOOTER:START-->
 
 <div id="footer">
-© Copyleft 2018-2019 — <a href="https://www.dreamsdk.org/"
-target="_blank">The DreamSDK Team</a> and contributors.</div>
+© Copyleft 2018-2019 — <a href="https://www.dreamsdk.org/" target="_blank">The
+DreamSDK Team</a> and contributors.</div>
 <!--FOOTER:END-->
 </body>
 </html>
