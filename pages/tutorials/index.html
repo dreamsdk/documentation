@@ -120,7 +120,7 @@ depending of your connection mode.</p>
 Windows Explorer, enter the following in the DreamSDK Shell:</p>
 
 <div class="fixed-block">
-explorer . </div>
+browse</div>
 
 <p>Below an example of commands entered:</p>
 
@@ -312,8 +312,8 @@ make dist<br>
 elf2bin &lt;prog.elf&gt;<br>
 scramble &lt;prog.bin&gt; cd_root/1ST_READ.BIN<br>
 ipcreate -silent<br>
-makedisc &lt;prog.cdi&gt; cd_root IP.BIN &lt;PROG_NAME&gt;<br>
-explorer .<br>
+makedisc &lt;prog.cdi&gt; cd_root IP.BIN [PROG_NAME]<br>
+browse<br>
 </div>
 
 <p><strong>Please note, this will work only if you installed <a
@@ -358,12 +358,15 @@ interesting options, like inserting a custom logo which will displayed in the
 <strong>Sega License Screen</strong> shown when booting up the Dreamcast.</p>
 
 <p>Finalize by generating the selfboot image: <span class="font-fixed">makedisc
-&lt;prog.cdi&gt; cd_root IP.BIN &lt;PROG_NAME&gt;</span>. <span
-class="font-fixed">&lt;PROGNAME&gt;</span> will be the CD label. It can be
-whatever but with no spaces. If you want to generate an <strong>Alcohol
-120%</strong> image (<span class="font-fixed">MDS/MDF</span>) rather than a
-<strong>Padus DiscJuggler</strong> image (<span class="font-fixed">CDI</span>),
-enter <span class="font-fixed">&lt;prog.mds&gt;</span> instead of <span
+&lt;prog.cdi&gt; cd_root IP.BIN [PROG_NAME]</span>. <span
+class="font-fixed">[PROG_NAME]</span> will be the CD label. It can be whatever
+and it's completely optional: if you don't specify something, it will be set to
+the <span class="font-fixed">Game Title</span> field value from the bootstrap
+file (<span class="font-fixed">IP.BIN</span>). If you want to generate an
+<strong>Alcohol 120%</strong> image (<span class="font-fixed">MDS/MDF</span>)
+rather than a <strong>Padus DiscJuggler</strong> image (<span
+class="font-fixed">CDI</span>), enter <span
+class="font-fixed">&lt;prog.mds&gt;</span> instead of <span
 class="font-fixed">&lt;prog.cdi&gt;</span>.</p>
 
 <p><strong>Your selfboot image is now ready!</strong> Below you will find an
@@ -373,8 +376,8 @@ example of all commands entered:</p>
 <img src="../../img/tutorials/selfboot-command.png" alt="Selfboot commands"
 title="Selfboot commands"></div>
 
-<p>Now, you just have to enter <span class="font-fixed">explorer .</span> to
-open the current directory in the Windows Explorer:</p>
+<p>Now, you just have to enter <span class="font-fixed">browse</span> to open
+the current directory in the Windows Explorer:</p>
 
 <div class="screenshot">
 <img src="../../img/tutorials/selfboot-final-command.png"
