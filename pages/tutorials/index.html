@@ -308,6 +308,7 @@ Shell</a> are:</p>
 <div class="fixed-block">
 cd &lt;your_program_dir&gt;<br>
 mkdir cd_root<br>
+make<br>
 make dist<br>
 elf2bin &lt;prog.elf&gt;<br>
 scramble &lt;prog.bin&gt; cd_root/1ST_READ.BIN<br>
@@ -327,23 +328,25 @@ DreamSDK!</strong></p>
 <p>To compile in Release mode, if you are using Code::Blocks, you just have to
 select the <a href="../ide/index.html#releasetarget">Release target</a> and
 click Build. If you are using KOS <span class="font-fixed">Makefile</span>,
-just enter <span class="font-fixed">make dist</span> in the DreamSDK Shell or
-even just <span class="font-fixed">make</span> (in case of the <span
-class="font-fixed">dist</span> target isn't defined).</p>
-
-<p>Then, in the <span class="font-fixed">bin\Release</span> folder (if using
-Code::Blocks) or in the project folder (if using KOS <span
+just enter <span class="font-fixed">make</span> followed by <span
+class="font-fixed">make dist</span> in the DreamSDK Shell. Please note, if
+<span class="font-fixed">make dist</span> isn't defined in your <span
+class="font-fixed">Makefile</span>, you can ignore the error as the <span
+class="font-fixed">elf2bin</span> tool will do the necessary for you. Then, in
+the <span class="font-fixed">bin\Release</span> folder (if using Code::Blocks)
+or in the project folder (if using KOS <span
 class="font-fixed">Makefile</span>), enter <span class="font-fixed">elf2bin
 &lt;prog.elf&gt;</span>. You should have a new file: <span
 class="font-fixed">&lt;prog.bin&gt;</span>. This is the unscrambled binary. In
-the capture below, you will see the <span class="font-fixed">hello.bin</span>
-file, which is the output of the <span class="font-fixed">elf2bin</span>
-command.</p>
+the screenshot below, you will see the <span
+class="font-fixed">hello.bin</span> file, which is the output of the <span
+class="font-fixed">elf2bin</span> command.</p>
 
 <div class="screenshot">
 <img src="../../img/tutorials/elf2bin.png" alt="elf2bin" title="elf2bin"> </div>
 
-<p>It's time to scramble the binary. Enter the following:</p>
+<p>It's time to scramble the binary. Enter the following (the <span
+class="font-fixed">mkdir</span> command may not be necessary):</p>
 
 <div class="fixed-block">
 mkdir cd_root<br>
