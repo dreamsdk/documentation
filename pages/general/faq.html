@@ -34,6 +34,10 @@ order to build Sega Dreamcast programs. It doesn't contains KallistiOS itself,
 which is handled by <a href="../manager/index.html">DreamSDK Manager</a>. Doing
 so will allow the DreamSDK package and your local installation staying always
 up-to-date, without the need of downloading an updated DreamSDK package.</p>
+	
+<p class="question">Q: Can I use DreamSDK on another OS than Windows, e.g. Linux/Unix/macOS/whatever?</p>
+	
+<p>A: Short answer: No. This package is intended only for Microsoft Windows users which they haven't natively a Unix-like Shell, which isn't the case of the others OS.</p>
 
 <p class="question">Q: What is a homebrew program?</p>
 
@@ -123,8 +127,12 @@ Sega Dreamcast part is called <span class="font-fixed">dcload</span> and exists
 in two version, <span class="font-fixed">serial</span> and <span
 class="font-fixed">ip</span>. <a href="../tutorials/index.html#dcload">Click
 here to learn everything on it</a>.</p>
-
-<p class="question">Q: It's really mandatory to use the DreamSDK Shell to build
+	
+<p class="question">Q: Is it really mandatory to use a Coders Cable, a LAN or Broadband Adapter in order to debug Sega Dreamcast programs?</p>
+	
+<p>A: No. The <a target="_blank" href="https://redream.io/">Redream</a> emulator provides a GDB connector. However, this possibility isn't covered by the DreamSDK package. <a target="_blank" href="https://libraries.io/github/inolen/redream#debugging">Learn more about this here</a>.</p>
+	
+<p class="question">Q: Is it really mandatory to use the DreamSDK Shell to build
 Dreamcast programs?</p>
 
 <p>A: It's better, but not mandatory. Check the <a
@@ -134,11 +142,11 @@ href="../runner/index.html">DreamSDK Runner</a> documentation or even better,
 <p class="question">Q: Can I use the package with an IDE (Integrated
 development environment)?</p>
 
-<p>A: Since DreamSDK R2, the environment is fully compatible with Code::Blocks
-17.12 stable release. Just install the IDE and select the appropriate option
+<p>A: Since DreamSDK R2, the environment <strong>is fully compatible with Code::Blocks
+17.12 stable release</strong>. Just install the IDE and select the appropriate option
 when installing DreamSDK. Code::Blocks was chosen because it's free,
 extensible, open source and nice to use, and even better, it's still compatible
-with the old Windows XP. There is no plan to support other IDE yet.</p>
+with the old Windows XP.</p>
 
 <p class="question"><a name="otherdir"></a>Q: From the DreamSDK Shell, how can
 I access to another directory which is NOT in the DreamSDK tree? Is it
@@ -146,7 +154,7 @@ mandatory to create my Sega Dreamcast homebrew projects in the DreamSDK
 environment, i.e. in my <span class="font-fixed">/home</span> directory from
 the DreamSDK environment?</p>
 
-<p>A: No. You can access to all Windows drives by entering something like <span
+<p>A: No it isn't mandatory. You can access to all Windows drives by entering something like <span
 class="font-fixed">cd
 /&lt;drive_letter&gt;/&lt;my_folder1&gt;/&lt;my_folder2&gt;/</span>, e.g. <span
 class="font-fixed">cd /C/Dreamcast/My/Project/</span>, or <a
