@@ -1,0 +1,185 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252">
+  <title>Additional user-interface tools</title>
+  <link href="../../css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<h1>Additional user-interface tools</h1>
+
+<p>This sections details <strong>all additional and optional user-interface
+tools</strong> available when installing DreamSDK.</p>
+
+<p>All these tools are installed in the <span
+class="font-fixed">/opt/dreamsdk/tools</span> directory.</p>
+
+<p>Please select a tool below to learn more:</p>
+<ul>
+  <li><a href="#checker"><strong>1ST_READ.BIN Checker</strong> — Binary program
+    state checker </a> </li>
+  <li><a href="#bdreams"><strong>BootDreams</strong> — Selfboot image generator
+    frontend</a></li>
+  <li><a href="#ipwriter"><strong>IP.BIN Writer</strong> — Initial Program
+    manipulation tool</a> 
+    <ul>
+      <li><a href="#iplogos">Additional ready-to-use Initial Program (IP)
+        logos</a></li>
+    </ul>
+  </li>
+  <li><a href="#mrwriter"><strong>MR Writer</strong> — Initial Program picture
+    format management tool</a></li>
+  <li><a href="#buildsbi"><strong>SBI Builder</strong> — Selfboot Inducer
+    package generator</a></li>
+  <li><a href="#sbinducr"><strong>Selfboot Inducer</strong> — DreamInducer disc
+    generator</a></li>
+  <li><a href="#vmutool"><strong>VMU Tool PC</strong> — Visual Memory data
+    manager (GUI)</a></li>
+</ul>
+
+<h2><a name="checker">1ST_READ.BIN Checker — Binary program state
+checker</a></h2>
+
+<p><strong>1ST_READ.BIN Checker</strong> is a tool which help you to see if a
+Sega Dreamcast program is in scrambled or unscrambled state.</p>
+
+<p><a href="../general/faq.html#scrambled">Scrambled or unscrambled states are
+described here</a>.</p>
+
+<div class="screenshot">
+<img src="../../img/addons/checker.png"></div>
+
+<h2><a name="bdreams">BootDreams — Selfboot image generator frontend</a></h2>
+
+<p><strong>BootDreams</strong> is a tool for Windows that uses many
+command-line tools to <a href="../general/faq.html#selfboot">create selfbooting
+images and discs</a> for Sega Dreamcast.</p>
+
+<p>This is the <a href="../general/utilities.html#makedisc">MakeDisc
+utility</a> equivalent but with a nice user-interface.</p>
+
+<div class="screenshot">
+<img src="../../img/addons/bdreams.png"></div>
+
+<h2><a name="ipwriter" id="ipwriter">IP.BIN Writer — Initial Program
+manipulation tool</a></h2>
+
+<p><strong>IP.BIN Writer</strong> is made to generate bootstrap <span
+class="font-fixed">IP.BIN</span> (<em>Initial Program</em>) files for your Sega
+Dreamcast console. This tool is used to generate customized bootstraps (e.g.
+with custom logos) for homebrew programs only, mainly KallistiOS programs (but
+it should be compatible with <span class="font-fixed">libronin</span> programs
+too).</p>
+
+<p>This is the <strong>IP creator</strong> (<span
+class="font-fixed">makeip</span>) utility (which is part of KallistiOS)
+equivalent but with a nice user-interface.</p>
+
+<div class="screenshot">
+<img src="../../img/addons/ipwriter.png"></div>
+
+<p>The bootstrap is the license screen shown at startup when you run any
+Dreamcast program.</p>
+
+<p>If you wish to create a custom logo, it can be in <span
+class="font-fixed">BMP</span>, <span class="font-fixed">PNG</span>, <span
+class="font-fixed">GIF</span> or <span class="font-fixed">JPEG</span> format,
+with <span class="font-fixed">320</span> × <span class="font-fixed">90</span>
+in size, and with <span class="font-fixed">128</span> colors max in the
+palette. The custom logo is in a custom format called <span
+class="font-fixed">MR</span>, so using a <span class="font-fixed">BMP</span>,
+<span class="font-fixed">PNG</span>, <span class="font-fixed">GIF</span> or
+<span class="font-fixed">JPEG</span> format will convert the file in that <span
+class="font-fixed"><span class="font-fixed">MR</span></span> format. The
+transparent color is <span class="font-fixed">#c0c0c0</span>
+(<strong>R:</strong> <span class="font-fixed">192</span>, <strong>G:</strong>
+<span class="font-fixed">192</span>, <strong>B:</strong> <span
+class="font-fixed">192</span>).</p>
+
+<p>Here is an example of a custom logo inserted:</p>
+
+<div class="screenshot">
+<img src="../../img/addons/bootstrap.png" alt="IPCreate"
+title="License Screen Preview"></div>
+
+<h3><a name="iplogos" id="iplogos">Additional ready-to-use Initial Program (IP)
+logos</a></h3>
+
+<p>You have the possibility to install some ready-to-use <span
+class="font-fixed">IP.BIN</span> logos at the same time with <strong>IP.BIN
+Writer</strong>.</p>
+
+<p>Logos will be available in <span
+class="font-fixed">/opt/dreamsdk/tools/ipwriter/iplogos/</span> directory.</p>
+
+<h2><a name="mrwriter">MR Writer — Initial Program picture format management
+tool</a></h2>
+
+<p><strong>MR Writer</strong> is a tool to generate <span
+class="font-fixed">IP.BIN</span> logos for inserting in <span
+class="font-fixed">IP.BIN</span> files. These kind of images are in the <span
+class="font-fixed">MR</span> format, a special image format developed for the
+Sega Dreamcast.</p>
+
+<div class="screenshot">
+<img src="../../img/addons/mrwriter.png"></div>
+
+<p><strong>Note:</strong> The <strong>IP creator</strong> (<span
+class="font-fixed">makeip</span>) utility included in KallistiOS can handle
+<span class="font-fixed">MR</span> image generation.</p>
+
+<h2><a name="buildsbi">SBI Builder — Selfboot Inducer package generator</a></h2>
+
+<p><strong>SBI Builder</strong> is a tool to build Selfboot Inducer packages
+(<span class="font-fixed">SBI</span>) from a Sega Dreamcast program.</p>
+
+<p>The <span class="font-fixed">SBI</span> package is a method of distribution
+for your Dreamcast programs used with <strong>Selfboot Inducer</strong>.</p>
+
+<div class="screenshot">
+<img src="../../img/addons/buildsbi.png"></div>
+
+<h2><a name="sbinducr">Selfboot Inducer — DreamInducer disc generator</a></h2>
+
+<p><strong>Selfboot Inducer</strong> is a program made to build a
+<strong>DreamInducer</strong> bootable compilation CD-ROM for your Sega
+Dreamcast.</p>
+
+<p><strong>DreamInducer</strong> is a Sega Dreamcast program allowing you to
+put multiple homebrew games, emulators, demos or applications onto the same
+CD.</p>
+
+<p>To use this application, you must have the packages corresponding to the
+application you like, for example <span class="font-fixed">neo4all.sbi</span>
+for the Neo 4 All emulator.</p>
+
+<p><span class="font-fixed">SBI</span> packages can be generated by <strong>SBI
+Builder</strong>.</p>
+
+<div class="screenshot">
+<img src="../../img/addons/sbinducr.png"> </div>
+
+<p>This application is meant to be used by the end-user which will receive your
+<span class="font-fixed">SBI</span> package generated by <strong>SBI
+Builder</strong>. This application is provided in DreamSDK only for testing
+your <span class="font-fixed">SBI</span> package.</p>
+
+<h2><a name="vmutool">VMU Tool PC — Visual Memory data manager (GUI)</a></h2>
+
+<p><strong>VMU Tool PC</strong> is a graphical tool allowing you to manage all
+<span class="font-fixed">VMU/VMS</span> (saves) files on your computer.</p>
+
+<div class="screenshot">
+<img src="../../img/addons/vmutool.png"></div>
+
+<p>This utility is the user-interface of the <a href="cmd.html#vmutool">VMU
+Tool PC command-line addon</a>.</p>
+<!--FOOTER:START-->
+
+<div id="footer">
+© Copyleft 2018-2020 — <a href="https://www.dreamsdk.org/" target="_blank">The
+DreamSDK Team</a> and contributors.</div>
+<!--FOOTER:END-->
+</body>
+</html>

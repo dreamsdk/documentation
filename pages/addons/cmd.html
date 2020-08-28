@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252">
+  <title>Additional command-line tools</title>
+  <link href="../../css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<h1>Additional command-line tools</h1>
+
+<p>This sections details <strong>all additional and optional command-line
+tools</strong> available when installing DreamSDK.</p>
+
+<p>All these tools are installed in the <span
+class="font-fixed">/opt/dreamsdk/addons</span> directory.</p>
+
+<p>Please select a tool below to learn more:</p>
+<ul>
+  <li><a href="#elevate"><strong>Elevate</strong> — Command-line UAC elevation
+    utility</a> (<span class="font-fixed">elevate</span>)</li>
+  <li><a href="#pvr2png"><strong>PVR to PNG</strong> — PowerVR image to PNG
+    converter</a> (<span class="font-fixed">pvr2png</span>)</li>
+  <li><a href="#ttf2txf"><strong>TXF Utilities</strong> — Textured font format
+    tools</a> (<span class="font-fixed">showtxf</span>, <span
+    class="font-fixed">ttf2txf</span>) 
+    <ul>
+      <li><a href="#txflib">Additional ready-to-use TXF fonts files</a></li>
+    </ul>
+  </li>
+  <li><a href="#vmutool"><strong>VMU Tool PC</strong> — Visual Memory data
+    handler</a> (<span class="font-fixed">vmutool</span>)</li>
+</ul>
+
+<h2><a name="elevate">Elevate — Command-line UAC elevation utility (<span
+class="font-fixed">elevate</span>)</a></h2>
+
+<p>This utility executes a command with UAC privilege elevation.</p>
+
+<p>This is useful for working inside command prompts or with batch files.</p>
+
+<h2><a name="pvr2png">PVR to PNG — PowerVR image to PNG converter (<span
+class="font-fixed">pvr2png</span>)</a></h2>
+
+<p><strong>PVR to PNG</strong> is a tool to convert PowerVR images (usually
+with the PVR extension) to the PNG format. It handles transparency as well.</p>
+
+<p>This tool may be useful to view <span class="font-fixed">PVR</span>
+textures.</p>
+
+<h2><a name="ttf2txf">TXF Utilities — Textured font format tools (<span
+class="font-fixed">showtxf</span>, <span
+class="font-fixed">ttf2txf</span>)</a></h2>
+
+<p>These utilities display TXF fonts (<span class="font-fixed">showtxf</span>)
+or convert TrueType fonts to TXF fonts (<span
+class="font-fixed">ttf2txf</span>).</p>
+
+<p>TXF fonts are fonts used for the OpenGL rendering. KallistiOS is compatible
+with this font format. Some examples provided in the KallistiOS tree uses this
+format.</p>
+
+<p>Example of <span class="font-fixed">showtxf</span> run:</p>
+
+<div class="screenshot">
+<img src="../../img/addons/showtxf.png" alt="Show TXF" title="Show TXF"></div>
+
+<p>Here is a sample command line of <span class="font-fixed">ttf2txf</span>,
+which will convert the <strong>OCR A Extended</strong> font provided with
+<strong>Microsoft Office 2010</strong>:</p>
+
+<div class="fixed-block">
+chars='1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
+ttf2txf -o ocraext10.txf -s 10 -w 128 -h 64 OCRAEXT.TTF -c \
+\!\@\#\$\%^\&amp;\*\(\)-_=+{}[]\\\|\;\:\'\"\&lt;\&gt;\,\.\?\/\`\~$chars </div>
+
+<h3><a name="txflib">Additional ready-to-use TXF fonts files</a></h3>
+
+<p>For convenience, you may install some ready-to-use <span
+class="font-fixed">TXF</span> fonts.</p>
+
+<p>All provided fonts are installed in <span
+class="font-fixed">/opt/dreamsdk/addons/txf/</span>.</p>
+
+<h2><a name="vmutool">VMU Tool PC — Visual Memory data handler (<span
+class="font-fixed">vmutool</span>)</a></h2>
+
+<p><strong>VMU Tool PC</strong> is a command-line tool allowing you to manage
+all <span class="font-fixed">VMU/VMS</span> (saves) files on your computer.</p>
+
+<p>This utility handles <span class="font-fixed">VMU</span> dumps, even them
+used in Dreamcast emulators.</p>
+<!--FOOTER:START-->
+
+<div id="footer">
+© Copyleft 2018-2020 — <a href="https://www.dreamsdk.org/" target="_blank">The
+DreamSDK Team</a> and contributors.</div>
+<!--FOOTER:END-->
+</body>
+</html>

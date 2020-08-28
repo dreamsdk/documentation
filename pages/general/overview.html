@@ -2,7 +2,8 @@
 <html>
 <head>
   <meta http-equiv="content-type" content="text/html; charset=windows-1252">
-  <meta name="Keywords" content="Architecture,Toolchain,Overview,Libronin,KallistiOS,kos,kos-ports,KallistiOS Ports">  
+  <meta name="Keywords"
+  content="Architecture,Toolchain,Overview,Libronin,KallistiOS,kos,kos-ports,KallistiOS Ports">
   <title>Overview</title>
   <link href="../../css/style.css" rel="stylesheet" type="text/css">
 </head>
@@ -11,18 +12,40 @@
 <h1>DreamSDK Overview</h1>
 
 <p><strong>DreamSDK is a modern, ready-to-use environment for Sega Dreamcast
-development, designed for the Microsoft Windows platform.</strong></p>
+development, designed for the Microsoft Windows platform!</strong></p>
 
 <p>It's a big, self-contained package embedding all needed software to freely
 develop for the Sega Dreamcast system on Windows. This package is built on
-open-source software only thus it doesn't contains any copyrighted software.
-See <a href="licenses.html">the license section</a> for more information.</p>
+open-source components so it doesn't contains any copyrighted software. See <a
+href="licenses.html">the license section</a> for more information.</p>
+
+<p>It was specially made for beginners but it can be of course used by
+everyone!</p>
 
 <p>In clear, DreamSDK provides you:</p>
 <ul>
   <li>An UNIX® like environment;</li>
-  <li>Three prebuilt toolchains;</li>
-  <li>Some side utilities in order to manage the whole environment.</li>
+  <li>3 prebuilt toolchains;</li>
+  <li>Some side utilities in order to manage and exploit the power of that
+    environment.</li>
+</ul>
+
+<p>To use DreamSDK, you have 2 options:</p>
+<ul>
+  <li><strong>Use the provided shell</strong>, in case you are confortable with
+    the <a href="../shell/index.html">command-line interface</a>. This is the
+    traditional way to develop;</li>
+  <li><strong>Use an IDE</strong>. At this time of writing, only Code::Blocks
+    17.12 is supported. <a href="../ide/index.html">This will explained later
+    in the document</a>.</li>
+</ul>
+
+<p>The programming languages used for Sega Dreamcast development are:</p>
+<ul>
+  <li><strong>C / C++</strong></li>
+  <li>Objective C / Objective C++ (not so used)</li>
+  <li>Assembly (if you feel capable of learning Hitachi SH-4 assembly!)</li>
+  <li><a href="requirements.html#ruby">Ruby</a> (experimental)</li>
 </ul>
 
 <p>All the sub-sections below describes in details the environment
@@ -32,39 +55,65 @@ composition:</p>
   <li><a href="#mingw">MinGW/MSYS</a></li>
   <li><a href="#shell">DreamSDK Shell</a></li>
   <li><a href="#tool">Toolchains</a></li>
-  <li><a href="#kos">KallistiOS</a>
-  <ul>
-	<li><a href="#kosports">KallistiOS Ports</a></li>
-	<li><a href="#dctool">Dreamcast Tool</a></li>
-	<li><a href="#managekos">Managing KallistiOS with DreamSDK environment</a></li>
-	<li><a href="#kosalt">Alternatives to KallistiOS</a></li>
-  </ul></li>
+  <li><a href="#kos">KallistiOS</a> 
+    <ul>
+      <li><a href="#kosports">KallistiOS Ports</a></li>
+      <li><a href="#dctool">Dreamcast Tool</a></li>
+      <li><a href="#managekos">Managing KallistiOS with DreamSDK
+      environment</a></li>
+      <li><a href="#kosalt">Alternatives to KallistiOS</a></li>
+    </ul>
+  </li>
   <li><a href="#mgr">DreamSDK Manager</a></li>
 </ul>
 
 <h2><a name="arch">Architecture summary</a></h2>
 
 <p>As described in the introduction, <strong>DreamSDK is a package which is
-built upon a lot of components</strong>.</p>
+built upon a lot of various components</strong>.</p>
 
 <p>The schema below describes the architecture of the whole environment:</p>
 
 <div class="schema">
 <img src="../../img/general/overview.gif"> </div>
 
+<p>Each layer represent a middleware used in the package:</p>
+<ol>
+  <li>The foundation is MinGW/MSYS, and the DreamSDK Shell is a simplified
+    launcher to access to it.</li>
+  <li>Then comes the 3 toolchains: one for the CPU of the Dreamcast (i.e.
+    SuperH), one for the audio chip (i.e. AICA) and the standard Win32
+    toolchain in order to build utilities.</li>
+  <li>This layer is KallistiOS library itself and related side-projects, i.e.
+    Dreamcast Tool and KallistiOS Ports.</li>
+  <li>On the top of all this stack, the DreamSDK Manager is the tool
+    responsible of the management of all these components.</li>
+</ol>
+
+<p>To learn more on all these components, please continue reading this
+document!</p>
+
 <h2><a name="mingw">MinGW/MSYS</a></h2>
+<div class="schema"><img src="../../img/general/mingw.png"> </div>
 
-<p>The UNIX® like environment is provided by <a
-href="http://mingw.org/" target="_blank">MinGW/MSYS</a>. Basically this is the
-environment base, which provides UNIX® tools on Windows.</p>
+<p>As you might know, Windows provides the <strong>Command Prompt</strong> (or
+<span class="font-fixed">cmd</span>) environment. This shell is not enough
+powerful to do Dreamcast development so that's why DreamSDK provides an
+additional UNIX® environment.</p>
 
-<p>Everything is built upon this middleware.</p>
+<p>That UNIX® like environment is provided by <a href="http://mingw.org/"
+target="_blank">MinGW/MSYS</a>. Basically this is the DreamSDK foundation.
+Everything is built upon this platform.</p>
 
 <h2><a name="shell">DreamSDK Shell</a></h2>
 
 <p><a href="../shell/index.html">DreamSDK Shell</a> is a component built on the
 top of <strong>MSYS</strong>. Basically, this is the main program of this
-environment.</p>
+environment, as it will let you use the DreamSDK package itself through that
+shell.</p>
+
+<p>This Shell shouldn't have to be confused with the standard <strong>Command
+Prompt</strong> (or <span class="font-fixed">cmd</span>)!</p>
 
 <h2><a name="tool">Toolchains</a></h2>
 
@@ -73,15 +122,15 @@ programs, i.e. compiling programs and debugging them. In our case, these
 toolchains are used to compile and build binary code targeting the Sega
 Dreamcast.</p>
 
-<p>Three toolchains are provided by the DreamSDK environment:</p>
+<p>3 toolchains are provided by the DreamSDK environment:</p>
 <ul>
   <li>For the <strong>SuperH CPU</strong> processor (<span
-    class="font-fixed">sh-elf</span>), the main processor of the Sega
-  Dreamcast;</li>
+    class="font-fixed">sh-elf</span>), the main processor (CPU) of the Sega
+    Dreamcast;</li>
   <li>For the <strong>Yamaha AICA</strong> processor (<span
     class="font-fixed">arm-eabi</span>), the sound processor. You don't have to
-    use it directly, as this is needed only to compile the sound driver
-    included in KallistiOS (see below).</li>
+    use it directly, as this toolchain is needed only to compile the sound
+    driver included in KallistiOS only (see below).</li>
   <li>The last one is the original <strong>Win32</strong> toolchain (<span
     class="font-fixed">mingw32</span>) provided by MinGW/MSYS, this allow you
     to produces Windows binaries, e.g. compiling KallistiOS utilities like
@@ -92,8 +141,9 @@ Dreamcast.</p>
   to.</li>
 </ul>
 
-<p>All the toolchains are assembled from several components:<a
-href="https://www.gnu.org/software/binutils/" target="_blank"></a></p>
+<p>For your information, all the toolchains are packages composed by several
+projects:<a href="https://www.gnu.org/software/binutils/"
+target="_blank"></a></p>
 <ul>
   <li><a href="https://www.gnu.org/software/binutils/"
     target="_blank">Binutils</a></li>
@@ -105,7 +155,12 @@ href="https://www.gnu.org/software/binutils/" target="_blank"></a></p>
 </ul>
 
 <p>These components are already prebuilt and installed with the DreamSDK
-environment.</p>
+environment, so you don't have to worry about that.</p>
+
+<p><strong>All of these toolchains expect C/C++ source codes</strong>, or
+Objective C/Objective C++ if you really want to use that language. <a
+href="requirements.html#ruby">Ruby is experimental and uses mruby
+implementation</a>, so it isn't interpreted directly by the toolchains.</p>
 
 <h2><a name="kos">KallistiOS</a></h2>
 
@@ -124,6 +179,14 @@ of Fury</strong>, <strong>Maqiupai</strong>, <strong>Inhabitants</strong>,
 DreamSDK respects all the standard <span class="font-fixed">KOS</span>
 prerequisites and requirements, that means this environment is 100% compliant
 with KallistiOS.</p>
+
+<div class="schema">
+<img src="../../img/general/kallistios-yuki.gif"> </div>
+
+<p><strong>In clear:</strong> When you do Dreamcast development, you'll use the
+KallistiOS library to interact with your Dreamcast. <a
+href="http://gamedev.allusion.net/softprj/kos/" target="_blank">So you should
+start learn KallistiOS API now!</a></p>
 
 <h3><a name="kosports">KallistiOS Ports</a></h3>
 
@@ -157,9 +220,10 @@ version:</p>
 
 <p>This component is disabled by default, as you have the possibility to
 execute your programs directly through a Dreamcast emulator, i.e. using <span
-class="font-fixed">Redream</span>, <span
-class="font-fixed">nullDC</span>, <span class="font-fixed">Demul</span>, <span
-class="font-fixed">Makaron</span>, etc.</p>
+class="font-fixed">Redream</span>, <span class="font-fixed">nullDC</span>,
+<span class="font-fixed">Demul</span>, <span class="font-fixed">Makaron</span>,
+etc. Please note, this possibility isn't supported in DreamSDK at least for
+now.</p>
 
 <h3><a name="managekos">Managing KallistiOS with DreamSDK environment</a></h3>
 
@@ -167,17 +231,17 @@ class="font-fixed">Makaron</span>, etc.</p>
 <span class="font-fixed">dcfreedev</span> — with that really out-dated <span
 class="font-fixed">GCC 3.4.6</span> —, <span class="font-fixed">DC Dev
 Environment</span> (DDE), <span class="font-fixed">Code::Blocks DC
-Development</span>...), <strong>DreamSDK only includes the prebuilt
-toolchains</strong> <strong>but not the KallistiOS library itself</strong>:
-KallistiOS is handled by the <a href="../manager/index.html">DreamSDK
-Manager</a> application.</p>
+Development</span>...), <strong>DreamSDK includes the prebuilt
+toolchains</strong> <strong>but not the prebuilt KallistiOS library
+itself</strong>. KallistiOS building process is handled by the <a
+href="../manager/index.html">DreamSDK Manager</a> application.</p>
 
-<p>This is the reason why DreamSDK ask you to be connected to Internet when
-installing it: <span class="font-fixed">KOS</span> is installed automatically
-at the end of the installation process. If you have cancelled the process or
-the process has failed, just fire-up <a href="../manager/index.html">DreamSDK
-Manager</a> again and that application will (re)install <span
-class="font-fixed">KOS</span> if needed.</p>
+<p>This is the reason why DreamSDK do additional steps when installing it:
+<span class="font-fixed">KOS</span> is compiled automatically at the end of the
+installation process. If you have cancelled the process or the process has
+failed, just fire-up <a href="../manager/index.html">DreamSDK Manager</a> again
+and that application will (re)install <span class="font-fixed">KOS</span> if
+needed.</p>
 
 <h3><a name="kosalt">Alternatives to KallistiOS</a></h3>
 
@@ -195,14 +259,14 @@ if you are new to Dreamcast development.</p>
 
 <h2><a name="mgr">DreamSDK Manager</a></h2>
 
-<p><a href="../manager/index.html">DreamSDK Manager</a> is the
-application which handle everything of the DreamSDK environment. Basically this
-application was made to update KallistiOS but it can also handle KallistiOS
-Ports even Dreamcast Tool configuration.</p>
+<p><a href="../manager/index.html">DreamSDK Manager</a> is the application
+which handle everything of the DreamSDK environment. Basically this application
+was made to update KallistiOS but it can also handle KallistiOS Ports even
+Dreamcast Tool configuration.</p>
 <!--FOOTER:START-->
 
 <div id="footer">
-&copy; Copyleft 2018-2020 — <a href="https://www.dreamsdk.org/" target="_blank">The
+© Copyleft 2018-2020 — <a href="https://www.dreamsdk.org/" target="_blank">The
 DreamSDK Team</a> and contributors.</div>
 <!--FOOTER:END-->
 </body>

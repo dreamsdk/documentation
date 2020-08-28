@@ -1,0 +1,299 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252">
+  <title>Utilities and embedded command-line tools</title>
+  <link href="../../css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<h1>Utilities and helpers command-line tools</h1>
+
+<p>This sections details <strong>all utilities and helpers command line
+tools</strong> available into DreamSDK.</p>
+
+<p>These tools are installed in the <span
+class="font-fixed">/opt/dreamsdk/helpers</span> and <span
+class="font-fixed">/opt/dreamsdk/scripts</span> directories.</p>
+
+<p>Please select a tool below to learn more.</p>
+
+<p><strong>Utilities:</strong></p>
+<ul>
+  <li><a href="#browse"><strong>Browse</strong> — Current directory opener in
+    the Windows® Explorer</a> (<span class="font-fixed">browse</span>)</li>
+  <li><a href="#dctool"><strong>Dreamcast Tool</strong> — Dreamcast
+    sender/receiver</a> (<span class="font-fixed">dc-tool</span>)</li>
+  <li><a href="#elf2bin"><strong>ELF to BIN</strong> — Dreamcast Executable
+    Linkable Format (<span class="font-fixed">ELF</span>) to RAW Binary (<span
+    class="font-fixed">BIN</span>) converter</a> (<span
+    class="font-fixed">elf2bin</span>)</li>
+  <li><a href="#makedisc"><strong>Make Disc</strong> — Selfboot disc
+    generator</a> (<span class="fixed-block font-fixed">makedisc</span>)</li>
+  <li><a href="#mingwgetinfo"><strong>MinGW Get Information Tool</strong> —
+    MinGW Packages Information Lister</a> (<span
+    class="font-fixed">mingw-get-info</span>)</li>
+</ul>
+
+<p><strong>Helpers:</strong></p>
+<ul>
+  <li><a href="#dirhash"><strong>DirHash</strong> — Directory hash
+    generator</a> (<span class="font-fixed">dirhash</span>)</li>
+  <li><a href="#dreamsdkgetinfo"><strong>DreamSDK Get Info</strong> — DreamSDK
+    information retriever</a> (<span
+    class="font-fixed">dreamsdk-get-info</span>)</li>
+  <li><a href="#fastarp"><strong>FastARP</strong> — Fast Address Resolution
+    Protocol utility</a> (<span class="font-fixed">fastarp</span>)</li>
+  <li><a href="#fastping"><strong>FastPing</strong> — Fast Ping utility</a>
+    (<span class="font-fixed">fastping</span>)</li>
+  <li><a href="#img4dc"><strong>IMG4DC</strong> — Dreamcast Selfboot
+    Toolkit</a> 
+    <ul>
+      <li><a href="#cdi4dc"><strong>CDI4DC</strong> — Padus DiscJuggler image
+        generator</a> (<span class="font-fixed"><span
+        class="font-fixed">cdi4dc</span></span>)</li>
+      <li><a href="#mds4dc"><strong>MDS4DC</strong> — Alcohol 120% image
+        generator</a> (<span class="font-fixed">mds4dc</span>, <span
+        class="font-fixed">lbacalc</span>)</li>
+    </ul>
+  </li>
+  <li><a href="#ipreader"><strong>IP.BIN Reader</strong> — Bootstrap Fields
+    Reader</a> (<span class="font-fixed">ipreader</span>)</li>
+  <li><a href="#mkisofs"><strong>Make ISO File System</strong> — ISO9660 image
+    generator</a> (<span class="font-fixed">mkisofs</span>)</li>
+  <li><a href="#uacstatus"><strong>UAC Status</strong> — User Account Control
+    Status</a> (<span class="font-fixed">uac-status</span>)</li>
+</ul>
+
+<h2>Utilities</h2>
+
+<h3><a name="browse">Browse — Current directory opener in the Windows® Explorer
+(<span class="font-fixed">browse</span>)</a></h3>
+
+<p>The <strong>Browse</strong> simple utility was made to quickly open the
+current directory from your DreamSDK Shell into the Windows® Explorer.</p>
+
+<p>In clear, if you are in the <span class="font-fixed">~/myproject</span>
+directory in the DreamSDK Shell<strong></strong>and you enter the <span
+class="font-fixed">browse</span> command from that directory, the <span
+class="font-fixed">%DREAMSDK_HOME%\msys\1.0\home\%UserName%\myproject</span>
+directory will be shown in the Explorer.</p>
+
+<div class="screenshot">
+<img src="../../img/general/browse.png"></div>
+
+<p>This may be useful for daily usages.</p>
+
+<h3><a name="dctool">Dreamcast Tool — Dreamcast sender/receiver (<span
+class="font-fixed">dc-tool</span>)</a></h3>
+
+<p><strong>Dreamcast Tool</strong> is an Ethernet/Serial loader for the Sega
+Dreamcast. This program is part of KallistiOS. The <span
+class="font-fixed">dc-tool</span> script included in DreamSDK is a wrapper for
+the real <span class="font-fixed">dc-tool-ip</span> and <span
+class="font-fixed">dc-tool-ser</span> binaries built when installing KallistiOS
+from DreamSDK Manager.</p>
+
+<p>This simple wrapper uses <a href="../manager/dc-tool.html">the connection
+and options settings defined in the DreamSDK Manager tool</a> so you don't have
+to pass them all the time to that script. You only have to pass the command you
+want (e.g. <span class="font-fixed">-x</span>, <span
+class="font-fixed">-d</span>...) and the target file name.</p>
+
+<p>For example, if you want to execute a program, you just have to enter the
+following: <span class="font-fixed">dc-tool -x myprog.elf</span>, instead of
+entering all the connection/option settings, like <span
+class="font-fixed">dc-tool -x myprog.elf -t COM1 -b 115200</span>. The <span
+class="font-fixed">-t</span> and <span class="font-fixed">-b</span> switches
+are automatically passed to the real <span class="font-fixed">dc-tool</span>
+program (i.e. the <span class="font-fixed">dc-tool-ip</span> or <span
+class="font-fixed">dc-tool-ser</span> binary) from the choice you made in the
+DreamSDK Manager.</p>
+
+<div class="screenshot"><img src="../../img/general/dc-tool.png"></div>
+
+<p>Please note, this tool will need the <span class="font-fixed">dcload</span>
+disc. <a href="../tutorials/index.html#dcload">Read more here</a>.</p>
+
+<h3><a name="elf2bin">ELF to BIN — Dreamcast Executable Linkable Format (<span
+class="font-fixed">ELF</span>) to RAW Binary (<span
+class="font-fixed">BIN</span>) converter (<span class="font-fixed"></span><span
+class="font-fixed">elf2bin</span>)</a></h3>
+
+<p><strong>ELF to BIN</strong> is a simple shell script that will convert a
+Sega Dreamcast <span class="font-fixed"><span
+class="font-fixed">ELF</span></span> program to the RAW Binary (<span
+class="font-fixed">BIN</span>) format. This will uses the <span
+class="font-fixed">kos-objcopy</span> wrapper in the background.</p>
+
+<p>After doing this conversion, you will have to <strong>scramble</strong> that
+<span class="font-fixed">BIN</span> program in order to create a bootable
+disc.</p>
+
+<div class="screenshot">
+<img src="../../img/general/elf2bin.png"></div>
+
+<p><a href="../tutorials/index.html#selfboot">Read more about this topic
+here</a>.</p>
+
+<h3><a name="makedisc">Make Disc — Selfboot disc generator (<span
+class="font-fixed"></span><span class="font-fixed">makedisc</span>)</a></h3>
+
+<p>The <strong>Make Disc</strong> script is a very important tool made for
+creating selfboot images of your programs. It will requires the usage of <span
+class="font-fixed">makeip</span> (part of KallistiOS), <a
+href="#elf2bin">ELF2BIN</a> and <a href="#img4dc">IMG4DC</a>. <a
+href="../tutorials/index.html#selfboot">Read more here</a>.</p>
+
+<div class="screenshot">
+<img src="../../img/general/makedisc.png"></div>
+
+<h3><a name="mingwgetinfo">MinGW Get Information Tool — MinGW Packages
+Information Lister (<span class="font-fixed">mingw-get-info</span>)</a></h3>
+
+<p>This small tool may be useful as it prints the whole list of the MinGW
+packages currently installed.</p>
+
+<div class="screenshot">
+<img src="../../img/general/mingw-get-info.png"> </div>
+
+<p>Please note, you may use the <a target="_blank" href="http://www.mingw.org/">MinGW-Get</a> tool in order to update these MinGW
+packages.</p>
+
+<h2>Helpers</h2>
+
+<p>All these helpers exists because they are used by DreamSDK itself but they
+may be useful for you, that's why you'll find the description of each of these
+components in that section.</p>
+
+<h3><a name="dirhash" id="dirhash">DirHash — Directory hash generator (<span
+class="font-fixed">dirhash</span>)</a></h3>
+
+<p>The <strong>DirHash</strong> utility is a great tool to compute a global
+hash for a directory. It's widely used in the DreamSDK environment for various
+processes but it may be useful for you too.</p>
+
+<div class="screenshot">
+<img src="../../img/general/dirhash.png"></div>
+
+<h3><a name="dreamsdkgetinfo" id="dreamsdkgetinfo">DreamSDK Get Info — DreamSDK
+information retriever (<span
+class="font-fixed">dreamsdk-get-info</span>)</a></h3>
+
+<p>This simple tool was made to retrieve some information on the DreamSDK
+environment you are currently using:</p>
+<ul>
+  <li>Pass the <span class="font-fixed">--release</span> switch to get the
+    version number information;</li>
+  <li>Pass the <span class="font-fixed">--date</span> switch to get the build
+    date.</li>
+</ul>
+
+<div class="screenshot">
+<img src="../../img/general/dreamsdk-get-info.png"></div>
+
+<p>Only one switch can be passed to the command-line at one time.</p>
+
+<h3><a name="fastarp" id="fastarp">FastARP — Fast Address Resolution Protocol
+(ARP) utility (<span class="font-fixed">fastarp</span>)</a></h3>
+
+<p><strong>FastARP</strong> is a simple wrapper used to assign an IP address to
+a MAC address. This tool is used in the DreamSDK engine but may be useful for
+you. It uses <span class="font-fixed">arp</span> or <span
+class="font-fixed">netsh</span> in the background, depending on your OS.</p>
+
+<div class="screenshot">
+<img src="../../img/general/fastarp.png"></div>
+
+<h3><a name="fastping" id="fastping">FastPing — Fast Ping utility (<span
+class="font-fixed">fastping</span>)</a></h3>
+
+<p><strong>FastPing</strong> is another simple wrapper used in the DreamSDK
+engine. It replaces the <span class="font-fixed">ping</span> tool by something
+really faster than the regular <span class="font-fixed">ping</span>.</p>
+
+<div class="screenshot">
+<img src="../../img/general/fastping.png"></div>
+
+<p>It may be useful in some batches.</p>
+
+<h3><a name="img4dc" id="img4dc">IMG4DC — Dreamcast Selfboot Toolkit</a></h3>
+
+<p><strong>IMG4DC</strong> is the core engine tool used in the <a
+href="#makedisc">makedisc</a> script. <strong>IMG4DC</strong> is a package that
+allows you to generate bootable CD images for your Sega Dreamcast. It's split
+in 2 separate programs, usable in command-line mode:</p>
+<ul>
+  <li><strong>CDI4DC</strong> : for generating Padus DiscJuggler CD images;</li>
+  <li><strong>MDS4DC</strong> : for generating Alcohol 120% CD images.</li>
+</ul>
+
+<p>These programs have become since 2007 a reference in the <strong>Sega
+Dreamcast</strong> homebrew world, and they are used in other third-party tools
+such <a title="BootDreams" href="https://code.google.com/p/bootdreams/"
+target="_blank">BootDreams</a>.</p>
+
+<h4><a name="cdi4dc" id="cdi4dc">CDI4DC — Padus DiscJuggler image generator
+(<span class="font-fixed">cdi4dc</span>)</a></h4>
+
+<p><strong>CDI4DC</strong> generates Padus DiscJuggler CD images, which is the
+standard for the distribution of Sega Dreamcast programs.</p>
+
+<p>This tool generates <span class="font-fixed">cdi</span> files.</p>
+
+<div class="screenshot">
+<img src="../../img/general/cdi4dc.png"></div>
+
+<h4><a name="mds4dc1" id="mds4dc1">MDS4DC — Alcohol 120% image generator (<span
+class="font-fixed">mds4dc</span>, <span
+class="font-fixed">lbacalc</span>)</a></h4>
+
+<p><strong>MDS4DC</strong> generates Alcohol 120% CD images. It's another
+format used for the distribution of Sega Dreamcast programs.</p>
+
+<p>This tool generates <span class="font-fixed">mds/mdf</span> files.</p>
+
+<div class="screenshot">
+<img src="../../img/general/mds4dc.png"></div>
+
+<h3>IP.BIN Reader — Bootstrap Fields Reader (<span
+class="font-fixed"></span><span class="font-fixed">ipreader</span>)</h3>
+
+<p>The <strong>IP.BIN Reader</strong> tool is a small utility program which
+will read the fields of a Sega Dreamcast bootsector, usually known as the <span
+class="font-fixed">IP.BIN</span> file. This tool is used internally but it may
+be useful for you too.</p>
+
+<div class="screenshot">
+<img src="../../img/general/ipreader.png"></div>
+
+<h3><a name="mkisofs" id="mkisofs">Make ISO File System — ISO9660 image
+generator (<span class="font-fixed">mkisofs</span>)</a></h3>
+
+<p><strong>Make ISO File System </strong>is an utility that creates an <a
+href="https://wiki.osdev.org/ISO_9660" title="ISO 9660">ISO 9660</a> image from
+files on disk. This tool is used internally by the DreamSDK environment
+package.</p>
+
+<div class="screenshot">
+<img src="../../img/general/mkisofs.png"></div>
+
+<h3><a name="uacstatus" id="uacstatus">UAC Status — User Account Control Status
+(<span class="font-fixed">uac-status</span>)</a></h3>
+
+<p>UAC Status is a helper program made to determine if the User Account Control
+(UAC) is enabled on the system. On systems which doesn't support UAC it will
+indicate the <span class="font-fixed">disabled</span> status.</p>
+
+<div class="screenshot">
+<img src="../../img/general/uac-status.png"></div>
+
+<p></p>
+<!--FOOTER:START-->
+
+<div id="footer">
+© Copyleft 2018-2020 — <a href="https://www.dreamsdk.org/" target="_blank">The
+DreamSDK Team</a> and contributors.</div>
+<!--FOOTER:END-->
+</body>
+</html>

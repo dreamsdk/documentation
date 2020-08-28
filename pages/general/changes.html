@@ -13,16 +13,103 @@
 <p>This section describes all releases and notable changes made to the DreamSDK
 environment.</p>
 
+<h2>R3 — 2020-02-DD</h2>
+
+<h3>Added</h3>
+<ul>
+  <li>Some useful links were added in the <strong>Windows Start</strong>
+  menu.</li>
+  <li>Support of <strong>CDFS</strong> images in <strong>Code::Blocks</strong>:
+    You have now the possibility to simulate a virtual <strong>CD-ROM</strong>
+    through an <strong>ISO</strong> file, when selecting the appropriate option
+    when creating a project in <strong>Code::Blocks</strong>.</li>
+  <li>Support for <span class="font-fixed">libkosfat</span> addon library.</li>
+  <li>You have now the possibility to manage <strong>Code::Blocks</strong> in
+    <strong>DreamSDK Manager</strong>. </li>
+  <li>This <strong>CHANGELOG</strong> file to hopefully serve as an evolving
+    example of a standardized open source project
+  <strong>CHANGELOG</strong>.</li>
+</ul>
+
+<h3>Improved</h3>
+<ul>
+  <li>An offline version of <strong>KallistiOS</strong>, <strong>KallistiOS
+    Ports</strong> and <strong>Dreamcast Tool</strong> are now integrated in
+    the package. But it's strongly recommanded to use the online
+  repositories!</li>
+  <li>Better handling of prerequisites: <strong>Git</strong>,
+    <strong>Python</strong> and <strong>Subversion Client (SVN)</strong> are
+    not mandatory in all the cases, this depends now of your choice.
+    <strong>Git</strong> is mandatory only if you use online repositories,
+    <strong>Python</strong> and <strong>Subversion Client</strong> are always
+    optional but preferred if you have the possibility to install these.</li>
+  <li>When installing <strong>Code::Blocks</strong>, the process of updating
+    user's configuration files is better. Now the <strong>Setup</strong>
+    process detects all usable configuration files and patch them if
+  possible.</li>
+  <li>In the <strong>DreamSDK Manager</strong> tool, URL for the
+    <strong>Git</strong> repositories may be changed.</li>
+  <li>Better support for <strong>ARP</strong> (creation of the tool
+    <strong>FastARP</strong>). It uses the classic <span
+    class="font-fixed">arp</span> command in <strong>Windows XP</strong> and
+    <span class="font-fixed">netsh</span> in modern
+  <strong>Windows</strong>.</li>
+  <li><strong>MakeDisc</strong>: The <span class="font-fixed">bootstrap</span>
+    parameter is now optional. It will try to detect the <span
+    class="font-fixed">IP.BIN</span> from the current directory or directly in
+    the directory where the <span class="font-fixed">1ST_READ.BIN</span> file
+    is located.</li>
+  <li>The installation of <strong>GNU Debugger (GDB) for SuperH</strong> is
+    better; and <strong>Python</strong> extensions may be enabled/disabled on
+    user request (previously, <strong>GDB for SuperH</strong> was linked to
+    <strong>Python 2.7</strong> only).</li>
+</ul>
+
+<h3>Fixed</h3>
+<ul>
+  <li><strong>KallistiOS</strong>, <strong>KallistiOS Ports</strong> and
+    <strong>Dreamcast Tool</strong> repositories are now the
+    <strong>Nitro</strong> versions from <a target="_blank"
+    href="https://gitlab.com/simulant/community/">Simulant Engine</a> instead
+    of official one as these contains various community improvements and
+  fixes.</li>
+  <li>In <strong>Code::Blocks</strong>, an issue when generating
+    <strong>Romdisk</strong> from projects with spaces in their name has been
+    fixed.</li>
+  <li><strong>MakeDisc</strong>: An little cosmetic problem has been fixed.</li>
+  <li>Various fixes for <strong>Windows 10+</strong> (mainly related to
+  UAC).</li>
+</ul>
+
+<h3>Updated</h3>
+<ul>
+  <li><strong>GNU Compiler Collection (GCC) for SuperH</strong> and
+    <strong>AICA</strong> is now <span class="font-fixed">4.7.4</span>, as this
+    version includes several fixes for <span class="font-fixed">sh-elf</span>
+    target.</li>
+  <li><strong>GNU Compiler Collection (GCC) for Win32</strong> is now <span
+    class="font-fixed">8.2.0</span>.</li>
+  <li><strong>GNU Debugger (GDB) for SuperH</strong> is now <span
+    class="font-fixed">8.3.1</span>.</li>
+  <li><strong>DreamSDK Manager</strong> was updated to display more useful
+    information like repositories versions or environment information.</li>
+  <li>The help file was updated to reflect all the changes of this release.</li>
+</ul>
+
 <h2>R2 — 2019-03-03</h2>
 <ul>
-  <li>Full Code::Blocks 17.12 integration!</li>
-  <li>GDB for SuperH is now the 8.2 release.</li>
-  <li>DreamSDK Runner is now part of the package. This application allows
-    executions of instructions directly in the MSYS Shell but from the standard
-    Microsoft Windows Prompt.</li>
-  <li>DreamSDK Shell has been simplified: it's now a MSYS Shell shortcut only
-    (previous role is now handled by DreamSDK Runner).</li>
-  <li>DreamSDK Manager was completely redesigned.</li>
+  <li>Full <strong>Code::Blocks</strong> <span class="font-fixed">17.12</span>
+    integration!</li>
+  <li><strong>GNU Debugger (GDB) for SuperH</strong> is now the <span
+    class="font-fixed">8.2</span> release.</li>
+  <li><strong>DreamSDK Runner</strong> is now part of the package. This
+    application allows executions of instructions directly in the <strong>MSYS
+    Shell</strong> but from the standard <strong>Microsoft Windows
+    Prompt</strong>.</li>
+  <li><strong>DreamSDK Shell</strong> has been simplified: it's now a
+    <strong>MSYS Shell</strong> shortcut only (previous role is now handled by
+    <strong>DreamSDK Runner</strong>).</li>
+  <li><strong>DreamSDK Manager</strong> was completely redesigned.</li>
   <li>A lot of additional tools have been included.</li>
   <li>Help system update.</li>
   <li>Lot of bugs fixes and various improvements.</li>
@@ -34,8 +121,8 @@ environment.</p>
 <!--FOOTER:START-->
 
 <div id="footer">
-© Copyleft 2018-2020 — <a href="https://www.dreamsdk.org/"
-target="_blank">The DreamSDK Team</a> and contributors.</div>
+© Copyleft 2018-2020 — <a href="https://www.dreamsdk.org/" target="_blank">The
+DreamSDK Team</a> and contributors.</div>
 <!--FOOTER:END-->
 </body>
 </html>

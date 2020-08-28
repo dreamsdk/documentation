@@ -53,13 +53,12 @@ development on Windows, in a really user-friendly way.</p>
     install the embedded MinGW version or the standalone version only). The
     only critical prerequisite is the version revision: <strong>it should be
     the 17.12 stable release</strong>, i.e. the latest official build as today
-    (February 2019). <strong>Code::Blocks needs to be installed before starting
-    the DreamSDK installation.</strong></li>
+    (on February 2020).</li>
   <li>After installing the Code::Blocks IDE, <strong>run it at least
     once</strong>. This will generate the <span
     class="font-fixed">default.conf</span> file, which will be patched by the
-    DreamSDK installation program, as some parameters need to be written in
-  it.</li>
+    DreamSDK installation program, as some parameters need to be written in it.
+    Do that for all the users concerned by the DreamSDK installation.</li>
   <li><strong>Optional:</strong> If you want to use the Code::Blocks debug
     capabilities, you will need to have either a Coders Cable, a LAN Adapter or
     a Broadband Adapter (best choice) and Dreamcast Tool configured. <a
@@ -76,13 +75,12 @@ class="font-fixed">Select Components</span> step, you should select the <span
 class="font-fixed">Code::Blocks 17.12 IDE integration</span> option.</p>
 
 <p>This will add a new step of the DreamSDK installation which will allow you
-to select:</p>
-<ul>
-  <li>The Code::Blocks installation directory (usually <span
-    class="font-fixed">%ProgramFiles%\CodeBlocks\</span>) ;</li>
-  <li>The Code::Blocks profile file (usually <span
-    class="font-fixed">%AppData%\CodeBlocks\default.conf</span>).</li>
-</ul>
+to select the Code::Blocks installation directory (usually <span
+class="font-fixed">%ProgramFiles%\CodeBlocks\</span>). </p>
+
+<p>All the Windows users that have a Code::Blocks profile file (i.e. the <span
+class="font-fixed">%AppData%\CodeBlocks\default.conf</span> file) will be
+displayed. To create it, run Code::Blocks with that user.</p>
 
 <div class="screenshot">
 <img src="../../img/ide/codeblocks-installation.png"
@@ -108,9 +106,9 @@ This includes, but not limited to:</p>
     installed.</li>
 </ul>
 
-<p>All these features are available only if you are installing the Code::Blocks
-17.12 release. <strong>It won't work with any other release of
-Code::Blocks!</strong></p>
+<p>All these features are available <strong>only if you are installing the
+Code::Blocks 17.12</strong> release. <strong>It won't work with any other
+release of Code::Blocks!</strong></p>
 
 <h2><a name="wizard">Creating a Sega Dreamcast Project</a></h2>
 
@@ -129,20 +127,21 @@ href="../manager/kos-ports.html">KallistiOS Ports</a> tab of the <a
 href="../manager/index.html">DreamSDK Manager</a> tool.</p>
 
 <p>If you don't install any <a href="../manager/kos-ports.html">KallistiOS
-Ports</a> libraries, you will have at least 4 libraries installed anyway:</p>
+Ports</a> libraries, you will have at least 5 libraries installed anyway:</p>
 <ul>
   <li><span class="font-fixed">kosext2fs</span></li>
+  <li><span class="font-fixed">kosfat</span></li>
   <li><span class="font-fixed">kosutils</span></li>
-  <li><span class="font-fixed">math</span></li>
+  <li><span class="font-fixed">libm</span> (previously known as <span
+    class="font-fixed">math</span>)</li>
   <li><span class="font-fixed">ppp</span></li>
 </ul>
 
 <p><span class="font-fixed">kosext2fs</span>, <span
-class="font-fixed">kosutils</span> and <span
-class="font-fixed">ppp</span> are installed with <a
-href="../general/overview.html#kallistios">KallistiOS</a>, when <span
-class="font-fixed">math</span> (aka <span class="font-fixed">libm</span>) is
-installed with <a target="_blank"
+class="font-fixed">kosutils</span> and <span class="font-fixed">ppp</span> are
+installed with <a href="../general/overview.html#kallistios">KallistiOS</a>,
+when <span class="font-fixed">libm</span> (aka <span
+class="font-fixed">math</span>) is installed with <a target="_blank"
 href="https://sourceware.org/newlib/libm.html">Newlib</a>. That's why all these
 libraries are always installed, even if you don't select any additional <a
 href="../manager/kos-ports.html">KallistiOS Ports</a>.</p>
@@ -192,7 +191,12 @@ step, you will also indicates if you wish to <strong>use a <span
 class="font-fixed">romdisk</span></strong>, which can be seen as a embedded
 resources: your Sega Dreamcast program will have access to the files inside of
 it through the <span class="font-fixed">/rd</span> mount point, when the <span
-class="font-fixed">romdisk</span> is embedded in the binary.</p>
+class="font-fixed">romdisk</span> is embedded in the binary. If you want to use
+a virtual CD-ROM, you may check the option now. This will simulate a CD-ROM
+instead of using the real CD-ROM inserted in your Sega Dreamcast. You just have
+to put some files in the <span class="font-fixed">cd_root</span> directory and
+then they will be available through the <span class="font-fixed">/cd</span>
+mount point.</p>
 
 <div class="screenshot">
 <img src="../../img/ide/codeblocks-wizard-libraries.png"
@@ -282,7 +286,7 @@ debugging of your program.</p>
 </ul>
 
 <p><strong>This won't be usable in any other cases</strong>, e.g. debugging
-through Sega Dreamcast emulators is not possible at the moment.</p> 
+through Sega Dreamcast emulators is not possible at the moment.</p>
 
 <p>So, to launch a debug session if you have everything ready: </p>
 <ol>
@@ -372,7 +376,9 @@ class="font-fixed">Custom</span></a> option in <a
 href="../manager/dc-tool.html">DreamSDK Manager</a>), the debugging feature may
 not be available. This depends of course of the custom binary you set in the <a
 href="../manager/dc-tool.html">Dreamcast Tool tab</a>. So if you want to use a
-	Sega Dreamcast emulator, debugging won't be possible natively, except with <a target="_blank" href="https://redream.io/">Redream</a> but this isn't covered here yet.</p>
+Sega Dreamcast emulator, debugging won't be possible natively, except with <a
+target="_blank" href="https://redream.io/">Redream</a> but this isn't covered
+here yet.</p>
 
 <h3><a name="releasetarget">The Release Target</a></h3>
 
@@ -464,6 +470,11 @@ the KallistiOS tree, do the following: </p>
     if needed.</li>
   <li>Done!</li>
 </ol>
+
+<p>If you want a working example, <a href="pngtest.zip">you may download the
+pngtest directly here</a>. Don't forget to install the <span
+class="font-fixed">libpng</span> KallistiOS Ports from the <span
+class="font-fixed">DreamSDK Manager</span>.</p>
 
 <h2><a name="tools">Additional tools in the Code::Blocks IDE</a></h2>
 

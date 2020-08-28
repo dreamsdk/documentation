@@ -312,7 +312,7 @@ make<br>
 make dist<br>
 elf2bin &lt;prog.elf&gt;<br>
 scramble &lt;prog.bin&gt; cd_root/1ST_READ.BIN<br>
-ipcreate -silent<br>
+makeip -v IP.BIN<br>
 makedisc &lt;prog.cdi&gt; cd_root IP.BIN [PROG_NAME]<br>
 browse<br>
 </div>
@@ -355,8 +355,7 @@ scramble &lt;prog.bin&gt; cd_root/1ST_READ.BIN<br>
 
 <p>This will generate the scrambled binary, usually called 1ST_READ.BIN.</p>
 
-<p>Now generate the bootstrap loader: <span class="font-fixed">ipcreate
--silent</span>. The <span class="font-fixed">ipcreate</span> tool has
+<p>Now generate the bootstrap loader: <span class="font-fixed">makeip -v IP.BIN</span>. The <span class="font-fixed">makeip</span> tool has
 interesting options, like inserting a custom logo which will displayed in the
 <strong>Sega License Screen</strong> shown when booting up the Dreamcast.</p>
 
@@ -405,9 +404,8 @@ this kind of disc is booted from the Sega Dreamcast, this menu is called
 <strong>Selfboot Inducer</strong> to use your packages in order to generate the
 disc image he wants.</p>
 
-<p>These tools aren't part of the DreamSDK package, but <a
-href="http://sizious.com/download/dreamcast/#selfboot-inducer"
-target="_blank">you can find them here</a>.</p>
+<p><a
+href="../../pages/addons/gui.html#buildsbi">Learn more here</a>.</p>
 <!--FOOTER:START-->
 
 <div id="footer">

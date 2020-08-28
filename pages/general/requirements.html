@@ -9,32 +9,42 @@
 </head>
 
 <body>
-<h1>Requirements</h1>
+<h1>Requirements and prerequisites</h1>
 
 <p>This section explains the requirements needed for DreamSDK.</p>
 <ul>
-  <li><a href="#ext">Required external components</a></li>
+  <li><a href="#ext">Useful external components</a> 
+    <ul>
+      <li><a href="#git">Git</a></li>
+      <li><a href="#python">Python</a></li>
+      <li><a href="#svn">Subversion Client</a> (SVN)</li>
+      <li><a href="#ruby">Ruby</a></li>
+      <li><a href="#codeblocks">Code::Blocks</a></li>
+    </ul>
+  </li>
   <li><a href="#os">Required operating system</a></li>
   <li><a href="#net">Internet connection</a></li>
 </ul>
 
-<h2><a name="ext">Required external components</a></h2>
+<h2><a name="ext">Useful external components</a></h2>
 
-<p>DreamSDK needs the following external components to work properly:</p>
+<p>DreamSDK doesn't require any external components to work properly. However,
+it may use the following external components if detected:</p>
 <ul>
-  <li><a target="_blank" href="http://git-scm.org">Git</a></li>
-  <li><a target="_blank" href="http://python.org/">Python</a> <span
-    class="font-fixed">2.7.x</span> (32-bit)</li>
-  <li><a target="_blank" href="http://subversion.apache.org/">Subversion
-    Client</a> (SVN)</li>
+  <li><a href="#git">Git</a> (<strong>highly recommended</strong>)</li>
+  <li><a href="#python">Python</a> (<strong>highly recommended</strong>)</li>
+  <li><a href="#svn">Subversion Client</a> i.e. SVN (optional)</li>
+  <li><a href="#ruby">Ruby</a> (optional, experimental)</li>
+  <li><a href="#codeblocks">Code::Blocks</a> (optional, if you want to use this
+    IDE)</li>
 </ul>
 
-<p>Theses components are not embedded in the DreamSDK package thus they need to
-be installed separately.</p>
+<p>These components are not embedded in the DreamSDK package so they need to be
+installed separately, <strong>before installing DreamSDK itself</strong>.</p>
 
 <p>All of these components should be available in the <span
-class="font-fixed">PATH</span> environment variable. You can verify that by
-following this procedure:</p>
+class="font-fixed"><span class="font-fixed">PATH</span></span> environment
+variable. You can verify that by following this simple procedure:</p>
 <ol>
   <li>Open a <strong>Command Prompt</strong> (Hit the <span
     class="shortcut">Win + R</span> keyboard shortcut, enter <span
@@ -45,59 +55,134 @@ following this procedure:</p>
       <li><span class="font-fixed">git --version</span></li>
       <li><span class="font-fixed">python --version</span></li>
       <li><span class="font-fixed">svn --version</span></li>
+      <li><span class="font-fixed">ruby --version</span></li>
     </ul>
   </li>
   <li>All of these commands should print the version of each components.</li>
 </ol>
+
+<div class="screenshot">
+<img src="../../img/general/external-version-check.png"></div>
+
+<p>As you might see on the screenshot above, all these 4 external components
+were detected in the <span class="font-fixed">PATH</span> environment
+variable.</p>
 
 <p>If at least one of them prints an incorrect message like <span
 class="font-fixed">Bad command or filename</span>, then you should (re)install
 the problematic component, and please don't forget to check the <span
 class="font-fixed">PATH</span> option when asked!</p>
 
-<p><strong>These components are absolutely required</strong>, so if they are
-not installed, DreamSDK will refuses to be installed.</p>
+<p><strong>Note:</strong> You may install all these components in 64-bit form
+if you want to, <strong>except Python which should be the 32-bit release if you
+want to enable Python extensions in GDB for SuperH</strong>.</p>
 
-<h3>About Python: What if I need 64-bit Python for my own use?</h3>
+<h3><a name="git">About Git</a></h3>
 
-<p><strong>The <span class="font-fixed">2.7.x</span> 32-bit version is required for DreamSDK</strong>, as it was linked to the <strong>GNU Debugger (GDB)</strong> for SuperH.</p>
+<p><a target="_blank" href="http://git-scm.org">Git</a> is a well-known source
+control software. It's used for retrieve all KallistiOS repositories and
+components.</p>
 
-<p>But if you need 64-bit Python for another usage and want to install it on the same computer as DreamSDK, it's possible:</p>
+<p>If Git isn't installed, you won't be able to use the online KallistiOS
+repositories, so it's very recommended to install at least Git. In that case,
+only the offline repositories, which are embedded in the DreamSDK installer,
+will be available.</p>
 
+<h3><a name="python">About Python</a></h3>
+
+<p><a target="_blank" href="http://python.org/">Python</a> is a powerful
+scripting language engine. It's used by DreamSDK to mainly install KallistiOS
+Ports and also in the GNU Debugger (GDB) for SuperH.</p>
+
+<p><strong>The better <span class="font-fixed">Python</span> version required
+for DreamSDK is the 32-bit</strong> version, as the <strong>GNU Debugger
+(GDB)</strong> for SuperH is a 32-bit program, so if you are interested about
+enabling Python extensions for GDB, you should install Python 32-bit.</p>
+
+<p>To be clear, if you aren't interested about Python extensions in GDB, you
+may install any version of Python. Otherwise, a 32-bit Python release is
+necessary.</p>
+
+<p>Hopefully, If you want a 64-bit Python and as well a 32-bit Python to enable
+GDB extensions too, then follow the procedure:</p>
 <ol>
-<li><strong>Start the 64-bit Python installation first</strong>, and install it in <span class="font-fixed">C:\Python\2.7\x64\</span>.</li>
-<li>Add it to the <span class="font-fixed">PATH</span> variable by using the proper option in the <span class="font-fixed">Customize Python</span> page. This Python installation will be the default Python runtime.
+  <li><strong>Start the 64-bit Python installation first</strong>, and install
+    it in <span class="font-fixed">C:\Python\&lt;version&gt;\x64\</span>.</li>
+  <li>Add it to the <span class="font-fixed">PATH</span> variable by using the
+    proper option in the <span class="font-fixed">Customize Python</span> page.
+    This Python installation will be the default Python runtime. 
 
-<div class="screenshot">
-<img src="../../img/general/python-path.png"></div>
+    <div class="screenshot">
+    <img src="../../img/general/python-path.png"></div>
+  </li>
+  <li><strong>Start the 32-bit Python installation now</strong>, and install it
+    in <span class="font-fixed">C:\Python\&lt;version&gt;\x86\</span>.</li>
+  <li>At the <span class="font-fixed">Customize Python</span> page, unset the
+    <span class="font-fixed">Register Extensions</span> option. 
 
-</li>
-<li><strong>Start the 32-bit Python installation now</strong>, and install it in <span class="font-fixed">C:\Python\2.7\x86\</span>.</li>
-<li>At the <span class="font-fixed">Customize Python</span> page, unset the <span class="font-fixed">Register Extensions</span> option.
-
-<div class="screenshot">
-<img src="../../img/general/python-setup.png"></div>
-
-</li>
-<li>Done!</li>
+    <div class="screenshot">
+    <img src="../../img/general/python-setup.png"></div>
+  </li>
+  <li>Done!</li>
 </ol>
 
-<p>Now, your 64-bit Python is your default Python runtime, but the 32-bit is also available when needed, i.e. for the the <strong>GNU Debugger (GDB)</strong> built for SuperH.</p>
+<p>Now, your 64-bit Python is your default Python runtime, but the 32-bit is
+also available when needed for the the <strong>GNU Debugger (GDB)</strong>. So
+in that way you may enable Python extensions for GDB.</p>
 
-<h2><a name="os">Required operating system</a></h2>
+<h3><a name="svn">About Subversion Client (SVN)</a></h3>
+
+<p>The <a target="_blank" href="http://subversion.apache.org/">Subversion
+Client</a> (SVN) is only used for installing one KallistiOS Port: <span
+class="font-fixed">libtremor</span>. If SVN isn't available, then you won't be
+able to use this particular library in your projects.</p>
+
+<h3><a name="ruby">About Ruby</a></h3>
+
+<p><a target="_blank" href="http://rubyinstaller.org/">Ruby</a> is a scripting
+language that may be used for Dreamcast programming.</p>
+
+<p>Please note, <strong>the Sega Dreamcast support is very
+experimental</strong>. You may install the <a href="https://rubyinstaller.org/"
+target="_blank">RubyInstaller</a> package to enable it in DreamSDK. For your
+information, the implementation used here is <a href="https://mruby.org/"
+target="_blank">mruby</a>.</p>
+
+<p><a href="https://dreamcast.wiki/Using_Ruby_for_Sega_Dreamcast_development"
+target="_blank">You may read more information here</a>.</p>
+
+<h3><a name="codeblocks">About Code::Blocks</a></h3>
+
+<p>If you want to use the Code::Blocks IDE, <strong>be sure to install the
+17.12 release version</strong> before installing DreamSDK.</p>
+
+<p>You need to start the Code::Blocks IDE at least for once for each users who
+will want to use the DreamSDK package within Code::Blocks. This is necessary to
+create some files that will be updated by the DreamSDK package.</p>
+
+<p><a href="../ide/index.html">You may learn more about Code::Blocks IDE
+integration here</a>.</p>
+
+<h2><a name="os" id="os">Required operating system</a></h2>
 
 <p>For the Windows Operating System (OS), <strong>Windows XP Service Pack 3 or
 later</strong> is required.</p>
 
-<p>If you want to install DreamSDK on Windows XP, please pay attention to the
-external components version to use. The Windows XP support was dropped almost
-everywhere, the reason why DreamSDK support it today is the fact that the Sega
-Dreamcast is a legacy system released back in 1998; some of useful utilities
-were made for this operating system (or more exactly, for Windows NT which is
-older!).</p>
+<p>Of course, <strong>you can use DreamSDK on modern Windows</strong>, if you
+plan to develop for your Dreamcast and execute your programs on emulators or
+even use Dreamcast Tool. <strong>DreamSDK is fully compatible with Windows
+10!</strong></p>
 
-<p>So if you want to install DreamSDK on Windows XP Service Pack 3, please use
-these components versions:</p>
+<p>Please note, the <strong>DreamSDK package use only 32-bit
+applications</strong>, so it may be installed on 32-bit or 64-bit systems.</p>
+
+<p>If you want to install DreamSDK on Windows XP, please pay attention to the
+external components version you have. The Windows XP support was dropped almost
+everywhere, the reason why DreamSDK supports that obsolete OS is the fact that
+the Sega Dreamcast is a legacy system released back in 1998; so some useful
+utilities were made for this operating system (or more exactly, for Windows NT
+which is older!). That said, if you want to install DreamSDK on Windows XP
+Service Pack 3, please use these versions:</p>
 <ul>
   <li><a target="_blank" href="http://git-scm.org">Git</a>: <a target="_blank"
     href="https://github.com/git-for-windows/git/releases/download/v2.10.0.windows.1/Git-2.10.0-32-bit.exe">2.10.0</a>
@@ -107,40 +192,41 @@ these components versions:</p>
   <li><a target="_blank" href="http://python.org/">Python</a>: any of <span
     class="font-fixed">2.7.x</span> release, e.g. <a target="_blank"
     href="https://www.python.org/ftp/python/2.7.15/python-2.7.15.msi">2.7.15</a>
-    is compatible;</li>
+    is compatible. If you really want Python 3 on this system, the last one
+    compatible is the 3.4.4 (but it's obsolete!);</li>
   <li><a target="_blank" href="http://subversion.apache.org/">Subversion Client
     (SVN)</a>: <a target="_blank"
     href="https://www.collab.net/downloads/subversion-1.7.19-windows-32">1.7.19
     from CollabNet</a>.</li>
+  <li><a href="https://rubyinstaller.org">RubyInstaller</a>: <a
+    href="https://dl.bintray.com/oneclick/rubyinstaller/rubyinstaller-2.0.0-p648.exe"
+    target="_blank">2.0.0</a>.</li>
 </ul>
 
-<p>In my case, I have a workstation dedicated to the Sega Dreamcast environment
-running Windows XP. This explains also the choice of using the legacy <a
-target="_blank" href="http://mingw.org/">MinGW/MSYS</a> environment instead of
-the modern (and better) <a target="_blank"
-href="http://mingw-w64.org/">MinGW-w64/MSYS2</a> environment, as they
-officially dropped Windows XP support.</p>
-
-<p>Of course, you can use DreamSDK on modern Windows, if you plan to develop
-for your Dreamcast and execute your programs on emulators or even use Dreamcast
-Tool. This software package is compatible with Windows 10.</p>
+<p>In my personal case, I have a legacy workstation (powered by a Pentium 4)
+dedicated to the Sega Dreamcast environment running Windows XP. This explains
+also the choice of using the legacy <a target="_blank"
+href="http://mingw.org/">MinGW/MSYS</a> environment instead of the modern (and
+better) <a target="_blank" href="http://mingw-w64.org/">MinGW-w64/MSYS2</a>
+environment, as they officially dropped Windows XP support.</p>
 
 <h2><a name="net">Internet connection</a></h2>
 
-<p>In order to install the DreamSDK environment on your computer, <strong>you
-need an active Internet connection</strong>.</p>
+<p>In order to install the DreamSDK environment on your computer, <strong>it's
+better to have an active Internet connection</strong>.</p>
 
-<p>This is required as the KallistiOS library will be downloaded at the
+<p>This is useful as the KallistiOS libraries will be downloaded at the
 installation time.</p>
 
-<p>If you don't have any Internet connection, you will have to install
-KallistiOS manually, but in this case, the Update feature of the <a
-href="../manager/index.html">DreamSDK Manager</a> will be impossible. Sorry,
-this possibility is not documented at this time.</p>
+<p>If you don't have any Internet connection, you may use the embedded
+KallistiOS libraries in the package, but in this case, the Update feature of
+the <a href="../manager/index.html">DreamSDK Manager</a> will be altered.
+Later, you will have the possibility to switch back online directly from the
+DreamSDK Manager.</p>
 <!--FOOTER:START-->
 
 <div id="footer">
-&copy; Copyleft 2018-2020 — <a href="https://www.dreamsdk.org/" target="_blank">The
+© Copyleft 2018-2020 — <a href="https://www.dreamsdk.org/" target="_blank">The
 DreamSDK Team</a> and contributors.</div>
 <!--FOOTER:END-->
 </body>
