@@ -25,6 +25,7 @@ Display compile progress=Yes
 pages\index.html
 pages\general\index.html
 pages\general\overview.html
+pages\general\utilities.html
 pages\general\features.html
 pages\general\requirements.html
 pages\general\faq.html
@@ -46,5 +47,7 @@ pages\shell\terminal.html
 pages\runner\index.html
 pages\ide\index.html
 pages\addons\index.html
+pages\addons\cmd.html
+pages\addons\gui.html
 pages\tutorials\index.html
 img\bkgnd.jpg

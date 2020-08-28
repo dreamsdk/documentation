@@ -430,6 +430,10 @@
 		<param name="Name" value="Tutorials">
 		<param name="Local" value="pages\tutorials\index.html">
 		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="** New **">
+		<param name="See Also" value="** New **">
+		</OBJECT>
 </UL>
 </BODY>
 </HTML>

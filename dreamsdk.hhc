@@ -71,6 +71,10 @@
 				</OBJECT>
 		</UL>
 		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Utilities and embedded command-line tools">
+			<param name="Local" value="pages\general\utilities.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
 			<param name="Name" value="Features">
 			<param name="Local" value="pages\general\features.html">
 			</OBJECT>
@@ -80,9 +84,31 @@
 			</OBJECT>
 		<UL>
 			<LI> <OBJECT type="text/sitemap">
-				<param name="Name" value="Required external components">
+				<param name="Name" value="Useful external components">
 				<param name="Local" value="pages\general\requirements.html#ext">
 				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="About Git">
+					<param name="Local" value="pages\general\requirements.html#git">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="About Python">
+					<param name="Local" value="pages\general\requirements.html#python">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="About Subversion Client (SVN)">
+					<param name="Local" value="pages\general\requirements.html#svn">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="About Ruby">
+					<param name="Local" value="pages\general\requirements.html#ruby">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="About Code::Blocks">
+					<param name="Local" value="pages\general\requirements.html#codeblocks">
+					</OBJECT>
+			</UL>
 			<LI> <OBJECT type="text/sitemap">
 				<param name="Name" value="Required operating system">
 				<param name="Local" value="pages\general\requirements.html#os">
@@ -96,6 +122,96 @@
 			<param name="Name" value="Frequently Asked Questions (FAQ)">
 			<param name="Local" value="pages\general\faq.html">
 			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Q: What is DreamSDK?">
+				<param name="Local" value="pages\general\faq.html#q01">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Q: What is NOT DreamSDK?">
+				<param name="Local" value="pages\general\faq.html#q02">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Q: Why another package? Again?">
+				<param name="Local" value="pages\general\faq.html#q03">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Q: Can I use DreamSDK on another OS than Windows?">
+				<param name="Local" value="pages\general\faq.html#q04">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Q: What is a homebrew program?">
+				<param name="Local" value="pages\general\faq.html#q05">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Q: What is an .elf file?">
+				<param name="Local" value="pages\general\faq.html#q06">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Q: What programming language I should use forprogramming?">
+				<param name="Local" value="pages\general\faq.html#q07">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Q: What is the main CPU of the Sega Dreamcast?">
+				<param name="Local" value="pages\general\faq.html#q08">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Q: What compiler I should use to develop for the Sega Dreamcast VMU / VMS?">
+				<param name="Local" value="pages\general\faq.html#q09">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Q: What is a selfboot (or autoboot/bootable) disc?">
+				<param name="Local" value="pages\general\faq.html#selfboot">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Q: What is an IP.BIN file?">
+				<param name="Local" value="pages\general\faq.html#q11">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Q: What is a scrambled program?">
+				<param name="Local" value="pages\general\faq.html#scrambled">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Q: What is KallistiOS?">
+				<param name="Local" value="pages\general\faq.html#q13">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Q: What is KallistiOS Ports?">
+				<param name="Local" value="pages\general\faq.html#q14">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Q: And... what is Dreamcast Tool?">
+				<param name="Local" value="pages\general\faq.html#q15">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Q: Is it really mandatory to use a Coders Cable, a LAN or Broadband Adapter in order to debug Sega Dreamcast programs?">
+				<param name="Local" value="pages\general\faq.html#q16">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Q: Is it really mandatory to use the DreamSDK Shell to build Dreamcast programs?">
+				<param name="Local" value="pages\general\faq.html#q17">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Q: Can I use the package with an IDE?">
+				<param name="Local" value="pages\general\faq.html#q18">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Q: From the DreamSDK Shell, how can I access to another directory which is NOT in the DreamSDK tree?">
+				<param name="Local" value="pages\general\faq.html#otherdir">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Q: How can I test all the environment? Is there any way to test if everything is working correctly in my environment?">
+				<param name="Local" value="pages\general\faq.html#q21">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Q: I found a bug or a missing software. How can I contact you?">
+				<param name="Local" value="pages\general\faq.html#q22">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Q: Can I contribute to the DreamSDK project? The firstthing I want to submit is a fix for that horrible Frenglish!">
+				<param name="Local" value="pages\general\faq.html#q23">
+				</OBJECT>
+		</UL>
 		<LI> <OBJECT type="text/sitemap">
 			<param name="Name" value="Changes Log">
 			<param name="Local" value="pages\general\changes.html">
@@ -292,56 +408,78 @@
 			</OBJECT>
 	</UL>
 	<LI> <OBJECT type="text/sitemap">
-		<param name="Name" value="Additional command line tools">
+		<param name="Name" value="Additional tools">
 		<param name="Local" value="pages\addons\index.html">
 		</OBJECT>
 	<UL>
 		<LI> <OBJECT type="text/sitemap">
-			<param name="Name" value="IMG4DC — Dreamcast Selfboot Toolkit">
-			<param name="Local" value="pages\addons\index.html#img4dc">
+			<param name="Name" value="Additional command-line tools">
+			<param name="Local" value="pages\addons\cmd.html">
 			</OBJECT>
 		<UL>
 			<LI> <OBJECT type="text/sitemap">
-				<param name="Name" value="CDI4DC — Padus DiscJuggler image generator">
-				<param name="Local" value="pages\addons\index.html#cdi4dc">
+				<param name="Name" value="Elevate — Command-line UAC elevation utility (elevate)">
+				<param name="Local" value="pages\addons\cmd.html#elevate">
 				</OBJECT>
 			<LI> <OBJECT type="text/sitemap">
-				<param name="Name" value="MDS4DC — Alcohol 120% image generator">
-				<param name="Local" value="pages\addons\index.html#mds4dc">
+				<param name="Name" value="PVR to PNG — PowerVR image to PNG converter (pvr2png)">
+				<param name="Local" value="pages\addons\cmd.html#pvr2png">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="TXF Utilities — Textured font format tools (showtxf, ttf2txf)">
+				<param name="Local" value="pages\addons\cmd.html#ttf2txf">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Additional ready-to-use TXF fonts files">
+					<param name="Local" value="pages\addons\cmd.html#txflib">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="VMU Tool PC — Visual Memory data handler (vmutool)">
+				<param name="Local" value="pages\addons\cmd.html#vmutool">
 				</OBJECT>
 		</UL>
 		<LI> <OBJECT type="text/sitemap">
-			<param name="Name" value="IP.BIN Creator — Initial Program generator">
-			<param name="Local" value="pages\addons\index.html#ipcreate">
+			<param name="Name" value="Additional user-interface tools">
+			<param name="Local" value="pages\addons\gui.html">
 			</OBJECT>
 		<UL>
 			<LI> <OBJECT type="text/sitemap">
-				<param name="Name" value="Additional ready-to-use IP logos">
-				<param name="Local" value="pages\addons\index.html#iplogos">
+				<param name="Name" value="1ST_READ.BIN Checker — Binary program state checker">
+				<param name="Local" value="pages\addons\gui.html#checker">
 				</OBJECT>
-		</UL>
-		<LI> <OBJECT type="text/sitemap">
-			<param name="Name" value="Make ISO File System — ISO9660 image generator">
-			<param name="Local" value="pages\addons\index.html#mkisofs">
-			</OBJECT>
-		<LI> <OBJECT type="text/sitemap">
-			<param name="Name" value="PVR to PNG — PowerVR image to PNG converter">
-			<param name="Local" value="pages\addons\index.html#pvr2png">
-			</OBJECT>
-		<LI> <OBJECT type="text/sitemap">
-			<param name="Name" value="TXF Utilities — Textured font format tools">
-			<param name="Local" value="pages\addons\index.html#ttf2txf">
-			</OBJECT>
-		<UL>
 			<LI> <OBJECT type="text/sitemap">
-				<param name="Name" value="Additional ready-to-use TXF fonts files">
-				<param name="Local" value="pages\addons\index.html#txflib">
+				<param name="Name" value="BootDreams — Selfboot image generator frontend">
+				<param name="Local" value="pages\addons\gui.html#bdreams">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="IP.BIN Writer — Initial Program manipulation tool">
+				<param name="Local" value="pages\addons\gui.html#ipwriter">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Additional ready-to-use Initial Program (IP) logos">
+					<param name="Local" value="pages\addons\gui.html#iplogos">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="MR Writer — Initial Program picture format management tool">
+				<param name="Local" value="pages\addons\gui.html#mrwriter">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="SBI Builder — Selfboot Inducer package generator">
+				<param name="Local" value="pages\addons\gui.html#buildsbi">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Selfboot Inducer — DreamInducer disc generator">
+				<param name="Local" value="pages\addons\gui.html#sbinducr">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="VMU Tool PC — Visual Memory data manager (GUI)">
+				<param name="Local" value="pages\addons\gui.html#vmutool">
 				</OBJECT>
 		</UL>
-		<LI> <OBJECT type="text/sitemap">
-			<param name="Name" value="VMU Tool PC — Visual Memory data handler">
-			<param name="Local" value="pages\addons\index.html#vmutool">
-			</OBJECT>
 	</UL>
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="Useful information and tutorials">
