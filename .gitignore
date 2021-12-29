@@ -1,2 +1,3 @@
 dreamsdk.chm
-dreamsdk.log
+*.log
+online/dist/
