@@ -42,3 +42,12 @@ The `dreamsdk.chm` file will be embedded in the **DreamSDK Setup** using the
 `prepare` script, please browse the `setup-helpers` repository for more
 information on that part.
 
+## How to produce the Online version ##
+
+First, just browse to the `online` directory.
+
+You need to update the `online/src/toc.html` file according to your changes
+made in the `dreamsdk.chm` file. Unfortunately, this is not automatic.
+
+Double-click on the `online.cmd` script then upload the `dist` directory
+content on the website.

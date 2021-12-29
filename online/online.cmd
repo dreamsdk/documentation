@@ -34,6 +34,7 @@ if exist %ONLINE_DATA_OUTPUT_DIR%\dreamsdk.* del %ONLINE_DATA_OUTPUT_DIR%\dreams
 :finish
 call :log
 call :log Done!
+call :log You can now upload the "dist" directory content.
 call :log
 goto end
 
