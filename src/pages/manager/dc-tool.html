@@ -36,11 +36,19 @@ title="Dreamcast Tool Tab"></div>
 
 <p>After choosing your tool version, the corresponding settings panel will
 activate.</p>
-
+	
+<p>All options that will be activated on the settings panel are described in the <a href="http://gamedev.allusion.net/docs/kos-2.0.0/" target="_blank">KallistiOS documentation</a>. Please
+note, <strong>these options are applied all the time</strong>, every time you
+will run the <span class="font-fixed">dc-tool</span> program.</p>	
+	
 <p>In order to use Dreamcast Tool, either Serial or IP versions, you will need
 the corresponding dcload. <a href="../tutorials/index.html#dcload">Click here
 to learn how to generate the dcload program</a>.</p>
+	
+<h2>Dreamcast Tool Internet Protocol (dcload-ip)</h2>	
 
+<p>The best option is to use the Internet Protocol (IP) version so in clear, dcload-ip.</p>
+	
 <p>If you use a <strong>direct cross-cable connection between your Sega
 Dreamcast and your computer</strong>, you should use the ARP protocol. The
 configuration may be a bit complex, so to do that, you have to:</p>
@@ -81,10 +89,27 @@ configuration may be a bit complex, so to do that, you have to:</p>
   </li>
   <li>You are now ready to use Dreamcast Tool by using direct connection!</li>
 </ol>
+	
+<h2>Dreamcast Tool Serial (dcload-serial)</h2>
+	
+<p>Another option, which historically was the first available, is using the Serial port, so in clear, dcload-serial.</p>
+	
+<p>You could use a direct COM port cable (in 2022, I think this is no more relevant... except if you have an old, dedicated machine for Sega Dreamcast development!) or a USB cable. These kind of cables are often based on FT232RL USB-Serial board.</p>
+	
+<p>In that case, you just have to select the proper COM port in DreamSDK Manager (you can grab it from your Windows&reg; Control Panel), plug the cable to your Sega Dreamcast unit and you are good to go.</p>
+	
+<p>If you are using an USB board and have trouble when execuing a program remotely to your Sega Dreamcast, i.e., nothing happen in the dcload-serial console, it could be a hardware issue/configuration. Basically, you need to know the following: <span class="font-fixed">RTS</span> and <span class="font-fixed">CTS</span> need to be swapped on the USB to Serial board much like <span class="font-fixed">RXD</span> and <span class="font-fixed">TXD</span> had as well. In summary:</p>
 
-<p>The other options are described in the KallistiOS documentation. Please
-note, <strong>these options are applied all the time</strong>, every time you
-will run the <span class="font-fixed">dc-tool</span> program.</p>
+<div class="fixed-block">
+DC-RXD -&gt; Serial-TXD<br>
+DC-TXD -&gt; Serial-RXD<br>
+DC-RTS -&gt; Serial-CTS<br>
+DC-CTS -&gt; Serial-RTS<br>
+</div>
+	
+<p>Another thing to note that isn't stated at all is that the USB to Serial board had its jumper changed from the default 5V to the 3V setting. Unknown to if this effects anything with communication, but I thought it was worth bringing up to anyone else who attempts this mod and runs into a similar issue. <a href="https://dcemulation.org/phpBB/viewtopic.php?p=1059034" target="_blank">You can read more on these points here</a>.</p>
+	
+<h2>Running/Debugging a Sega Dreamcast program</h2>	
 
 <p>At the <a href="../shell/index.html">DreamSDK Shell</a> prompt, you just
 have to run the following command:</p>

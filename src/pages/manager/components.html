@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+  <META http-equiv="Content-Type" content="text/html; charset=Windows-1252">
+  <meta name="Keywords" content="Components Versions,Components,Version">  
+  <TITLE>Components</TITLE>
+  <LINK href="../../css/style.css" rel="stylesheet" type="text/css">
+</HEAD>
+
+<BODY>
+
+<H1>Components</H1>
+
+<p>The Components tab is useful for several things:</p>
+	
+<ul>
+	<li>It displays the home base (root) directory. You have the possibility to open it in the Windows&reg; Explorer using the <span class="font-fixed">Open</span> button.</li>
+	<li>You can change the whole Sega Dreamcast toolchain used by DreamSDK, or just the GNU Debugger (GDB) package.</li>
+	<li>You can check the version of the main libraries (i.e., <a href="../general/overview.html#kos">KallistiOS, KallistiOS Ports and Dreamcast Tool</a>) used by DreamSDK.</li>
+</ul>
+
+<div class="screenshot">
+<img src="../../img/manager/components.png" alt="Components Tab"
+title="Components Tab"></div>
+
+<h2>About changing the Components configuration</h2>
+	
+<p>When installing DreamSDK, you have the choice to install the <span class="font-fixed">Stable</span> toolchain, based on GCC 4, or the <span class="font-fixed">Experimental</span> toolchain, based on GCC 9.</p>
+	
+<div class="screenshot">
+<img src="../../img/manager/components-setup.png" alt="Components in DreamSDK Setup"
+title="Components in DreamSDK Setup"></div>
+	
+<p>Later on, after installation, you have the possibility to change the toolchain components using DreamSDK Manager through this tab. When changing these, the whole toolchain will be rebuilt. Please note, you can only have one version of the toolchain installed at once, so you will have to choose between GCC 4 or 9. Usually, GCC 9 is better as it's more <em>modern</em> (of course), but this one has not been tested so much, instead of GCC 4 which is stable from years now (but <a target="_blank" href="https://dcemulation.org/phpBB/viewtopic.php?f=29&t=104724">some issues may happen in C++</a>).</p>
+	
+<p>You also have the option to change the GNU Debugger (gdb) package version only, basically if you want to change the Python revision support. Indeed, all GNU Debugger (gdb) packages provided with DreamSDK are the same but they have been built using different Python versions. You have of course the choice to disable completely Python extensions by selecting the value <span class="font-fixed">Disable Python for GDB</span>.</p>
+	
+<p>To apply a new toolchain and/or another GNU Debugger (gdb) package, you just have to:</p>	
+	
+<ol>
+	<li>Click on <span class="font-fixed">Change Toolchain</span> or <span class="fixed-block">Change GNU Debugger (gdb)</span> radio buttons;</li>
+	<li>Click on <span class="font-fixed">Toolchain</span> and/or <span class="font-fixed">GNU Debugger (GDB)</span> drop-down lists;</li>
+	<li>Click on the <span class="font-fixed">Apply</span> button.</li>
+</ol>
+		
+<div class="screenshot">
+<img src="../../img/manager/components-change.png" alt="Changing components in DreamSDK Setup"
+title="Changing components in DreamSDK Setup"></div>
+	
+<p><strong>Note:</strong> if you don't click on the <span class="font-fixed">Apply</span> button after doing the changes, the fields will be reset to their initial values.</p>	
+
+<!--FOOTER:START-->
+<div id="footer">&copy; Copyleft 2018-2022 &mdash; <a href="https://www.dreamsdk.org/" target="_blank">The DreamSDK Team</a> and contributors.</div>
+<!--FOOTER:END-->
+
+</body>
+</html>

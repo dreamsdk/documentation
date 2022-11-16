@@ -350,7 +350,7 @@
 			</OBJECT>
 	</UL>
 	<LI> <OBJECT type="text/sitemap">
-		<param name="Name" value="Code::Blocks 17.12 Integration">
+		<param name="Name" value="Code::Blocks IDE Integration">
 		<param name="Local" value="pages\ide\index.html">
 		</OBJECT>
 	<UL>
