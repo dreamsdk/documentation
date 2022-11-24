@@ -12,7 +12,7 @@ Index File=dreamsdk.hhk
 Error log file=..\bin\dreamsdk.log
 Full-text search=Yes
 Language=0x409 English (United States)
-Title=DreamSDK Help — Ver. 20200831
+Title=DreamSDK Help — Ver. 20221124
 Default Topic=pages\index.html
 Default Window=
 Default Font=Arial, 9, 000
@@ -38,8 +38,11 @@ pages\manager\home.html
 pages\manager\kos.html
 pages\manager\kos-ports.html
 pages\manager\dc-tool.html
+pages\manager\ruby.html
+pages\manager\ide.html
 pages\manager\options.html
 pages\manager\environ.html
+pages\manager\components.html
 pages\manager\about.html
 pages\shell\index.html
 pages\shell\overview.html

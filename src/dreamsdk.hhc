@@ -281,12 +281,24 @@
 			<param name="Local" value="pages\manager\dc-tool.html">
 			</OBJECT>
 		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Ruby">
+			<param name="Local" value="pages\manager\ruby.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="IDE">
+			<param name="Local" value="pages\manager\ide.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
 			<param name="Name" value="Options">
 			<param name="Local" value="pages\manager\options.html">
 			</OBJECT>
 		<LI> <OBJECT type="text/sitemap">
 			<param name="Name" value="Environment">
 			<param name="Local" value="pages\manager\environ.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Components">
+			<param name="Local" value="pages\manager\components.html">
 			</OBJECT>
 		<LI> <OBJECT type="text/sitemap">
 			<param name="Name" value="About">
