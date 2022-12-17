@@ -9,16 +9,34 @@
 
 <BODY>
 
-<H1>IDE</H1>
+<H1>IDE &mdash; Integrated Development Environment</H1>
 
-<p>The IDE tab is just a read-only panel, displaying all IDE versions used in your DreamSDK installation.</p>
+<p>The IDE tab was made to manage the integration of the DreamSDK package with your favorite IDE. Only Code::Blocks is supported yet for historical reasons but this could change in the future.</p>
 
 <div class="screenshot">
 <img src="../../img/manager/ide.png" alt="IDE Tab"
 title="IDE Tab"></div>
 
-<p>This can be useful to debug if something seems to be wrong with your environment.</p>
-
+<p>In this tab, you will be able to view the current statut of the integration, install, reinstall or uninstall the integration of DreamSDK in the IDE of your choice.</p>
+	
+<h2>Code::Blocks</h2>
+	
+<p><a href="http://codeblocks.org" target="_blank">Code::Blocks is an open source IDE</a>. The integration is fully completed for this IDE. <a href="../ide/index.html">You may learn more here</a>.</p>
+	
+<p>Currently, 2 versions of Code::Blocks are supported:</p>
+	
+<ul>
+	<li><strong>17.12</strong> (available in 32-bit only)</li>
+	<li><strong>20.03</strong> (available on both 32-bit and 64-bit)</li>
+</ul>
+	
+<p>As the DreamSDK integration for Code::Blocks is installing a completely brand new C::B package, i.e., new binaries that were built by the DreamSDK Team, only these 2 official versions are supported yet. This could change in the future if the required changes in the Code::Blocks codebase are accepted by the C::B Team.</p>
+	
+<p>To have a working environment for DreamSDK in Code::Blocks, you mean to startup at least one time C::B on the session you want to enable the integration, or you just have to click on the <span class="font-fixed">Initialize&hellip;</span> button. After installing the integration, by clicking <span class="font-fixed">Install&hellip;</span> or <span class="font-fixed">Reinstall&hellip;</span>, the session username will be displayed in the <span class="font-fixed">Code::Blocks for DreamSDK Enabled Users</span> box.</p>
+	
+<p>All features are supported, i.e., running and debugging your program. <a href="../ide/index.html">Everything is described here</a>.</p>		
+<p>You can restore the real, official Code::Blocks installation by clicking the <span class="font-fixed">Uninstall&hellip;</span> button.</p>	
+	
 <!--FOOTER:START-->
 <div id="footer">&copy; Copyleft 2018-2022 &mdash; <a href="https://www.dreamsdk.org/" target="_blank">The DreamSDK Team</a> and contributors.</div>
 <!--FOOTER:END-->
