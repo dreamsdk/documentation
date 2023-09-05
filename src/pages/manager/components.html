@@ -25,20 +25,20 @@ title="Components Tab"></div>
 
 <h2>About changing the Components configuration</h2>
 	
-<p>When installing DreamSDK, you have the choice to install the <span class="font-fixed">Stable</span> toolchain, based on GCC 4, or the <span class="font-fixed">Experimental</span> toolchain, based on GCC 9.</p>
+<p>When installing DreamSDK, you have the choice to install the <span class="font-fixed">Stable</span> toolchain, based on GCC 13 (not compatible with Windows® XP), the <span class="font-fixed">Old Stable</span> toolchain, based on GCC 9, or the <span class="font-fixed">Legacy</span> toolchain, based on GCC 4.</p>
 	
 <div class="screenshot">
 <img src="../../img/manager/components-setup.png" alt="Components in DreamSDK Setup"
 title="Components in DreamSDK Setup"></div>
 	
-<p>Later on, after installation, you have the possibility to change the toolchain components using DreamSDK Manager through this tab. When changing these, the whole toolchain will be rebuilt. Please note, you can only have one version of the toolchain installed at once, so you will have to choose between GCC 4 or 9. Usually, GCC 9 is better as it's more <em>modern</em> (of course), but this one has not been tested so much, instead of GCC 4 which is stable from years now (but <a target="_blank" href="https://dcemulation.org/phpBB/viewtopic.php?f=29&t=104724">some issues may happen in C++</a>).</p>
+<p>Later on, after installation, you have the possibility to change the toolchain components using DreamSDK Manager through this tab. When changing these, the whole toolchain will be rebuilt (<strong>excluding the KallistiOS Ports</strong>). Please note, you can only have one version of the toolchain installed at once, so you will have to choose between GCC 4, 9 or 13. Usually, GCC 13 is better as it's more <em>modern</em> (of course).</p>
 	
-<p>You also have the option to change the GNU Debugger (gdb) package version only, basically if you want to change the Python revision support. Indeed, all GNU Debugger (gdb) packages provided with DreamSDK are the same but they have been built using different Python versions. You have of course the choice to disable completely Python extensions by selecting the value <span class="font-fixed">Disable Python for GDB</span>.</p>
+<p>You also have the option to change the GNU Debugger (GDB) package version only, basically if you want to change the Python revision support. Indeed, all GNU Debugger (GDB) packages provided with DreamSDK are the same but they have been built using different Python versions. You have of course the choice to disable completely Python extensions by selecting the value <span class="font-fixed">Disable Python for GDB</span>. Please note, for enabling Python extensions, <strong>Python 32-bit build needs to be installed</strong>.</p>
 	
-<p>To apply a new toolchain and/or another GNU Debugger (gdb) package, you just have to:</p>	
+<p>To apply a new toolchain and/or another GNU Debugger (GDB) package, you just have to:</p>	
 	
 <ol>
-	<li>Click on <span class="font-fixed">Change Toolchain</span> or <span class="fixed-block">Change GNU Debugger (gdb)</span> radio buttons;</li>
+	<li>Click on <span class="font-fixed">Change Toolchain</span> or <span class="fixed-block">Change GNU Debugger (GDB)</span> radio buttons;</li>
 	<li>Click on <span class="font-fixed">Toolchain</span> and/or <span class="font-fixed">GNU Debugger (GDB)</span> drop-down lists;</li>
 	<li>Click on the <span class="font-fixed">Apply</span> button.</li>
 </ol>
