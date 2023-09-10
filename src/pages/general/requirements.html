@@ -18,12 +18,12 @@
       <li><a href="#git">Git</a></li>
       <li><a href="#python">Python</a></li>
       <li><a href="#svn">Subversion Client</a> (SVN)</li>
-      <li><a href="#ruby">Ruby</a></li>
-      <li><a href="#codeblocks">Code::Blocks</a></li>
+      <li><a href="#ruby">Ruby</a> (optional)</li>
+      <li><a href="#codeblocks">Code::Blocks</a> (optional)</li>
     </ul>
   </li>
   <li><a href="#os">Required operating system</a></li>
-  <li><a href="#net">Internet connection</a></li>
+	<li><a href="#net">Internet connection</a> (<strong>highly recommended</strong>)</li>
 </ul>
 
 <h2><a name="ext">Useful external components</a></h2>
@@ -75,7 +75,7 @@ class="font-fixed">PATH</span> option when asked!</p>
 
 <p><strong>Note:</strong> You may install all these components in 64-bit form
 if you want to, <strong>except Python which should be the 32-bit release if you
-want to enable Python extensions in GDB for SuperH</strong>.</p>
+want to enable Python extensions in GDB for SuperH</strong>. If you don't want to enable Python extension GDB for SuperH, you can install a 64-bit release of Python without issues (<a href="#python">see below</a>).</p>
 
 <h3><a name="git">About Git</a></h3>
 
@@ -91,7 +91,7 @@ will be available.</p>
 <h3><a name="python">About Python</a></h3>
 
 <p><a target="_blank" href="http://python.org/">Python</a> is a powerful
-scripting language engine. It's used by DreamSDK to mainly install KallistiOS
+scripting language engine. It's used by DreamSDK to mainly install/validate KallistiOS
 Ports and also in the GNU Debugger (GDB) for SuperH.</p>
 
 <p><strong>The better <span class="font-fixed">Python</span> version required
@@ -100,7 +100,7 @@ for DreamSDK is the 32-bit</strong> version, as the <strong>GNU Debugger
 enabling Python extensions for GDB, you should install Python 32-bit.</p>
 
 <p>To be clear, if you aren't interested about Python extensions in GDB, you
-may install any version of Python. Otherwise, a 32-bit Python release is
+may install any version of Python (including a 64-bit release if you want to). Otherwise, a 32-bit Python release is
 necessary.</p>
 
 <p>Hopefully, If you want a 64-bit Python and as well a 32-bit Python to enable
@@ -133,9 +133,8 @@ in that way you may enable Python extensions for GDB.</p>
 <h3><a name="svn">About Subversion Client (SVN)</a></h3>
 
 <p>The <a target="_blank" href="http://subversion.apache.org/">Subversion
-Client</a> (SVN) is only used for installing one KallistiOS Port: <span
-class="font-fixed">libtremor</span>. If SVN isn't available, then you won't be
-able to use this particular library in your projects.</p>
+Client</a> (SVN) was only used for installing one KallistiOS Port: <span
+class="font-fixed">libtremor</span>, but this is not true anymore. This tool is not more used at least for now, it could be removed in the future.&nbsp;</p>
 
 <h3><a name="ruby">About Ruby</a></h3>
 
@@ -171,7 +170,7 @@ later</strong> is required.</p>
 <p>Of course, <strong>you can use DreamSDK on modern Windows</strong>, if you
 plan to develop for your Dreamcast and execute your programs on emulators or
 even use Dreamcast Tool. <strong>DreamSDK is fully compatible with Windows
-10!</strong></p>
+11!</strong></p>
 
 <p>Please note, the <strong>DreamSDK package use only 32-bit
 applications</strong>, so it may be installed on 32-bit or 64-bit systems.</p>

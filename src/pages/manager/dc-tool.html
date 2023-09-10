@@ -14,11 +14,13 @@
 <p>The Dreamcast Tool is the tool responsible of sending your program to the
 Sega Dreamcast, in order to execute/debug it. This tab handles the
 configuration of this tool.</p>
-
+	
 <div class="screenshot">
 <img src="../../img/manager/dc-tool.png" alt="Dreamcast Tool Tab"
 title="Dreamcast Tool Tab"></div>
 
+<p>After configuring this tool using this tab, you will be able to <a href="#run">run Dreamcast Tool</a> by using the <span class="font-fixed">dc-tool</span> command or directly from the IDE.</p>
+	
 <p>Please choose the configuration accordingly to your scenario:</p>
 <ul>
   <li>If you have a <strong>Serial (Coders Cable)</strong>, you should check
@@ -90,15 +92,17 @@ configuration may be a bit complex, so to do that, you have to:</p>
   <li>You are now ready to use Dreamcast Tool by using direct connection!</li>
 </ol>
 	
+<p>If you don't want to use a cros-cable connection and if you have connected your Sega Dreamcast to your regular network, you may also use DHCP as dcload-ip is supporting this protocol; or you may assign a static IP address from your router as well. All these configurations are supported by dcload-ip.</p>
+	
 <h2>Dreamcast Tool Serial (dcload-serial)</h2>
 	
 <p>Another option, which historically was the first available, is using the Serial port, so in clear, dcload-serial.</p>
 	
-<p>You could use a direct COM port cable (in 2022, I think this is no more relevant... except if you have an old, dedicated machine for Sega Dreamcast development!) or a USB cable. These kind of cables are often based on FT232RL USB-Serial board.</p>
+<p>You could use a direct COM port cable (in 2022, I think this is no more relevant... except if you have an old, dedicated machine for Sega Dreamcast development!) or a USB cable. These kind of cables are often based on Silicon Labs CP2102N or FT232RL USB-Serial board.</p>
 	
 <p>In that case, you just have to select the proper COM port in DreamSDK Manager (you can grab it from your Windows&reg; Control Panel), plug the cable to your Sega Dreamcast unit and you are good to go.</p>
 	
-<p>If you are using an USB board and have trouble when execuing a program remotely to your Sega Dreamcast, i.e., nothing happen in the dcload-serial console, it could be a hardware issue/configuration. Basically, you need to know the following: <span class="font-fixed">RTS</span> and <span class="font-fixed">CTS</span> need to be swapped on the USB to Serial board much like <span class="font-fixed">RXD</span> and <span class="font-fixed">TXD</span> had as well. In summary:</p>
+<p>If you are using an USB board and have trouble when executing a program remotely to your Sega Dreamcast, i.e., nothing happen in the dcload-serial console, it could be a hardware issue/configuration. Basically, you need to know the following: <span class="font-fixed">RTS</span> and <span class="font-fixed">CTS</span> need to be swapped on the USB to Serial board much like <span class="font-fixed">RXD</span> and <span class="font-fixed">TXD</span> had as well. In summary:</p>
 
 <div class="fixed-block">
 DC-RXD -&gt; Serial-TXD<br>
@@ -109,7 +113,7 @@ DC-CTS -&gt; Serial-RTS<br>
 	
 <p>Another thing to note that isn't stated at all is that the USB to Serial board had its jumper changed from the default 5V to the 3V setting. Unknown to if this effects anything with communication, but I thought it was worth bringing up to anyone else who attempts this mod and runs into a similar issue. <a href="https://dcemulation.org/phpBB/viewtopic.php?p=1059034" target="_blank">You can read more on these points here</a>.</p>
 	
-<h2>Running/Debugging a Sega Dreamcast program</h2>	
+<a name="run"></a><h2>Running/Debugging a Sega Dreamcast program</h2>	
 
 <p>At the <a href="../shell/index.html">DreamSDK Shell</a> prompt, you just
 have to run the following command:</p>

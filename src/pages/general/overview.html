@@ -12,11 +12,11 @@
 <h1>DreamSDK Overview</h1>
 
 <p><strong>DreamSDK is a modern, ready-to-use environment for Sega Dreamcast
-development, designed for the Microsoft Windows platform!</strong></p>
+development, designed for the Microsoft Windows® platform!</strong></p>
 
 <p>It's a big, self-contained package embedding all needed software to freely
-develop for the Sega Dreamcast system on Windows. This package is built on
-open-source components so it doesn't contains any copyrighted software. See <a
+develop for the Sega Dreamcast system on Windows®. This package is built on
+open-source components, so it doesn't contains any copyrighted software. See <a
 href="licenses.html">the license section</a> for more information.</p>
 
 <p>It was specially made for beginners but it can be of course used by
@@ -26,13 +26,13 @@ everyone!</p>
 <ul>
   <li>An UNIX® like environment;</li>
   <li>3 prebuilt toolchains;</li>
-  <li>Some side utilities in order to manage and exploit the power of that
-    environment.</li>
+  <li>Some side utilities in order to manage and exploit the full power of that
+  environment.</li>
 </ul>
 
-<p>To use DreamSDK, you have 2 options:</p>
+<p>To use DreamSDK, you basically have 2 options:</p>
 <ul>
-  <li><strong>Use the provided shell</strong>, in case you are confortable with
+  <li><strong>Use the provided shell</strong>, in case you are comfortable with
     the <a href="../shell/index.html">command-line interface</a>. This is the
     traditional way to develop;</li>
   <li><strong>Use an IDE</strong>. At this time of writing, only Code::Blocks
@@ -79,8 +79,8 @@ built upon a lot of various components</strong>.</p>
 
 <p>Each layer represent a middleware used in the package:</p>
 <ol>
-  <li>The foundation is MinGW/MSYS, and the DreamSDK Shell is a simplified
-    launcher to access to it.</li>
+  <li>The foundation is the legacy MinGW/MSYS project, and the DreamSDK Shell is a simplified
+  launcher to access it.</li>
   <li>Then comes the 3 toolchains: one for the CPU of the Dreamcast (i.e.
     SuperH), one for the audio chip (i.e. AICA) and the standard Win32
     toolchain in order to build utilities.</li>
@@ -103,7 +103,7 @@ additional UNIX® environment.</p>
 
 <p>That UNIX® like environment is provided by <a href="https://mingw.osdn.io/"
 target="_blank">MinGW/MSYS</a>. Basically this is the DreamSDK foundation.
-Everything is built upon this platform.</p>
+Everything is built upon this component.</p>
 
 <h2><a name="shell">DreamSDK Shell</a></h2>
 
@@ -178,7 +178,7 @@ of Fury</strong>, <strong>Maqiupai</strong>, <strong>Inhabitants</strong>,
 <strong>Cool Herders</strong>, <strong>Dynamite Dreams</strong> and many more.
 DreamSDK respects all the standard <span class="font-fixed">KOS</span>
 prerequisites and requirements, that means this environment is 100% compliant
-with KallistiOS.</p>
+with KallistiOS (no fancy hacks or weird stuff).</p>
 
 <div class="schema">
 <img src="../../img/general/kallistios-yuki.gif"> </div>
@@ -222,7 +222,7 @@ version:</p>
 execute your programs directly through a Dreamcast emulator, i.e. using <span
 class="font-fixed">Redream</span>, <span class="font-fixed">nullDC</span>,
 <span class="font-fixed">Demul</span>, <span class="font-fixed">Makaron</span>,
-etc. Please note, this possibility isn't supported in DreamSDK at least for
+etc. Please note, this possibility (using an emulator) isn't supported in DreamSDK at least for
 now.</p>
 
 <h3><a name="managekos">Managing KallistiOS with DreamSDK environment</a></h3>
@@ -251,8 +251,8 @@ library is the most advanced library for Sega Dreamcast development. </p>
 <p>The other alternative to <span class="font-fixed">KOS</span> is <a
 target="_blank" href="https://bitbucket.org/ihi/libronin">Libronin</a>. This
 software library was used for making <a href="http://mc.pp.se/dc/dreamsnes/"
-target="_blank">DreamSNES</a>. It should work under DreamSDK, even if this
-scenario was not tested.</p>
+target="_blank">DreamSNES</a>. It could work under DreamSDK, even if this
+scenario was not tested; plus the toolchains included were built with the specific KallistiOS patches (e.g., enabling <span class="font-fixed">kos</span> thread model).</p>
 
 <p>You are free to use other libraries if you want, but KOS is a great choice
 if you are new to Dreamcast development.</p>

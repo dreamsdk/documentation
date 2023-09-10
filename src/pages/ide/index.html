@@ -136,11 +136,12 @@ Ports</a> libraries, you will have at least 5 libraries installed anyway:</p>
   <li><span class="font-fixed">kosutils</span></li>
   <li><span class="font-fixed">libm</span> (previously known as <span
     class="font-fixed">math</span>)</li>
+<li><span class="font-fixed">navi</span></li>
   <li><span class="font-fixed">ppp</span></li>
 </ul>
 
 <p><span class="font-fixed">kosext2fs</span>, <span
-class="font-fixed">kosutils</span> and <span class="font-fixed">ppp</span> are
+class="font-fixed">kosutils</span>, <span class="font-fixed">navi</span> and <span class="font-fixed">ppp</span> are
 installed with <a href="../general/overview.html#kallistios">KallistiOS</a>,
 when <span class="font-fixed">libm</span> (aka <span
 class="font-fixed">math</span>) is installed with <a target="_blank"
@@ -464,7 +465,8 @@ the KallistiOS tree, do the following: </p>
     <div class="fixed-block">
     ... <br>
     #ifdef DEBUG<br>
-    #include &lt;arch/gdb.h&gt;<br>
+	#include &lt;kos/dbgio.h&gt;<br>
+	#include &lt;arch/gdb.h&gt;<br>
     #endif<br>
     ...</div>
   </li>
