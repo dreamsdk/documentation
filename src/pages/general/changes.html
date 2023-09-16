@@ -13,20 +13,23 @@
 <p>This section describes all releases and notable changes made to the DreamSDK
 environment.</p>
 
-<h2>R3 — 2020-02-DD</h2>
+<h2>R3 — 2023-09-DD</h2>
 
 <h3>Added</h3>
 <ul>
-  <li>Some useful links were added in the <strong>Windows Start</strong>
-  menu.</li>
-  <li>Support of <strong>CDFS</strong> images in <strong>Code::Blocks</strong>:
+  <li> Experimental <strong>Ruby</strong> support! This feature uses <a href="https://mruby.org/" target="_blank">mruby</a> (lightweight, embeddable Ruby). This feature is handled in <strong>DreamSDK Manager</strong> through the Ruby tab.</li>
+
+<li>Some useful links were added in the <strong>Windows Start</strong> menu.</li>
+<li>Support of <strong>CDFS</strong> images in <strong>Code::Blocks</strong>:
     You have now the possibility to simulate a virtual <strong>CD-ROM</strong>
     through an <strong>ISO</strong> file, when selecting the appropriate option
     when creating a project in <strong>Code::Blocks</strong>.</li>
-  <li>Support for <span class="font-fixed">libkosfat</span> addon library.</li>
-  <li>You have now the possibility to manage <strong>Code::Blocks</strong> in
-    <strong>DreamSDK Manager</strong>. </li>
-  <li>This <strong>CHANGELOG</strong> file to hopefully serve as an evolving
+  <li>Support for <span class="font-fixed">libkosfat/navi</span> addon libraries.</li>
+  <li>You have now the possibility to manage <strong>Code::Blocks</strong> in <strong>DreamSDK Manager</strong>. </li>
+  <li>Support for <strong>Windows Terminal</strong> (if available).</li>
+  <li>The USB baud rates for <strong>Dreamcast Tool Serial</strong> are now supported.</li>
+	<li>Additional tools (e.g., <span class="font-fixed">curl</span>) and libraries (e.g., <span class="font-fixed">libelf</span>) are now available.</li>
+<li>This <strong>CHANGELOG</strong> file to hopefully serve as an evolving
     example of a standardized open source project
   <strong>CHANGELOG</strong>.</li>
 </ul>
@@ -54,48 +57,61 @@ environment.</p>
     class="font-fixed">arp</span> command in <strong>Windows XP</strong> and
     <span class="font-fixed">netsh</span> in modern
   <strong>Windows</strong>.</li>
-  <li><strong>MakeDisc</strong>: The <span class="font-fixed">bootstrap</span>
-    parameter is now optional. It will try to detect the <span
-    class="font-fixed">IP.BIN</span> from the current directory or directly in
+  <li><strong>MakeDisc</strong>: The <span class="font-fixed">bootstrap</span> parameter is now optional. It will try to detect the <span class="font-fixed">IP.BIN</span> from the current directory or directly in
     the directory where the <span class="font-fixed">1ST_READ.BIN</span> file
     is located.</li>
+  <li>It's now possible to select the toolchains you want to use directly from the DreamSDK Manager instead of making your choice in the Setup. You have the possibility to choose between <strong>Legacy</strong>, <strong>Old Stable</strong> and <strong>Stable</strong> toolchains.&nbsp; &nbsp;&nbsp;</li>
   <li>The installation of <strong>GNU Debugger (GDB) for SuperH</strong> is
     better; and <strong>Python</strong> extensions may be enabled/disabled on
-    user request (previously, <strong>GDB for SuperH</strong> was linked to
-    <strong>Python 2.7</strong> only).</li>
+    user request (previously, <strong>GDB for SuperH</strong> was linked to <strong>Python 2.7</strong> only).</li>
+  <li>Removing some outdated packages provided by MSYS and replacing them with standalone packages:
+	  <ol><li><strong>GNU Awk</strong>: From <span class="font-fixed">3.1.7</span> to <span class="font-fixed">4.0.1</span> (provided <a target="_blank" href="https://github.com/sizious/msys-gawk">here</a>)</li> 
+		  <li><strong>MinTTY</strong>: From <span class="font-fixed">1.0.3</span> to <span class="font-fixed">3.5.0</span> (using <a target="_blank" href="https://mintty.github.io/">official MinTTY</a> source)</li>
+        <li><strong>Wget</strong>: From <span class="font-fixed">1.12</span> to <span class="font-fixed">1.19.4</span> (provided by <a target="_blank" href="https://eternallybored.org/misc/wget/">Jernej Simoncic</a>)</li>
+	      
+    </ol>
+  </li>
+	<li>The COM ports list used for <strong>Dreamcast Tool Serial</strong> is now dynamic and not hardcoded anymore.</li>
 </ul>
 
 <h3>Fixed</h3>
 <ul>
-  <li><strong>KallistiOS</strong>, <strong>KallistiOS Ports</strong> and
-    <strong>Dreamcast Tool</strong> repositories are now the
-    <strong>Nitro</strong> versions from <a target="_blank"
-    href="https://gitlab.com/simulant/community/">Simulant Engine</a> instead
-    of official one as these contains various community improvements and
-  fixes.</li>
   <li>In <strong>Code::Blocks</strong>, an issue when generating
     <strong>Romdisk</strong> from projects with spaces in their name has been
     fixed.</li>
   <li><strong>MakeDisc</strong>: An little cosmetic problem has been fixed.</li>
-  <li>Various fixes for <strong>Windows 10+</strong> (mainly related to
+  <li>Tons of various fixes, including specific things for <strong>Windows 10+</strong> (mainly related to
   UAC).</li>
 </ul>
 
 <h3>Updated</h3>
 <ul>
-  <li><strong>GNU Compiler Collection (GCC) for SuperH</strong> and
-    <strong>AICA</strong> is now <span class="font-fixed">4.7.4</span>, as this
-    version includes several fixes for <span class="font-fixed">sh-elf</span>
-    target.</li>
-  <li><strong>GNU Compiler Collection (GCC) for Win32</strong> is now <span
-    class="font-fixed">8.2.0</span>.</li>
+  <li><strong>MinTTY</strong> is now the default shell (you can still use Windows Prompt or Windows Terminal).&nbsp;</li>
+  <li><strong>GNU Compiler Collection (GCC) for SuperH</strong> and <strong>AICA (ARM)</strong> is now <span class="font-fixed">4.7.4</span> (<strong>Legacy</strong>), <span class="font-fixed">9.5.0</span> for SuperH and <span class="font-fixed">8.5.0</span> for ARM (<strong>Old Stable</strong>) and <span class="font-fixed">13.2.0</span> for SuperH (<strong>Stable</strong>). <strong>Stable</strong> is the toolchain selected by default, but this one requires a modern OS (if you are on Windows XP, you can select <strong>Old Stable</strong> at maximum).</li>
+<li><strong>GNU Compiler Collection (GCC) for Win32</strong> is now <span
+    class="font-fixed">9.2.0</span>.</li>
   <li><strong>GNU Debugger (GDB) for SuperH</strong> is now <span
-    class="font-fixed">8.3.1</span>.</li>
+    class="font-fixed">10.2</span>.</li>
   <li><strong>DreamSDK Manager</strong> was updated to display more useful
     information like repositories versions or environment information.</li>
   <li>The help file was updated to reflect all the changes of this release.</li>
+  <li>The JPEG library (<span
+    class="font-fixed">libjpeg</span>) is now <span
+    class="font-fixed">9d</span>.</li>
+  <li>The PNG library (<span class="font-fixed">libpng</span>) is now <span class="font-fixed">1.6.37</span>.</li>
+  <li>Some optional tools before are now mandatory and installed by default (e.g., <span class="font-fixed">img4dc</span>).</li>
 </ul>
-
+	
+<h3>Removed</h3>
+<ul>
+<li>The <strong>IPCreate</strong> tool was removed, as the standard KallistiOS repository
+  contains now the modernized <strong>IP creator</strong> (<span class="font-fixed">makeip</span>) tool.</li>
+</ul>
+	
+<h3>Known Bugs</h3>
+	
+<ul><li>Sometimes the <span class="font-fixed">CTRL+C</span> command is not working properly (no effect instead of killing the current process). This isn't really known why this happens, it looks like this issue is in the original MSYS tool as well.</li></ul>
+	
 <h2>R2 — 2019-03-03</h2>
 <ul>
   <li>Full <strong>Code::Blocks</strong> <span class="font-fixed">17.12</span>

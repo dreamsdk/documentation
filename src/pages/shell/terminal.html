@@ -13,8 +13,8 @@
 <p>With the DreamSDK Shell, you have the the possibility to choose the Shell
 interface of your choice, between:</p>
 <ul>
-  <li><a href="#cmd">Windows Prompt/Terminal</a> (by default)</li>
-  <li><a href="#mintty">MinTTY</a></li>
+  <li><a href="#cmd">Windows Prompt/Terminal</a> </li>
+  <li><a href="#mintty">MinTTY</a> (by default)</li>
 </ul>
 
 <p><a href="../manager/options.html">Click here to learn how to configure this
@@ -23,7 +23,7 @@ Shell interface</a>.</p>
 <h2><a name="cmd">Command Prompt</a></h2>
 
 <p>The default Shell interface usable with MSYS is the standard <strong>Windows
-Command Prompt</strong> (<span class="font-fixed">cmd</span>).</p>
+Command Prompt</strong> (<span class="font-fixed">cmd</span>). This was the previous default shell for DreamSDK but starting from R3, it's now MinTTY.</p>
 
 <div class="screenshot">
 <img src="../../img/shell/cmd.png"> </div>
@@ -37,7 +37,12 @@ remember, despite of the UI appereance, you are in a Bash shell!</p>
 <div class="screenshot">
 <img src="../../img/shell/wt.png"> </div>	
 
-<p>In that case, you have the choice to install/uninstall the integration from <a href="../manager/options.html">DreamSDK Manager</a>.</p>
+<p>You also have the choice to open DreamSDK directly from Windows Terminal by using the embedded menu:</p>
+	
+<div class="screenshot">
+<img src="../../img/shell/wt-menu.png"> </div>	
+	
+<p><strong>Note:</strong> You always have the choice to install/uninstall this integration from <a href="../manager/options.html">DreamSDK Manager</a>.</p>	
 	
 <h2><a name="mintty">MinTTY</a></h2>
 
@@ -47,14 +52,15 @@ remember, despite of the UI appereance, you are in a Bash shell!</p>
 <p>For your information, this Shell is now the standard Shell for the <a
 target="_blank" href="http://www.cygwin.com/">Cygwin</a> and the <a
 target="_blank" href="http://www.mingw-w64.org/">MinGW-w64/MSYS2</a>
-projects.</p>
+projects. It's now the case for DreamSDK as well.</p>
 
 <div class="screenshot">
 <img src="../../img/shell/mintty.png"></div>
 
 <p>MinTTY is a free and open source terminal emulator for Cygwin, the Unix-like
 environment for Windows, but it supplied with the MSYS team too, that's why
-this option is available for the DreamSDK package. </p>
+this option is available for the DreamSDK package. Starting from DreamSDK R3, this is the default shell.</p>
+	
 <!--FOOTER:START-->
 
 <div id="footer">
