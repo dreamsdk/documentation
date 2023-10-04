@@ -357,8 +357,8 @@
 			<param name="Local" value="pages\runner\index.html#overview">
 			</OBJECT>
 		<LI> <OBJECT type="text/sitemap">
-			<param name="Name" value="Limitation">
-			<param name="Local" value="pages\runner\index.html#limit">
+			<param name="Name" value="Chaining commands">
+			<param name="Local" value="pages\runner\index.html#chain">
 			</OBJECT>
 	</UL>
 	<LI> <OBJECT type="text/sitemap">

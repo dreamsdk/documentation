@@ -17,7 +17,7 @@ the DreamSDK environment outside it!</strong></p>
 <p>Select a chapter below to learn how to use this component:</p>
 <ul>
   <li><a href="#overview">Overview</a></li>
-  <li><a href="#limit">Limitation</a></li>
+  <li><a href="#chain">Chaining commands</a></li>
 </ul>
 
 <h2><a name="overview">Overview</a></h2>
@@ -85,12 +85,12 @@ a great feature used only for <span class="font-fixed">make</span> commands.</p>
 <p>You have the possibility to process the output of the DreamSDK Runner by
 catching it with redirections.</p>
 
-<h2><a name="limit">Limitation</a></h2>
+<h2><a name="chain">Chaining commands</a></h2>
 
-<p>Only one command can be executed at once so passing commands like <span
-class="font-fixed">make clean &amp;&amp; echo "YESS"</span> <strong>will not
-work</strong>. In that case, you just have to execute two commands by executing
-the Runner twice.</p>
+<p>It's possible to chain commands by surrounding those with quotes (&quot;), e.g., <span
+class="font-fixed">make clean &amp;&amp; make</span>. This will execute all the 
+commands and return the result of the last command passed.</p>
+
 <!--FOOTER:START-->
 
 <div id="footer">
